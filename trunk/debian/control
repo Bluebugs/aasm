@@ -1,0 +1,22 @@
+Source: aasm
+Section: devel
+Priority: optional
+Maintainer: Alexandre Becoulet <alexandre.becoulet@free.fr>
+Standards-Version: 0.9.0
+Build-Depends: gperf, perl, debhelper (>= 2)
+
+Package: aasm
+Architecture: any
+Depends: debconf, libc6
+Recommends:
+Description: advanced assembler base files
+ Aasm is an advanced assembler designed to support several target
+ architectures. It has been designed to be easily extended and,
+ should be considered as a good alternative to monolithic assembler
+ development for each new target CPUs and binary file formats.
+ .
+ Aasm should make assembly programming easier for developer, by
+ providing a set of advanced features: symbol scopes, expressions engine,
+ big integer support, numerous and accurate warning messages, filter
+ modules... Its dynamic modular architecture enables aasm to extend
+ its set of features with plug-ins.
