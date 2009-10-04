@@ -23,7 +23,7 @@ Contents of section .text:
  0000 c390                                 ..              
 Contents of section .comment:
  0000 41737365 6d626c65 64207769 74683a20  Assembled with: 
- 0010 4141534d 20302e39 2e302c20 47504c20  AASM 0.9.0, GPL 
+ 0010 4141534d 20302e39 2e302c20 47504c20  AASM 0.9.1, GPL 
  0020 41647661 6e636564 20417373 656d626c  Advanced Assembl
  0030 65722e20 4f626a65 63743a20 74657374  er. Object: test
  0040 735f666f 726d6174 2f73796d 5f647570  s_format/sym_dup
