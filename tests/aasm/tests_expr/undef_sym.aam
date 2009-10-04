@@ -1,0 +1,14 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.mod_asm mode 32bits
+	.section_base 0x0
+
+	mov eax, sym
+
+.ends
+

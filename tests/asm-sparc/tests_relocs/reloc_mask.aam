@@ -1,0 +1,14 @@
+
+.mod_load asm-sparc
+.mod_load out-elf32
+
+.section code .text
+
+	.extern printf
+
+	or  g0, printf and 0x3ff, i5
+	sethi printf shr 10, i5
+	sethi printf, i5
+
+.ends
+

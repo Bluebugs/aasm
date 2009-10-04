@@ -1,0 +1,2 @@
+ [Warning] tests_expr/shadow_sym.aam:14: function `plouf' defined but not used
+ [Warning] tests_expr/shadow_sym.aam:16: symbol `truc' shadows higher scope definition

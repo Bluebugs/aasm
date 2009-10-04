@@ -1,0 +1,22 @@
+
+tests_format/align_ms.obj:     file format coff-i386
+tests_format/align_ms.obj
+architecture: i386, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000001  00000000  00000000  0000008c  2**2
+                  CONTENTS, ALLOC, LOAD, CODE
+  1 .textb        00000001  00000000  00000000  0000008d  2**2
+                  CONTENTS, ALLOC, LOAD, CODE
+SYMBOL TABLE:
+[  0](sec  1)(fl 0x00)(ty   0)(scl   3) (nx 0) 0x00000000 .text
+[  1](sec  2)(fl 0x00)(ty   0)(scl   3) (nx 0) 0x00000000 .textb
+
+
+Contents of section .text:
+ 0000 90                                   .               
+Contents of section .textb:
+ 0000 90                                   .               

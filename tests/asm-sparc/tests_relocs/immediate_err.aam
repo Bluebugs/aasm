@@ -1,0 +1,24 @@
+
+.mod_load asm-sparc
+.mod_load out-elf32
+
+.section code .text
+
+	.mod_asm opcodes v8
+
+	sethi 0x7fffff, i5
+	sethi -0x1, i5
+
+	ldsha [o4], 255, g4
+	ldsha [o4], 256, g4
+	ldsha [o4], -1, g4
+
+	add o5, 0x0fff, o7
+	add o5, 0x1fff, o7
+	add o5, 0x3fff, o7
+	add o5, -0x0fff, o7
+	add o5, -0x1000, o7
+	add o5, -0x1001, o7
+
+.ends
+

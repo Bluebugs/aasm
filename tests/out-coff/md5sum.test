@@ -1,0 +1,17 @@
+
+export AASM_OUT_EXT=".o"
+export AASM_OUT_EXT2=".obj"
+export AASM_PARAM="-m out-coff -Wnone -q"
+export AASM_BIN=${AASM_TEST_BIN:aasm}
+export AASM_OUT_CLEAN="*.o *.obj"
+
+export TEST_BIN="md5sum"
+export TEST_NAME="md5sum"
+export TEST_BIN_PARAM=""
+
+if ! test -x "`which $TEST_BIN`" ; then
+	echo "$TEST_BIN not available, skipping tests"
+	return 1	
+fi
+
+return 0

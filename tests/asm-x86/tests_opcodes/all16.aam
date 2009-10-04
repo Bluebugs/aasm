@@ -1,0 +1,926 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+        .mod_asm mode 16bits
+	.mod_asm cpu 686
+
+aaa
+
+aad
+aad 0x23
+
+aam
+aam 0x21
+
+aas
+
+adc al,0x3
+adc ax,0x7
+adc eax,0x11
+adc bl,0x13
+adc bx,0x17
+adc ebx,0x23
+adc byte [eax],byte 0x29
+adc word [eax],word 0x31
+adc dword [eax],dword 0x33
+adc cx,byte 0x25
+adc ecx,byte 0x37
+adc word [eax],byte 0x31
+adc dword [eax],byte 0x33
+adc ch,cl
+adc bx,sp
+adc edx,ecx
+adc [eax],bh
+adc [eax],bx
+adc [eax],ebx
+adc cl, [eax]
+adc cx, [eax]
+adc ecx, [eax]
+
+add al,0x3
+add ax,0x7
+add eax,0x11
+add bl,0x13
+add bx,0x17
+add ebx,0x23
+add byte [eax],byte 0x29
+add word [eax],word 0x31
+add dword [eax],dword 0x33
+add cx,byte 0x25
+add ecx,byte 0x37
+add word [eax],byte 0x31
+add dword [eax],byte 0x33
+add ch,cl
+add bx,sp
+add edx,ecx
+add [eax],bh
+add [eax],bx
+add [eax],ebx
+add cl, [eax]
+add cx, [eax]
+add ecx, [eax]
+
+and al,0x3
+and ax,0x7
+and eax,0x11
+and bl,0x13
+and bx,0x17
+and ebx,0x23
+and byte [eax],byte 0x29
+and word [eax],word 0x31
+and dword [eax],dword 0x33
+and cx,byte 0x25
+and ecx,byte 0x37
+and word [eax],byte 0x31
+and dword [eax],byte 0x33
+and ch,cl
+and bx,sp
+and edx,ecx
+and [eax],bh
+and [eax],bx
+and [eax],ebx
+and cl, [eax]
+and cx, [eax]
+and ecx, [eax]
+
+arpl [eax], cx
+arpl bx, dx
+
+bound si, [eax]
+bound edi, [eax]
+
+bsf bp, ax
+bsf sp, [eax]
+bsf ebp, eax
+bsf esp, [eax]
+
+bsr bp, ax
+bsr sp, [eax]
+bsr ebp, eax
+bsr esp, [eax]
+
+bswap ecx
+bswap ebp
+
+bt si, bp
+bt [eax], di
+bt ebx, ebp
+bt [eax], ecx
+bt bx, 6
+bt word [eax], 5
+bt ebx, 5
+bt dword [eax], 5
+
+btc si, bp
+btc [eax], di
+btc ebx, ebp
+btc [eax], ecx
+btc bx, 6
+btc word [eax], 5
+btc ebx, 5
+btc dword [eax], 5
+
+btr si, bp
+btr [eax], di
+btr ebx, ebp
+btr [eax], ecx
+btr bx, 6
+btr word [eax], 5
+btr ebx, 5
+btr dword [eax], 5
+
+bts si, bp
+bts [eax], di
+bts ebx, ebp
+bts [eax], ecx
+bts bx, 6
+bts word [eax], 5
+bts ebx, 5
+bts dword [eax], 5
+
+call word [eax]
+call dword [eax]
+
+call bx
+call esi
+
+call word 0x1234
+
+callf dword [eax + ecx]
+callf word [eax + ecx]
+callf 0x1234, dword 0x5678
+callf 0x1234, word 0x5678
+
+cbw
+cwde
+clc
+cld
+cli
+clts
+cmc
+
+cmovz cx, [edx * 4]
+cmovz bx, di
+cmovz ecx, [bx + si]
+cmovz ebx, edi
+
+cmova ebx, edi
+cmovae ebx, edi
+cmovb ebx, edi
+cmovbe ebx, edi
+cmovc ebx, edi
+cmove ebx, edi
+cmovg ebx, edi
+cmovge ebx, edi
+cmovl ebx, edi
+cmovle ebx, edi
+cmovna ebx, edi
+cmovnae ebx, edi
+cmova ebx, edi
+cmovnb ebx, edi
+cmovnbe ebx, edi
+cmovnc ebx, edi
+cmovne ebx, edi
+cmovng ebx, edi
+cmovnge ebx, edi
+cmovnl ebx, edi
+cmovnle ebx, edi
+cmovno ebx, edi
+cmovnp ebx, edi
+cmovns ebx, edi
+cmovnz ebx, edi
+cmovo ebx, edi
+cmovp ebx, edi
+cmovpe ebx, edi
+cmovpo ebx, edi
+cmovs ebx, edi
+
+cmp al,0x3
+cmp ax,0x7
+cmp eax,0x11
+cmp bl,0x13
+cmp bx,0x17
+cmp ebx,0x23
+cmp byte [eax],byte 0x29
+cmp word [eax],word 0x31
+cmp dword [eax],dword 0x33
+cmp cx,byte 0x25
+cmp ecx,byte 0x37
+cmp word [eax],byte 0x31
+cmp dword [eax],byte 0x33
+cmp ch,cl
+cmp bx,sp
+cmp edx,ecx
+cmp [eax],bh
+cmp [eax],bx
+cmp [eax],ebx
+cmp cl, [eax]
+cmp cx, [eax]
+cmp ecx, [eax]
+
+cmpsb
+cmpsw
+cmpsd
+
+cmpxchg cl, dh
+cmpxchg [esi + 6], dh
+cmpxchg cx, dx
+cmpxchg [esi + 6], bx
+cmpxchg edx, esi
+cmpxchg [esi + 6], ebp
+
+cmpxchg8b [edx]
+
+cpuid
+cwd
+cdq
+daa
+das
+
+dec byte [edx]
+dec word [edx]
+dec dword [edx]
+dec bl
+dec cx
+dec edx
+
+div byte [edx]
+div word [edx]
+div dword [edx]
+div bl
+div cx
+div edx
+
+enter 45, 4
+hlt
+
+idiv byte [edx]
+idiv word [edx]
+idiv dword [edx]
+idiv bl
+idiv cx
+idiv edx
+
+imul byte [edx]
+imul word [edx]
+imul dword [edx]
+imul bl
+imul cx
+imul edx
+
+imul bx, ax
+imul cx, [edx]
+imul ebx, eax
+imul ecx, [edx]
+
+imul bx, ax, byte 5
+imul cx, [edx], byte -5
+imul ebx, eax, byte 5
+imul ecx, [edx], byte -5
+
+imul bx, ax, word 5
+imul cx, [edx], word -5
+imul ebx, eax, dword 5
+imul ecx, [edx], dword -5
+
+inc byte [edx]
+inc word [edx]
+inc dword [edx]
+inc bl
+inc cx
+inc edx
+
+in al, dx
+in ax, dx
+in eax, dx
+
+in al, 0x45
+in ax, 0x45
+in eax, 0x45
+
+insb
+insw
+insd
+
+int3
+int 0xaa
+into
+invd
+invlpg word [ecx + 4]
+iret
+
+ja word lbl
+jae word lbl
+jb word lbl
+jbe word lbl
+jc word lbl
+je word lbl
+jg word lbl
+jge word lbl
+jl word lbl
+jle word lbl
+jna word lbl
+jnae word lbl
+ja word lbl
+jnb word lbl
+jnbe word lbl
+
+ja dword lbl
+jae dword lbl
+jb dword lbl
+jbe dword lbl
+jc dword lbl
+je dword lbl
+jg dword lbl
+jge dword lbl
+jl dword lbl
+jle dword lbl
+jna dword lbl
+jnae dword lbl
+ja dword lbl
+jnb dword lbl
+jnbe dword lbl
+
+ja byte lbl
+jae byte lbl
+jb byte lbl
+jbe byte lbl
+jc byte lbl
+je byte lbl
+jg byte lbl
+jge byte lbl
+jl byte lbl
+jle byte lbl
+jna byte lbl
+jnae byte lbl
+ja byte lbl
+jnb byte lbl
+jnbe byte lbl
+
+.label lbl
+
+jnc byte lbl
+jne byte lbl
+jng byte lbl
+jnge byte lbl
+jnl byte lbl
+jnle byte lbl
+jno byte lbl
+jnp byte lbl
+jns byte lbl
+jnz byte lbl
+jo byte lbl
+jp byte lbl
+jpe byte lbl
+jpo byte lbl
+js byte lbl
+
+jnc dword lbl
+jne dword lbl
+jng dword lbl
+jnge dword lbl
+jnl dword lbl
+jnle dword lbl
+jno dword lbl
+jnp dword lbl
+jns dword lbl
+jnz dword lbl
+jo dword lbl
+jp dword lbl
+jpe dword lbl
+jpo dword lbl
+js dword lbl
+
+jnc word lbl
+jne word lbl
+jng word lbl
+jnge word lbl
+jnl word lbl
+jnle word lbl
+jno word lbl
+jnp word lbl
+jns word lbl
+jnz word lbl
+jo word lbl
+jp word lbl
+jpe word lbl
+jpo word lbl
+js word lbl
+
+jmp word [eax]
+jmp dword [eax]
+
+jmp bx
+jmp esi
+
+jmp word 0x1234
+
+jmpf dword [eax + ecx]
+jmpf word [eax + ecx]
+jmpf 0x1234, dword 0x5678
+jmpf 0x1234, word 0x5678
+
+lahf
+
+lar ax, bx
+lar bx, [edx]
+lar eax, ebx
+lar ebx, [edx]
+
+lds ax, dword [edx]
+lds eax, fword [edx]
+lss ax, dword [edx]
+lss eax, fword [edx]
+les ax, dword [edx]
+les eax, fword [edx]
+lfs ax, dword [edx]
+lfs eax, fword [edx]
+lgs ax, dword [edx]
+lgs eax, fword [edx]
+
+lea eax, [ecx + edx]
+lea di, [ecx + edx]
+lea eax, [si]
+lea di, [si]
+
+leave
+
+lidt [ecx]
+lgdt [edx]
+
+lldt cx
+lldt [bx]
+
+lmsw dx
+lmsw [si]
+
+lock
+xchg [bx], ax
+
+lodsb
+lodsw
+lodsd
+
+.label loop_lbl loop
+
+loop loop_lbl
+loope loop_lbl
+loopz loop_lbl
+loopne loop_lbl
+loopnz loop_lbl
+
+lsl cx, dx
+lsl bx, [esi]
+
+lsl ecx, edx
+lsl ebx, [esi]
+
+ltr cx
+ltr [bx]
+
+mov al, bh
+mov bl, ah
+mov ax, bx
+mov bx, ax
+mov eax, ebx
+mov ebx, eax
+
+mov [edx], cl
+mov [edx], cx
+mov [edx], ecx
+mov dl, [esi]
+mov dx, [esi]
+mov edx, [esi]
+
+mov bl, 5
+mov bx, 5
+mov ebx, 5
+
+mov [ecx], byte 5
+mov [ecx], word 5
+mov [ecx], dword 5
+
+mov cr3, edx
+mov esi, cr4
+
+mov dr6, eax
+mov ebx, dr5
+
+mov ds, bx
+mov bx, ds
+mov gs, cx
+
+mov cx, cs
+mov ecx, cs
+
+mov [edi + 5], gs
+
+movsb
+movsw
+movsd
+
+movsx bx, cl
+movsx ecx, ch
+movsx edx, si
+movsx bx, byte [eax]
+movsx ecx, byte [eax]
+movsx edx, word [eax]
+
+movzx bx, cl
+movzx ecx, ch
+movzx edx, si
+movzx bx, byte [eax]
+movzx ecx, byte [eax]
+movzx edx, word [eax]
+
+mul bl
+mul cx
+mul edx
+mul byte [eax]
+mul word [eax]
+mul dword [eax]
+
+neg bl
+neg cx
+neg edx
+neg byte [eax]
+neg word [eax]
+neg dword [eax]
+
+nop
+
+not bl
+not cx
+not edx
+not byte [eax]
+not word [eax]
+not dword [eax]
+
+or al,0x3
+or ax,0x7
+or eax,0x11
+or bl,0x13
+or bx,0x17
+or ebx,0x23
+or byte [eax],byte 0x29
+or word [eax],word 0x31
+or dword [eax],dword 0x33
+or cx,byte 0x25
+or ecx,byte 0x37
+or word [eax],byte 0x31
+or dword [eax],byte 0x33
+or ch,cl
+or bx,sp
+or edx,ecx
+or [eax],bh
+or [eax],bx
+or [eax],ebx
+or cl, [eax]
+or cx, [eax]
+or ecx, [eax]
+
+out dx, al
+out dx, ax
+out dx, eax
+
+out 0x23, al
+out 0x22, ax
+out 0x21, eax
+
+outsb
+outsw
+outsd
+
+pop word [eax]
+pop dword [eax]
+pop edx
+pop cx
+pop ds
+pop es
+pop ss
+pop fs
+pop gs
+
+popa
+popad
+popf
+
+push word [eax]
+push dword [eax]
+push edx
+push cx
+push ds
+push es
+push ss
+push fs
+push gs
+push byte 5
+push word 5
+push dword 5
+
+pusha
+pushad
+pushf
+
+rcl bl
+rcl bl, cl
+rcl bl, 3
+rcl bx
+rcl bx, cl
+rcl bx, 3
+rcl ebx
+rcl ebx, cl
+rcl ebx, 3
+
+rcr bl
+rcr bl, cl
+rcr bl, 3
+rcr bx
+rcr bx, cl
+rcr bx, 3
+rcr ebx
+rcr ebx, cl
+rcr ebx, 3
+
+rol bl
+rol bl, cl
+rol bl, 3
+rol bx
+rol bx, cl
+rol bx, 3
+rol ebx
+rol ebx, cl
+rol ebx, 3
+
+ror bl
+ror bl, cl
+ror bl, 3
+ror bx
+ror bx, cl
+ror bx, 3
+ror ebx
+ror ebx, cl
+ror ebx, 3
+
+rdmsr
+rdpmc
+rdtsc
+
+rep
+movsb
+repe
+movsb
+repz
+movsb
+repne
+movsb
+repnz
+movsb
+
+ret
+ret 32
+
+rsm
+
+sahf
+
+sal bl
+sal bl, cl
+sal bl, 3
+sal bx
+sal bx, cl
+sal bx, 3
+sal ebx
+sal ebx, cl
+sal ebx, 3
+
+sar bl
+sar bl, cl
+sar bl, 3
+sar bx
+sar bx, cl
+sar bx, 3
+sar ebx
+sar ebx, cl
+sar ebx, 3
+
+shl bl
+shl bl, cl
+shl bl, 3
+shl bx
+shl bx, cl
+shl bx, 3
+shl ebx
+shl ebx, cl
+shl ebx, 3
+
+shr bl
+shr bl, cl
+shr bl, 3
+shr bx
+shr bx, cl
+shr bx, 3
+shr ebx
+shr ebx, cl
+shr ebx, 3
+
+sbb al,0x3
+sbb ax,0x7
+sbb eax,0x11
+sbb bl,0x13
+sbb bx,0x17
+sbb ebx,0x23
+sbb byte [eax],byte 0x29
+sbb word [eax],word 0x31
+sbb dword [eax],dword 0x33
+sbb cx,byte 0x25
+sbb ecx,byte 0x37
+sbb word [eax],byte 0x31
+sbb dword [eax],byte 0x33
+sbb ch,cl
+sbb bx,sp
+sbb edx,ecx
+sbb [eax],bh
+sbb [eax],bx
+sbb [eax],ebx
+sbb cl, [eax]
+sbb cx, [eax]
+sbb ecx, [eax]
+
+scasb
+scasw
+scasd
+
+seta [eax]
+seta cl
+setae cl
+setb cl
+setbe cl
+setc cl
+sete cl
+setg cl
+setge cl
+setl cl
+setle cl
+setna cl
+setnae cl
+seta cl
+setnb cl
+setnbe cl
+setnc cl
+setne cl
+setng cl
+setnge cl
+setnl cl
+setnle cl
+setno cl
+setnp cl
+setns cl
+setnz cl
+seto cl
+setp cl
+setpe cl
+setpo cl
+sets cl
+
+sidt [ebx * 4]
+sgdt [ebx * 4]
+
+shld cx, bx, 6
+shld [ecx], bx, 6
+shld ax, dx, cl
+shld [eax], dx, cl
+shld ecx, ebx, 6
+shld [ecx], ebx, 6
+shld eax, edx, cl
+shld [eax], edx, cl
+
+shrd cx, bx, 6
+shrd [ecx], bx, 6
+shrd ax, dx, cl
+shrd [eax], dx, cl
+shrd ecx, ebx, 6
+shrd [ecx], ebx, 6
+shrd eax, edx, cl
+shrd [eax], edx, cl
+
+sldt bx
+sldt [ebx]
+
+smsw bx
+smsw [ebx]
+
+stc
+std
+sti
+
+stosb
+stosw
+stosd
+
+str bx
+str [ebx]
+
+sub al,0x3
+sub ax,0x7
+sub eax,0x11
+sub bl,0x13
+sub bx,0x17
+sub ebx,0x23
+sub byte [eax],byte 0x29
+sub word [eax],word 0x31
+sub dword [eax],dword 0x33
+sub cx,byte 0x25
+sub ecx,byte 0x37
+sub word [eax],byte 0x31
+sub dword [eax],byte 0x33
+sub ch,cl
+sub bx,sp
+sub edx,ecx
+sub [eax],bh
+sub [eax],bx
+sub [eax],ebx
+sub cl, [eax]
+sub cx, [eax]
+sub ecx, [eax]
+
+sysenter
+;sysexit
+
+test al,0x3
+test ax,0x7
+test eax,0x11
+test bl,0x13
+test bx,0x17
+test ebx,0x23
+test byte [eax],byte 0x29
+test word [eax],word 0x31
+test dword [eax],dword 0x33
+test ch,cl
+test bx,sp
+test edx,ecx
+test [eax],bh
+test [eax],bx
+test [eax],ebx
+test cl, [eax]
+test cx, [eax]
+test ecx, [eax]
+
+verr bx
+verr [ebx]
+verw bx
+verw [ebx]
+
+wait
+
+wbinvd
+
+wrmsr
+
+xadd bl, ch
+xadd cx, dx
+xadd edx, esi
+xadd [ebx], al
+xadd [ebx], cx
+xadd [ebx], ecx
+
+xchg eax, eax
+xchg ax, bx
+xchg ebx, eax
+
+xchg [eax], cx
+xchg cx, [eax]
+xchg eax_, eax_
+
+xlat
+
+xor al,0x3
+xor ax,0x7
+xor eax,0x11
+xor bl,0x13
+xor bx,0x17
+xor ebx,0x23
+xor byte [eax],byte 0x29
+xor word [eax],word 0x31
+xor dword [eax],dword 0x33
+xor cx,byte 0x25
+xor ecx,byte 0x37
+xor word [eax],byte 0x31
+xor dword [eax],byte 0x33
+xor ch,cl
+xor bx,sp
+xor edx,ecx
+xor [eax],bh
+xor [eax],bx
+xor [eax],ebx
+xor cl, [eax]
+xor cx, [eax]
+xor ecx, [eax]
+
+.ends
+

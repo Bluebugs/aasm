@@ -1,0 +1,33 @@
+
+
+.mod_load asm-sparc
+.mod_load out-elf32
+
+.extern printf
+
+.section code .text
+
+	ba label
+	call label
+	sethi label, g3
+	or g0, label, g4
+
+	nop
+	nop
+
+	ba .textb:label
+	call .textb:label
+	sethi .textb:label, g3
+	or g0, .textb:label, g4
+
+	label:
+
+.ends
+
+.section code .textb
+
+	label:
+	nop
+
+.ends
+

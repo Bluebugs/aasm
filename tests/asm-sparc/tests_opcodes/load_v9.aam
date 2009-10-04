@@ -1,0 +1,13 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	.mod_asm opcodes v9
+
+	lduw [g2 + o3], i2
+	lduwa [g2], 3, i2
+
+.ends
+

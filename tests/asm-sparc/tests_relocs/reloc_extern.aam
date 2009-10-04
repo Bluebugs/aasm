@@ -1,0 +1,32 @@
+
+
+.mod_load asm-sparc
+.mod_load out-elf32
+
+.extern printf
+
+.section code .text
+
+	ld [printf + o5], i3
+
+	sethi printf, o4
+	sethi printf + 1, o4
+
+	call printf
+	call printf + 1
+
+	ba printf
+	ba printf + 1
+
+.ends
+
+.section data .data
+
+	.dump dword printf
+	.dump word printf
+	.dump byte printf
+	.dump byte (printf + 1)
+	.dump byte (printf - 1)
+
+.ends
+

@@ -1,0 +1,17 @@
+
+.mod_load asm-x86
+
+.section data
+
+	.dump dword (0xabcdef and 0xfedcba)
+	.dump dword (0xabcdef or 0xfedcba)
+	.dump dword (0xabcdef xor 0xfedcba)
+	.dump dword (not 0xfedcba)
+
+	.define a eax + 5
+
+	.dump dword (a = eax + 5)
+	.dump dword (a = ebx + 5)
+
+.ends
+

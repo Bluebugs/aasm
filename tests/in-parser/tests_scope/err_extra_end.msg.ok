@@ -1,0 +1,9 @@
+ [Warning] tests_scope/err_extra_end.aam:11: function `main' defined but not used
+ [Warning] tests_scope/err_extra_end.aam:12: macro `mac_proc' defined but not used
+ [ Error ] tests_scope/err_extra_end.aam:15: no macro to end
+ [ Error ] tests_scope/err_extra_end.aam:17: no function to end
+ [Warning] tests_scope/err_extra_end.aam:19: macro `mac_section' defined but not used
+ [ Error ] tests_scope/err_extra_end.aam:22: no macro to end
+ [ Error ] tests_scope/err_extra_end.aam:25: no section to end
+ [Warning] tests_scope/err_extra_end.aam:27: macro `mac_object' defined but not used
+ [ Error ] tests_scope/err_extra_end.aam:30: no macro to end

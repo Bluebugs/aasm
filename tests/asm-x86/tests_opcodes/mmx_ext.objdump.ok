@@ -1,0 +1,35 @@
+
+tests_opcodes/mmx_ext.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	0f f7 ca             	maskmovq %mm2,%mm1
+   3:	0f e7 18             	movntq %mm3,(%eax)
+   6:	0f e0 f7             	pavgb  %mm7,%mm6
+   9:	0f e0 08             	pavgb  (%eax),%mm1
+   c:	0f e3 ec             	pavgw  %mm4,%mm5
+   f:	0f e3 38             	pavgw  (%eax),%mm7
+  12:	0f c5 f5 07          	pextrw $0x7,%mm5,%esi
+  16:	0f c4 db 05          	pinsrw $0x5,%ebx,%mm3
+  1a:	0f c4 18 05          	pinsrw $0x5,(%eax),%mm3
+  1e:	0f ee d7             	pmaxsw %mm7,%mm2
+  21:	0f ee 08             	pmaxsw (%eax),%mm1
+  24:	0f de d7             	pmaxub %mm7,%mm2
+  27:	0f de 08             	pmaxub (%eax),%mm1
+  2a:	0f ea d7             	pminsw %mm7,%mm2
+  2d:	0f ea 08             	pminsw (%eax),%mm1
+  30:	0f da d7             	pminub %mm7,%mm2
+  33:	0f da 08             	pminub (%eax),%mm1
+  36:	0f d7 d4             	pmovmskb %mm4,%edx
+  39:	0f e4 d4             	pmulhuw %mm4,%mm2
+  3c:	0f e4 10             	pmulhuw (%eax),%mm2
+  3f:	0f 18 00             	prefetchnta (%eax)
+  42:	0f 18 08             	prefetcht0 (%eax)
+  45:	0f 18 10             	prefetcht1 (%eax)
+  48:	0f 18 18             	prefetcht2 (%eax)
+  4b:	0f f6 dc             	psadbw %mm4,%mm3
+  4e:	0f f6 18             	psadbw (%eax),%mm3
+  51:	0f 70 cb 07          	pshufw $0x7,%mm3,%mm1
+  55:	0f 70 08 07          	pshufw $0x7,(%eax),%mm1
+  59:	0f ae f8             	sfence 

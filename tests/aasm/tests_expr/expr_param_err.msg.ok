@@ -1,0 +1,5 @@
+ [ Error ] tests_expr/expr_param_err.aam:10: non expression symbol `printf' used with parameters
+ [ Error ] tests_expr/expr_param_err.aam:13: unsubstitued expression parameter (symbol need more parameters ?)
+ [ Error ] tests_expr/expr_param_err.aam:16: more parameters excepected for symbol `D'
+ [ Error ] tests_expr/expr_param_err.aam:16: unsubstitued expression parameter (symbol need more parameters ?)
+ [ Error ] tests_expr/expr_param_err.aam:20: too many parameters for `A' symbol

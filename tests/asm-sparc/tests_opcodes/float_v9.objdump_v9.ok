@@ -1,0 +1,32 @@
+
+tests_opcodes/float_v9.o:     file format elf64-sparc
+tests_opcodes/float_v9.o
+architecture: sparc:v9, flags 0x00000010:
+HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000030  0000000000000000  0000000000000000  000001c0  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000077  0000000000000000  0000000000000000  0000021a  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    d  .text	0000000000000000 
+
+
+Disassembly of section .text:
+
+0000000000000000 <.text>:
+   0:	81 a8 4a 24 	fcmps  %f1, %f4
+   4:	81 a8 8a 44 	fcmpd  %f2, %f4
+   8:	81 a8 0a 64 	fcmpq  %f0, %f4
+   c:	87 a8 4a 24 	fcmps  %fcc3, %f1, %f4
+  10:	87 a8 8a 44 	fcmpd  %fcc3, %f2, %f4
+  14:	87 a8 0a 64 	fcmpq  %fcc3, %f0, %f4
+  18:	81 a8 4a a4 	fcmpes  %f1, %f4
+  1c:	81 a8 8a c4 	fcmped  %f2, %f4
+  20:	81 a8 0a e4 	fcmpeq  %f0, %f4
+  24:	87 a8 4a a4 	fcmpes  %fcc3, %f1, %f4
+  28:	87 a8 8a c4 	fcmped  %fcc3, %f2, %f4
+  2c:	87 a8 0a e4 	fcmpeq  %fcc3, %f0, %f4

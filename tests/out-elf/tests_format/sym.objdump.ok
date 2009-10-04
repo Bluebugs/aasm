@@ -1,0 +1,45 @@
+
+tests_format/sym.o:     file format elf32-i386
+tests_format/sym.o
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000a  00000000  00000000  00000174  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000007  00000000  00000000  0000017e  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .comment      00000071  00000000  00000000  000001bf  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .data	00000000 
+00000000 l    d  .text	00000000 
+00000000 l     O .data	00000000 str_local
+00000006 l     F .text	00000001 sub
+00000000 g     F .text	00000006 main
+00000005 g     O .data	00000000 str_global
+
+
+Contents of section .data:
+ 0000 74657374 00746573 7400               test.test.      
+Contents of section .text:
+ 0000 e8010000 00c3c3                      .......         
+Contents of section .comment:
+ 0000 41737365 6d626c65 64207769 74683a20  Assembled with: 
+ 0010 4141534d 20302e39 2e302c20 47504c20  AASM 0.9.0, GPL 
+ 0020 41647661 6e636564 20417373 656d626c  Advanced Assembl
+ 0030 65722e20 4f626a65 63743a20 74657374  er. Object: test
+ 0040 735f666f 726d6174 2f73796d 2e20436f  s_format/sym. Co
+ 0050 70797269 6768743a 206e6f6e 652e2044  pyright: none. D
+ 0060 65736372 69707469 6f6e3a20 6e6f6e65  escription: none
+ 0070 00                                   .               
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e8 01 00 00 00       	call   6 <sub>
+   5:	c3                   	ret    
+
+00000006 <sub>:
+   6:	c3                   	ret    

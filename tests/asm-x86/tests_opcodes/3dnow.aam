@@ -1,0 +1,16 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+	.mod_asm mode 32bits
+	.mod_asm ext 3dnow
+
+	syscall
+	sysret
+
+.ends
+

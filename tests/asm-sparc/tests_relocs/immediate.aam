@@ -1,0 +1,35 @@
+
+.mod_load asm-sparc
+.mod_load out-elf32
+
+.section code .text
+
+	sethi 0x80, i5
+	sethi 0xff, i5
+
+	sethi 0x0, i5
+	sethi 0x1, i5
+	sethi 0x70, i5
+	sethi 0x80, i5
+	sethi 0x180, i5
+	sethi 0x1234, i5
+
+	sethi 0x3fffff, i5
+
+	sethi -0x0, i5
+
+	ldsha [o4], 120, g4
+	ldsha [o4], 4, g4
+
+	stba o3, [o5], 27
+
+	add o5, 123, o7
+	add o5, -456, o7
+
+	ld [o4 + 0x123], g4
+	ld [o4 - 0x123], g4
+	ld [0x456], g4
+	ld [-0x456], g4
+
+.ends
+

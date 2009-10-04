@@ -1,0 +1,138 @@
+
+tests_opcodes/branch.o:     file format elf32-sparc
+tests_opcodes/branch.o
+architecture: sparc, flags 0x00000010:
+HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001d8  00000000  00000000  00000124  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000075  00000000  00000000  00000326  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	10 80 00 00 	b  0x0
+   4:	10 80 00 00 	b  0x4
+   8:	00 80 00 00 	bn  0x8
+   c:	12 80 00 00 	bne  0xc
+  10:	02 80 00 00 	be  0x10
+  14:	12 80 00 00 	bne  0x14
+  18:	02 80 00 00 	be  0x18
+  1c:	14 80 00 00 	bg  0x1c
+  20:	04 80 00 00 	ble  0x20
+  24:	16 80 00 00 	bge  0x24
+  28:	06 80 00 00 	bl  0x28
+  2c:	18 80 00 00 	bgu  0x2c
+  30:	08 80 00 00 	bleu  0x30
+  34:	1a 80 00 00 	bcc  0x34
+  38:	1a 80 00 00 	bcc  0x38
+  3c:	0a 80 00 00 	bcs  0x3c
+  40:	0a 80 00 00 	bcs  0x40
+  44:	1c 80 00 00 	bpos  0x44
+  48:	0c 80 00 00 	bneg  0x48
+  4c:	1e 80 00 00 	bvc  0x4c
+  50:	0e 80 00 00 	bvs  0x50
+  54:	30 80 00 00 	b,a   0x54
+  58:	30 80 00 00 	b,a   0x58
+  5c:	20 80 00 00 	bn,a   0x5c
+  60:	32 80 00 00 	bne,a   0x60
+  64:	22 80 00 00 	be,a   0x64
+  68:	32 80 00 00 	bne,a   0x68
+  6c:	22 80 00 00 	be,a   0x6c
+  70:	34 80 00 00 	bg,a   0x70
+  74:	24 80 00 00 	ble,a   0x74
+  78:	36 80 00 00 	bge,a   0x78
+  7c:	26 80 00 00 	bl,a   0x7c
+  80:	38 80 00 00 	bgu,a   0x80
+  84:	28 80 00 00 	bleu,a   0x84
+  88:	3a 80 00 00 	bcc,a   0x88
+  8c:	3a 80 00 00 	bcc,a   0x8c
+  90:	2a 80 00 00 	bcs,a   0x90
+  94:	2a 80 00 00 	bcs,a   0x94
+  98:	3c 80 00 00 	bpos,a   0x98
+  9c:	2c 80 00 00 	bneg,a   0x9c
+  a0:	3e 80 00 00 	bvc,a   0xa0
+  a4:	2e 80 00 00 	bvs,a   0xa4
+  a8:	11 80 00 00 	fb  0xa8
+  ac:	01 80 00 00 	fbn  0xac
+  b0:	0f 80 00 00 	fbu  0xb0
+  b4:	0d 80 00 00 	fbg  0xb4
+  b8:	0b 80 00 00 	fbug  0xb8
+  bc:	09 80 00 00 	fbl  0xbc
+  c0:	07 80 00 00 	fbul  0xc0
+  c4:	05 80 00 00 	fblg  0xc4
+  c8:	03 80 00 00 	fbne  0xc8
+  cc:	13 80 00 00 	fbe  0xcc
+  d0:	15 80 00 00 	fbue  0xd0
+  d4:	17 80 00 00 	fbge  0xd4
+  d8:	19 80 00 00 	fbuge  0xd8
+  dc:	1b 80 00 00 	fble  0xdc
+  e0:	1d 80 00 00 	fbule  0xe0
+  e4:	1f 80 00 00 	fbo  0xe4
+  e8:	31 80 00 00 	fb,a   0xe8
+  ec:	21 80 00 00 	fbn,a   0xec
+  f0:	2f 80 00 00 	fbu,a   0xf0
+  f4:	2d 80 00 00 	fbg,a   0xf4
+  f8:	2b 80 00 00 	fbug,a   0xf8
+  fc:	29 80 00 00 	fbl,a   0xfc
+ 100:	27 80 00 00 	fbul,a   0x100
+ 104:	25 80 00 00 	fblg,a   0x104
+ 108:	23 80 00 00 	fbne,a   0x108
+ 10c:	33 80 00 00 	fbe,a   0x10c
+ 110:	35 80 00 00 	fbue,a   0x110
+ 114:	37 80 00 00 	fbge,a   0x114
+ 118:	39 80 00 00 	fbuge,a   0x118
+ 11c:	3b 80 00 00 	fble,a   0x11c
+ 120:	3d 80 00 00 	fbule,a   0x120
+ 124:	3f 80 00 00 	fbo,a   0x124
+ 128:	11 c0 00 00 	cb  0x128
+ 12c:	11 c0 00 00 	cb  0x12c
+ 130:	01 c0 00 00 	cbn  0x130
+ 134:	13 c0 00 00 	cb0  0x134
+ 138:	09 c0 00 00 	cb1  0x138
+ 13c:	0d c0 00 00 	cb2  0x13c
+ 140:	0f c0 00 00 	cb3  0x140
+ 144:	1b c0 00 00 	cb01  0x144
+ 148:	17 c0 00 00 	cb02  0x148
+ 14c:	15 c0 00 00 	cb03  0x14c
+ 150:	05 c0 00 00 	cb12  0x150
+ 154:	07 c0 00 00 	cb13  0x154
+ 158:	0b c0 00 00 	cb23  0x158
+ 15c:	1f c0 00 00 	cb012  0x15c
+ 160:	1d c0 00 00 	cb013  0x160
+ 164:	19 c0 00 00 	cb023  0x164
+ 168:	03 c0 00 00 	cb123  0x168
+ 16c:	31 c0 00 00 	cb,a   0x16c
+ 170:	31 c0 00 00 	cb,a   0x170
+ 174:	21 c0 00 00 	cbn,a   0x174
+ 178:	33 c0 00 00 	cb0,a   0x178
+ 17c:	29 c0 00 00 	cb1,a   0x17c
+ 180:	2d c0 00 00 	cb2,a   0x180
+ 184:	2f c0 00 00 	cb3,a   0x184
+ 188:	3b c0 00 00 	cb01,a   0x188
+ 18c:	37 c0 00 00 	cb02,a   0x18c
+ 190:	35 c0 00 00 	cb03,a   0x190
+ 194:	25 c0 00 00 	cb12,a   0x194
+ 198:	27 c0 00 00 	cb13,a   0x198
+ 19c:	2b c0 00 00 	cb23,a   0x19c
+ 1a0:	3f c0 00 00 	cb012,a   0x1a0
+ 1a4:	3d c0 00 00 	cb013,a   0x1a4
+ 1a8:	39 c0 00 00 	cb023,a   0x1a8
+ 1ac:	23 c0 00 00 	cb123,a   0x1ac
+ 1b0:	40 00 00 00 	call  0x1b0
+ 1b4:	bd c0 80 1b 	jmpl  %g2 + %i3, %fp
+ 1b8:	bd c0 80 00 	jmpl  %g2, %fp
+ 1bc:	bd c0 20 02 	jmpl  2, %fp
+ 1c0:	81 cf 00 00 	rett  %i4
+ 1c4:	81 c9 60 04 	rett  %g5 + 4
+ 1c8:	91 d0 20 0c 	ta  0xc
+ 1cc:	91 d0 c0 00 	ta  %g3
+ 1d0:	91 d6 e0 32 	ta  %i3 + 0x32
+ 1d4:	91 d0 c0 07 	ta  %g3 + %g7

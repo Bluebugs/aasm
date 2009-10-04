@@ -1,0 +1,3 @@
+ [ Error ] tests_parse/err_label.aam:2: unknown directive `.invalid_directive'
+ [ Error ] tests_parse/err_label.aam:7: no section defined before `lbl' label
+ [ Error ] tests_parse/err_label.aam:13: invalid label name `label&'

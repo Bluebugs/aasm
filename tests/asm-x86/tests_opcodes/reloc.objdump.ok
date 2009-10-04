@@ -1,0 +1,10 @@
+
+tests_opcodes/reloc.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <label_a-0x7>:
+   0:	8b 04 4d 00 00 00 00 	mov    0x0(,%ecx,2),%eax
+
+00000007 <label_a>:
+   7:	90 90                                               ..

@@ -1,0 +1,3 @@
+ [ Error ] tests_error/invalid_form.aam:13: x86: no matching `mov' form found
+ [ Error ] tests_error/invalid_form.aam:16: x86: no matching `movzx' form found
+ [ Error ] tests_error/invalid_form.aam:19: x86: no matching `add' form found

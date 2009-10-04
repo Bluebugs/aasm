@@ -1,0 +1,14 @@
+
+tests_opcodes/mem_size.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	8b 80 05 00 00 00    	mov    0x5(%eax),%eax
+   6:	8b 80 0a 00 00 00    	mov    0xa(%eax),%eax
+   c:	8b 40 05             	mov    0x5(%eax),%eax
+   f:	8b 80 0a 00 00 00    	mov    0xa(%eax),%eax
+  15:	8b 80 0a 00 00 00    	mov    0xa(%eax),%eax
+  1b:	8b 40 0a             	mov    0xa(%eax),%eax
+  1e:	8b 40 0a             	mov    0xa(%eax),%eax
+  21:	8b 40 0a             	mov    0xa(%eax),%eax

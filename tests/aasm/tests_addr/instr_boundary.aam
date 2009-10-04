@@ -1,0 +1,37 @@
+
+.mod_load asm-x86
+.obj_base 0x10
+
+.section code .text
+
+	.section_align 32
+	.section_base 0x20
+	.mod_asm mode 32bits
+
+	.align boundary 16
+	label_start:
+	nop
+
+	.align boundary 4
+	label_middle:
+	nop
+
+	.align boundary 8
+	label_end:
+
+.ends
+
+.section data .data
+
+	.section_base 0x80
+	.mod_asm mode 32bits
+
+	.dump dword .text
+	.dump dword .text:label_start
+	.dump dword .text:label_middle
+	.dump dword .text:label_end
+
+	.dump dword .data
+
+.ends
+

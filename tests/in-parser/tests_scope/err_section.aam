@@ -1,0 +1,8 @@
+
+
+.section code .text
+
+	mov eax, .data:truc
+
+.ends
+

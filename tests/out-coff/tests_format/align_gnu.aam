@@ -1,0 +1,23 @@
+
+.mod_load asm-x86
+
+.mod_load out-coff
+.mod_out notime
+.mod_out variant gnu
+
+.section code .text
+
+	.section_align	0x10
+
+		nop
+
+.ends
+
+.section code .textb
+
+	.section_align	0x20
+
+		nop
+
+.ends
+

@@ -1,0 +1,409 @@
+
+tests_opcodes/all.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <lbl-0x3fb>:
+   0:	37                   	aaa    
+   1:	d5 0a                	aad    $0xa
+   3:	d5 23                	aad    $0x23
+   5:	d4 0a                	aam    $0xa
+   7:	d4 21                	aam    $0x21
+   9:	3f                   	aas    
+   a:	14 03                	adc    $0x3,%al
+   c:	66 15 07 00          	adc    $0x7,%ax
+  10:	15 11 00 00 00       	adc    $0x11,%eax
+  15:	80 d3 13             	adc    $0x13,%bl
+  18:	66 81 d3 17 00       	adc    $0x17,%bx
+  1d:	81 d3 23 00 00 00    	adc    $0x23,%ebx
+  23:	80 10 29             	adcb   $0x29,(%eax)
+  26:	66 81 10 31 00       	adcw   $0x31,(%eax)
+  2b:	81 10 33 00 00 00    	adcl   $0x33,(%eax)
+  31:	66 83 d1 25          	adc    $0x25,%cx
+  35:	83 d1 37             	adc    $0x37,%ecx
+  38:	66 83 10 31          	adcw   $0x31,(%eax)
+  3c:	83 10 33             	adcl   $0x33,(%eax)
+  3f:	10 cd                	adc    %cl,%ch
+  41:	66 11 e3             	adc    %sp,%bx
+  44:	11 ca                	adc    %ecx,%edx
+  46:	10 38                	adc    %bh,(%eax)
+  48:	66 11 18             	adc    %bx,(%eax)
+  4b:	11 18                	adc    %ebx,(%eax)
+  4d:	12 08                	adc    (%eax),%cl
+  4f:	66 13 08             	adc    (%eax),%cx
+  52:	13 08                	adc    (%eax),%ecx
+  54:	04 03                	add    $0x3,%al
+  56:	66 05 07 00          	add    $0x7,%ax
+  5a:	05 11 00 00 00       	add    $0x11,%eax
+  5f:	80 c3 13             	add    $0x13,%bl
+  62:	66 81 c3 17 00       	add    $0x17,%bx
+  67:	81 c3 23 00 00 00    	add    $0x23,%ebx
+  6d:	80 00 29             	addb   $0x29,(%eax)
+  70:	66 81 00 31 00       	addw   $0x31,(%eax)
+  75:	81 00 33 00 00 00    	addl   $0x33,(%eax)
+  7b:	66 83 c1 25          	add    $0x25,%cx
+  7f:	83 c1 37             	add    $0x37,%ecx
+  82:	66 83 00 31          	addw   $0x31,(%eax)
+  86:	83 00 33             	addl   $0x33,(%eax)
+  89:	00 cd                	add    %cl,%ch
+  8b:	66 01 e3             	add    %sp,%bx
+  8e:	01 ca                	add    %ecx,%edx
+  90:	00 38                	add    %bh,(%eax)
+  92:	66 01 18             	add    %bx,(%eax)
+  95:	01 18                	add    %ebx,(%eax)
+  97:	02 08                	add    (%eax),%cl
+  99:	66 03 08             	add    (%eax),%cx
+  9c:	03 08                	add    (%eax),%ecx
+  9e:	24 03                	and    $0x3,%al
+  a0:	66 25 07 00          	and    $0x7,%ax
+  a4:	25 11 00 00 00       	and    $0x11,%eax
+  a9:	80 e3 13             	and    $0x13,%bl
+  ac:	66 81 e3 17 00       	and    $0x17,%bx
+  b1:	81 e3 23 00 00 00    	and    $0x23,%ebx
+  b7:	80 20 29             	andb   $0x29,(%eax)
+  ba:	66 81 20 31 00       	andw   $0x31,(%eax)
+  bf:	81 20 33 00 00 00    	andl   $0x33,(%eax)
+  c5:	66 83 e1 25          	and    $0x25,%cx
+  c9:	83 e1 37             	and    $0x37,%ecx
+  cc:	66 83 20 31          	andw   $0x31,(%eax)
+  d0:	83 20 33             	andl   $0x33,(%eax)
+  d3:	20 cd                	and    %cl,%ch
+  d5:	66 21 e3             	and    %sp,%bx
+  d8:	21 ca                	and    %ecx,%edx
+  da:	20 38                	and    %bh,(%eax)
+  dc:	66 21 18             	and    %bx,(%eax)
+  df:	21 18                	and    %ebx,(%eax)
+  e1:	22 08                	and    (%eax),%cl
+  e3:	66 23 08             	and    (%eax),%cx
+  e6:	23 08                	and    (%eax),%ecx
+  e8:	63 08                	arpl   %cx,(%eax)
+  ea:	63 d3                	arpl   %dx,%bx
+  ec:	66 62 30             	bound  %si,(%eax)
+  ef:	62 38                	bound  %edi,(%eax)
+  f1:	66 0f bc e8          	bsf    %ax,%bp
+  f5:	66 0f bc 20          	bsf    (%eax),%sp
+  f9:	0f bc e8             	bsf    %eax,%ebp
+  fc:	0f bc 20             	bsf    (%eax),%esp
+  ff:	66 0f bd e8          	bsr    %ax,%bp
+ 103:	66 0f bd 20          	bsr    (%eax),%sp
+ 107:	0f bd e8             	bsr    %eax,%ebp
+ 10a:	0f bd 20             	bsr    (%eax),%esp
+ 10d:	0f c9                	bswap  %ecx
+ 10f:	0f cd                	bswap  %ebp
+ 111:	66 0f a3 ee          	bt     %bp,%si
+ 115:	66 0f a3 38          	bt     %di,(%eax)
+ 119:	0f a3 eb             	bt     %ebp,%ebx
+ 11c:	0f a3 08             	bt     %ecx,(%eax)
+ 11f:	66 0f ba e3 06       	bt     $0x6,%bx
+ 124:	66 0f ba 20 05       	btw    $0x5,(%eax)
+ 129:	0f ba e3 05          	bt     $0x5,%ebx
+ 12d:	0f ba 20 05          	btl    $0x5,(%eax)
+ 131:	66 0f bb ee          	btc    %bp,%si
+ 135:	66 0f bb 38          	btc    %di,(%eax)
+ 139:	0f bb eb             	btc    %ebp,%ebx
+ 13c:	0f bb 08             	btc    %ecx,(%eax)
+ 13f:	66 0f ba fb 06       	btc    $0x6,%bx
+ 144:	66 0f ba 38 05       	btcw   $0x5,(%eax)
+ 149:	0f ba fb 05          	btc    $0x5,%ebx
+ 14d:	0f ba 38 05          	btcl   $0x5,(%eax)
+ 151:	66 0f b3 ee          	btr    %bp,%si
+ 155:	66 0f b3 38          	btr    %di,(%eax)
+ 159:	0f b3 eb             	btr    %ebp,%ebx
+ 15c:	0f b3 08             	btr    %ecx,(%eax)
+ 15f:	66 0f ba f3 06       	btr    $0x6,%bx
+ 164:	66 0f ba 30 05       	btrw   $0x5,(%eax)
+ 169:	0f ba f3 05          	btr    $0x5,%ebx
+ 16d:	0f ba 30 05          	btrl   $0x5,(%eax)
+ 171:	66 0f ab ee          	bts    %bp,%si
+ 175:	66 0f ab 38          	bts    %di,(%eax)
+ 179:	0f ab eb             	bts    %ebp,%ebx
+ 17c:	0f ab 08             	bts    %ecx,(%eax)
+ 17f:	66 0f ba eb 06       	bts    $0x6,%bx
+ 184:	66 0f ba 28 05       	btsw   $0x5,(%eax)
+ 189:	0f ba eb 05          	bts    $0x5,%ebx
+ 18d:	0f ba 28 05          	btsl   $0x5,(%eax)
+ 191:	66 ff 10             	callw  *(%eax)
+ 194:	ff 10                	call   *(%eax)
+ 196:	66 ff d3             	callw  *%bx
+ 199:	ff d6                	call   *%esi
+ 19b:	66 e8 34 12          	callw  13d3 <loop_lbl+0xe99>
+ 19f:	ff 1c 08             	lcall  *(%eax,%ecx,1)
+ 1a2:	66 ff 1c 08          	lcallw *(%eax,%ecx,1)
+ 1a6:	9a 78 56 00 00 34 12 	lcall  $0x1234,$0x5678
+ 1ad:	66 9a 78 56 34 12    	lcallw $0x1234,$0x5678
+ 1b3:	66 98                	cbtw   
+ 1b5:	98                   	cwtl   
+ 1b6:	f8                   	clc    
+ 1b7:	fc                   	cld    
+ 1b8:	fa                   	cli    
+ 1b9:	0f 06                	clts   
+ 1bb:	f5                   	cmc    
+ 1bc:	66 0f 44 0c 95 00 00 	cmove  0x0(,%edx,4),%cx
+ 1c3:	00 00 
+ 1c5:	66 0f 44 df          	cmove  %di,%bx
+ 1c9:	67 0f 44 08          	addr16 cmove (%bx,%si),%ecx
+ 1cd:	0f 44 df             	cmove  %edi,%ebx
+ 1d0:	0f 47 df             	cmova  %edi,%ebx
+ 1d3:	0f 43 df             	cmovae %edi,%ebx
+ 1d6:	0f 42 df             	cmovb  %edi,%ebx
+ 1d9:	0f 46 df             	cmovbe %edi,%ebx
+ 1dc:	0f 42 df             	cmovb  %edi,%ebx
+ 1df:	0f 44 df             	cmove  %edi,%ebx
+ 1e2:	0f 4f df             	cmovg  %edi,%ebx
+ 1e5:	0f 4d df             	cmovge %edi,%ebx
+ 1e8:	0f 4c df             	cmovl  %edi,%ebx
+ 1eb:	0f 4e df             	cmovle %edi,%ebx
+ 1ee:	0f 46 df             	cmovbe %edi,%ebx
+ 1f1:	0f 42 df             	cmovb  %edi,%ebx
+ 1f4:	0f 47 df             	cmova  %edi,%ebx
+ 1f7:	0f 43 df             	cmovae %edi,%ebx
+ 1fa:	0f 47 df             	cmova  %edi,%ebx
+ 1fd:	0f 43 df             	cmovae %edi,%ebx
+ 200:	0f 45 df             	cmovne %edi,%ebx
+ 203:	0f 4e df             	cmovle %edi,%ebx
+ 206:	0f 4c df             	cmovl  %edi,%ebx
+ 209:	0f 4d df             	cmovge %edi,%ebx
+ 20c:	0f 4f df             	cmovg  %edi,%ebx
+ 20f:	0f 41 df             	cmovno %edi,%ebx
+ 212:	0f 4b df             	cmovnp %edi,%ebx
+ 215:	0f 49 df             	cmovns %edi,%ebx
+ 218:	0f 45 df             	cmovne %edi,%ebx
+ 21b:	0f 40 df             	cmovo  %edi,%ebx
+ 21e:	0f 4a df             	cmovp  %edi,%ebx
+ 221:	0f 4a df             	cmovp  %edi,%ebx
+ 224:	0f 4b df             	cmovnp %edi,%ebx
+ 227:	0f 48 df             	cmovs  %edi,%ebx
+ 22a:	3c 03                	cmp    $0x3,%al
+ 22c:	66 3d 07 00          	cmp    $0x7,%ax
+ 230:	3d 11 00 00 00       	cmp    $0x11,%eax
+ 235:	80 fb 13             	cmp    $0x13,%bl
+ 238:	66 81 fb 17 00       	cmp    $0x17,%bx
+ 23d:	81 fb 23 00 00 00    	cmp    $0x23,%ebx
+ 243:	80 38 29             	cmpb   $0x29,(%eax)
+ 246:	66 81 38 31 00       	cmpw   $0x31,(%eax)
+ 24b:	81 38 33 00 00 00    	cmpl   $0x33,(%eax)
+ 251:	66 83 f9 25          	cmp    $0x25,%cx
+ 255:	83 f9 37             	cmp    $0x37,%ecx
+ 258:	66 83 38 31          	cmpw   $0x31,(%eax)
+ 25c:	83 38 33             	cmpl   $0x33,(%eax)
+ 25f:	38 cd                	cmp    %cl,%ch
+ 261:	66 39 e3             	cmp    %sp,%bx
+ 264:	39 ca                	cmp    %ecx,%edx
+ 266:	38 38                	cmp    %bh,(%eax)
+ 268:	66 39 18             	cmp    %bx,(%eax)
+ 26b:	39 18                	cmp    %ebx,(%eax)
+ 26d:	3a 08                	cmp    (%eax),%cl
+ 26f:	66 3b 08             	cmp    (%eax),%cx
+ 272:	3b 08                	cmp    (%eax),%ecx
+ 274:	a6                   	cmpsb  %es:(%edi),%ds:(%esi)
+ 275:	66 a7                	cmpsw  %es:(%edi),%ds:(%esi)
+ 277:	a7                   	cmpsl  %es:(%edi),%ds:(%esi)
+ 278:	0f b0 f1             	cmpxchg %dh,%cl
+ 27b:	0f b0 b6 06 00 00 00 	cmpxchg %dh,0x6(%esi)
+ 282:	66 0f b1 d1          	cmpxchg %dx,%cx
+ 286:	66 0f b1 9e 06 00 00 	cmpxchg %bx,0x6(%esi)
+ 28d:	00 
+ 28e:	0f b1 f2             	cmpxchg %esi,%edx
+ 291:	0f b1 ae 06 00 00 00 	cmpxchg %ebp,0x6(%esi)
+ 298:	0f c7 0a             	cmpxchg8b (%edx)
+ 29b:	0f a2                	cpuid  
+ 29d:	66 99                	cwtd   
+ 29f:	99                   	cltd   
+ 2a0:	27                   	daa    
+ 2a1:	2f                   	das    
+ 2a2:	fe 0a                	decb   (%edx)
+ 2a4:	66 ff 0a             	decw   (%edx)
+ 2a7:	ff 0a                	decl   (%edx)
+ 2a9:	fe cb                	dec    %bl
+ 2ab:	66 49                	dec    %cx
+ 2ad:	4a                   	dec    %edx
+ 2ae:	f6 32                	divb   (%edx)
+ 2b0:	66 f7 32             	divw   (%edx)
+ 2b3:	f7 32                	divl   (%edx)
+ 2b5:	f6 f3                	div    %bl
+ 2b7:	66 f7 f1             	div    %cx
+ 2ba:	f7 f2                	div    %edx
+ 2bc:	c8 2d 00 04          	enter  $0x2d,$0x4
+ 2c0:	f4                   	hlt    
+ 2c1:	f6 3a                	idivb  (%edx)
+ 2c3:	66 f7 3a             	idivw  (%edx)
+ 2c6:	f7 3a                	idivl  (%edx)
+ 2c8:	f6 fb                	idiv   %bl
+ 2ca:	66 f7 f9             	idiv   %cx
+ 2cd:	f7 fa                	idiv   %edx
+ 2cf:	f6 2a                	imulb  (%edx)
+ 2d1:	66 f7 2a             	imulw  (%edx)
+ 2d4:	f7 2a                	imull  (%edx)
+ 2d6:	f6 eb                	imul   %bl
+ 2d8:	66 f7 e9             	imul   %cx
+ 2db:	f7 ea                	imul   %edx
+ 2dd:	66 0f af d8          	imul   %ax,%bx
+ 2e1:	66 0f af 0a          	imul   (%edx),%cx
+ 2e5:	0f af d8             	imul   %eax,%ebx
+ 2e8:	0f af 0a             	imul   (%edx),%ecx
+ 2eb:	66 6b d8 05          	imul   $0x5,%ax,%bx
+ 2ef:	66 6b 0a fb          	imul   $0xfffffffb,(%edx),%cx
+ 2f3:	6b d8 05             	imul   $0x5,%eax,%ebx
+ 2f6:	6b 0a fb             	imul   $0xfffffffb,(%edx),%ecx
+ 2f9:	66 69 d8 05 00       	imul   $0x5,%ax,%bx
+ 2fe:	66 69 0a fb ff       	imul   $0xfffb,(%edx),%cx
+ 303:	69 d8 05 00 00 00    	imul   $0x5,%eax,%ebx
+ 309:	69 0a fb ff ff ff    	imul   $0xfffffffb,(%edx),%ecx
+ 30f:	fe 02                	incb   (%edx)
+ 311:	66 ff 02             	incw   (%edx)
+ 314:	ff 02                	incl   (%edx)
+ 316:	fe c3                	inc    %bl
+ 318:	66 41                	inc    %cx
+ 31a:	42                   	inc    %edx
+ 31b:	ec                   	in     (%dx),%al
+ 31c:	66 ed                	in     (%dx),%ax
+ 31e:	ed                   	in     (%dx),%eax
+ 31f:	e4 45                	in     $0x45,%al
+ 321:	66 e5 45             	in     $0x45,%ax
+ 324:	e5 45                	in     $0x45,%eax
+ 326:	6c                   	insb   (%dx),%es:(%edi)
+ 327:	66 6d                	insw   (%dx),%es:(%edi)
+ 329:	6d                   	insl   (%dx),%es:(%edi)
+ 32a:	cc                   	int3   
+ 32b:	cd aa                	int    $0xaa
+ 32d:	ce                   	into   
+ 32e:	0f 08                	invd   
+ 330:	0f 01 b9 04 00 00 00 	invlpg 0x4(%ecx)
+ 337:	cf                   	iret   
+ 338:	66 0f 87 be 00       	data16 ja 3fb <lbl>
+ 33d:	66 0f 83 b9 00       	data16 jae 3fb <lbl>
+ 342:	66 0f 82 b4 00       	data16 jb 3fb <lbl>
+ 347:	66 0f 86 af 00       	data16 jbe 3fb <lbl>
+ 34c:	66 0f 82 aa 00       	data16 jb 3fb <lbl>
+ 351:	66 0f 84 a5 00       	data16 je 3fb <lbl>
+ 356:	66 0f 8f a0 00       	data16 jg 3fb <lbl>
+ 35b:	66 0f 8d 9b 00       	data16 jge 3fb <lbl>
+ 360:	66 0f 8c 96 00       	data16 jl 3fb <lbl>
+ 365:	66 0f 8e 91 00       	data16 jle 3fb <lbl>
+ 36a:	66 0f 86 8c 00       	data16 jbe 3fb <lbl>
+ 36f:	66 0f 82 87 00       	data16 jb 3fb <lbl>
+ 374:	66 0f 87 82 00       	data16 ja 3fb <lbl>
+ 379:	66 0f 83 7d 00       	data16 jae 3fb <lbl>
+ 37e:	66 0f 87 78 00       	data16 ja 3fb <lbl>
+ 383:	0f 87 72 00 00 00    	ja     3fb <lbl>
+ 389:	0f 83 6c 00 00 00    	jae    3fb <lbl>
+ 38f:	0f 82 66 00 00 00    	jb     3fb <lbl>
+ 395:	0f 86 60 00 00 00    	jbe    3fb <lbl>
+ 39b:	0f 82 5a 00 00 00    	jb     3fb <lbl>
+ 3a1:	0f 84 54 00 00 00    	je     3fb <lbl>
+ 3a7:	0f 8f 4e 00 00 00    	jg     3fb <lbl>
+ 3ad:	0f 8d 48 00 00 00    	jge    3fb <lbl>
+ 3b3:	0f 8c 42 00 00 00    	jl     3fb <lbl>
+ 3b9:	0f 8e 3c 00 00 00    	jle    3fb <lbl>
+ 3bf:	0f 86 36 00 00 00    	jbe    3fb <lbl>
+ 3c5:	0f 82 30 00 00 00    	jb     3fb <lbl>
+ 3cb:	0f 87 2a 00 00 00    	ja     3fb <lbl>
+ 3d1:	0f 83 24 00 00 00    	jae    3fb <lbl>
+ 3d7:	0f 87 1e 00 00 00    	ja     3fb <lbl>
+ 3dd:	77 1c                	ja     3fb <lbl>
+ 3df:	73 1a                	jae    3fb <lbl>
+ 3e1:	72 18                	jb     3fb <lbl>
+ 3e3:	76 16                	jbe    3fb <lbl>
+ 3e5:	72 14                	jb     3fb <lbl>
+ 3e7:	74 12                	je     3fb <lbl>
+ 3e9:	7f 10                	jg     3fb <lbl>
+ 3eb:	7d 0e                	jge    3fb <lbl>
+ 3ed:	7c 0c                	jl     3fb <lbl>
+ 3ef:	7e 0a                	jle    3fb <lbl>
+ 3f1:	76 08                	jbe    3fb <lbl>
+ 3f3:	72 06                	jb     3fb <lbl>
+ 3f5:	77 04                	ja     3fb <lbl>
+ 3f7:	73 02                	jae    3fb <lbl>
+ 3f9:	77 00                	ja     3fb <lbl>
+
+000003fb <lbl>:
+ 3fb:	73 fe 75 fc 7e fa 7c f8 7d f6 7f f4 71 f2 7b f0     s.u.~.|.}...q.{.
+ 40b:	79 ee 75 ec 70 ea 7a e8 7a e6 7b e4 78 e2 0f 83     y.u.p.z.z.{.x...
+ 41b:	dc ff ff ff 0f 85 d6 ff ff ff 0f 8e d0 ff ff ff     ................
+ 42b:	0f 8c ca ff ff ff 0f 8d c4 ff ff ff 0f 8f be ff     ................
+ 43b:	ff ff 0f 81 b8 ff ff ff 0f 8b b2 ff ff ff 0f 89     ................
+ 44b:	ac ff ff ff 0f 85 a6 ff ff ff 0f 80 a0 ff ff ff     ................
+ 45b:	0f 8a 9a ff ff ff 0f 8a 94 ff ff ff 0f 8b 8e ff     ................
+ 46b:	ff ff 0f 88 88 ff ff ff 66 0f 83 83 ff 66 0f 85     ........f....f..
+ 47b:	7e ff 66 0f 8e 79 ff 66 0f 8c 74 ff 66 0f 8d 6f     ~.f..y.f..t.f..o
+ 48b:	ff 66 0f 8f 6a ff 66 0f 81 65 ff 66 0f 8b 60 ff     .f..j.f..e.f..`.
+ 49b:	66 0f 89 5b ff 66 0f 85 56 ff 66 0f 80 51 ff 66     f..[.f..V.f..Q.f
+ 4ab:	0f 8a 4c ff 66 0f 8a 47 ff 66 0f 8b 42 ff 66 0f     ..L.f..G.f..B.f.
+ 4bb:	88 3d ff 66 ff 20 ff 20 66 ff e3 ff e6 66 e9 34     .=.f. . f....f.4
+ 4cb:	12 ff 2c 08 66 ff 2c 08 ea 78 56 00 00 34 12 66     ..,.f.,..xV..4.f
+ 4db:	ea 78 56 34 12 9f 66 0f 02 c3 66 0f 02 1a 0f 02     .xV4..f...f.....
+ 4eb:	c3 0f 02 1a 66 c5 02 c5 02 66 0f b2 02 0f b2 02     ....f....f......
+ 4fb:	66 c4 02 c4 02 66 0f b4 02 0f b4 02 66 0f b5 02     f....f......f...
+ 50b:	0f b5 02 8d 04 11 66 8d 3c 11 67 8d 04 67 66 8d     ......f.<.g..gf.
+ 51b:	3c c9 0f 01 19 0f 01 12 0f 00 d1 67 0f 00 17 0f     <..........g....
+ 52b:	01 f2 67 0f 01 34 f0 67 66 87 07 ac 66 ad ad        ..g..4.gf...f..
+
+0000053a <loop_lbl>:
+ 53a:	e2 fe e1 fc e1 fa e0 f8 e0 f6 66 0f 03 ca 66 0f     ..........f...f.
+ 54a:	03 1e 0f 03 ca 0f 03 1e 0f 00 d9 67 0f 00 1f 88     ...........g....
+ 55a:	f8 88 e3 66 89 d8 66 89 c3 89 d8 89 c3 88 0a 66     ...f..f........f
+ 56a:	89 0a 89 0a 8a 16 66 8b 16 8b 16 b3 05 66 bb 05     ......f......f..
+ 57a:	00 bb 05 00 00 00 c6 01 05 66 c7 01 05 00 c7 01     .........f......
+ 58a:	05 00 00 00 0f 22 da 0f 20 e6 0f 23 f0 0f 21 eb     .....".. ..#..!.
+ 59a:	8e db 66 8c db 8e e9 66 8c c9 8c c9 8c af 05 00     ..f....f........
+ 5aa:	00 00 a4 66 a5 a5 66 0f be d9 0f be cd 0f bf d6     ...f..f.........
+ 5ba:	66 0f be 18 0f be 08 0f bf 10 66 0f b6 d9 0f b6     f.........f.....
+ 5ca:	cd 0f b7 d6 66 0f b6 18 0f b6 08 0f b7 10 f6 e3     ....f...........
+ 5da:	66 f7 e1 f7 e2 f6 20 66 f7 20 f7 20 f6 db 66 f7     f..... f. . ..f.
+ 5ea:	d9 f7 da f6 18 66 f7 18 f7 18 90 f6 d3 66 f7 d1     .....f.......f..
+ 5fa:	f7 d2 f6 10 66 f7 10 f7 10 0c 03 66 0d 07 00 0d     ....f......f....
+ 60a:	11 00 00 00 80 cb 13 66 81 cb 17 00 81 cb 23 00     .......f......#.
+ 61a:	00 00 80 08 29 66 81 08 31 00 81 08 33 00 00 00     ....)f..1...3...
+ 62a:	66 83 c9 25 83 c9 37 66 83 08 31 83 08 33 08 cd     f..%..7f..1..3..
+ 63a:	66 09 e3 09 ca 08 38 66 09 18 09 18 0a 08 66 0b     f.....8f......f.
+ 64a:	08 0b 08 ee 66 ef ef e6 23 66 e7 22 e7 21 6e 66     ....f...#f.".!nf
+ 65a:	6f 6f 66 8f 00 8f 00 5a 66 59 1f 07 17 0f a1 0f     oof....ZfY......
+ 66a:	a9 61 61 9d 66 ff 30 ff 30 52 66 51 1e 06 16 0f     .aa.f.0.0RfQ....
+ 67a:	a0 0f a8 6a 05 66 68 05 00 68 05 00 00 00 60 60     ...j.fh..h....``
+ 68a:	9c d0 d3 d2 d3 c0 d3 03 66 d1 d3 66 d3 d3 66 c1     ........f..f..f.
+ 69a:	d3 03 d1 d3 d3 d3 c1 d3 03 d0 db d2 db c0 db 03     ................
+ 6aa:	66 d1 db 66 d3 db 66 c1 db 03 d1 db d3 db c1 db     f..f..f.........
+ 6ba:	03 d0 c3 d2 c3 c0 c3 03 66 d1 c3 66 d3 c3 66 c1     ........f..f..f.
+ 6ca:	c3 03 d1 c3 d3 c3 c1 c3 03 d0 cb d2 cb c0 cb 03     ................
+ 6da:	66 d1 cb 66 d3 cb 66 c1 cb 03 d1 cb d3 cb c1 cb     f..f..f.........
+ 6ea:	03 0f 32 0f 33 0f 31 f3 a4 f3 a4 f3 a4 f2 a4 f2     ..2.3.1.........
+ 6fa:	a4 c3 c2 20 00 0f aa 9e d0 e3 d2 e3 c0 e3 03 66     ... ...........f
+ 70a:	d1 e3 66 d3 e3 66 c1 e3 03 d1 e3 d3 e3 c1 e3 03     ..f..f..........
+ 71a:	d0 fb d2 fb c0 fb 03 66 d1 fb 66 d3 fb 66 c1 fb     .......f..f..f..
+ 72a:	03 d1 fb d3 fb c1 fb 03 d0 e3 d2 e3 c0 e3 03 66     ...............f
+ 73a:	d1 e3 66 d3 e3 66 c1 e3 03 d1 e3 d3 e3 c1 e3 03     ..f..f..........
+ 74a:	d0 eb d2 eb c0 eb 03 66 d1 eb 66 d3 eb 66 c1 eb     .......f..f..f..
+ 75a:	03 d1 eb d3 eb c1 eb 03 1c 03 66 1d 07 00 1d 11     ..........f.....
+ 76a:	00 00 00 80 db 13 66 81 db 17 00 81 db 23 00 00     ......f......#..
+ 77a:	00 80 18 29 66 81 18 31 00 81 18 33 00 00 00 66     ...)f..1...3...f
+ 78a:	83 d9 25 83 d9 37 66 83 18 31 83 18 33 18 cd 66     ..%..7f..1..3..f
+ 79a:	19 e3 19 ca 18 38 66 19 18 19 18 1a 08 66 1b 08     .....8f......f..
+ 7aa:	1b 08 ae 66 ae ae 0f 97 00 0f 97 c1 0f 93 c1 0f     ...f............
+ 7ba:	92 c1 0f 96 c1 0f 92 c1 0f 94 c1 0f 9f c1 0f 9d     ................
+ 7ca:	c1 0f 9c c1 0f 9e c1 0f 96 c1 0f 92 c1 0f 97 c1     ................
+ 7da:	0f 93 c1 0f 97 c1 0f 93 c1 0f 95 c1 0f 9e c1 0f     ................
+ 7ea:	9c c1 0f 9d c1 0f 9f c1 0f 91 c1 0f 9b c1 0f 99     ................
+ 7fa:	c1 0f 95 c1 0f 90 c1 0f 9a c1 0f 9a c1 0f 9b c1     ................
+ 80a:	0f 98 c1 0f 01 0c 9d 00 00 00 00 0f 01 04 9d 00     ................
+ 81a:	00 00 00 66 0f a4 d9 06 66 0f a4 19 06 66 0f a5     ...f....f....f..
+ 82a:	d0 66 0f a5 10 0f a4 d9 06 0f a4 19 06 0f a5 d0     .f..............
+ 83a:	0f a5 10 66 0f ac d9 06 66 0f ac 19 06 66 0f ad     ...f....f....f..
+ 84a:	d0 66 0f ad 10 0f ac d9 06 0f ac 19 06 0f ad d0     .f..............
+ 85a:	0f ad 10 0f 00 c3 0f 00 03 0f 01 e3 0f 01 23 f9     ..............#.
+ 86a:	fd fb aa 66 ab ab 0f 00 cb 0f 00 0b 2c 03 66 2d     ...f........,.f-
+ 87a:	07 00 2d 11 00 00 00 80 eb 13 66 81 eb 17 00 81     ..-.......f.....
+ 88a:	eb 23 00 00 00 80 28 29 66 81 28 31 00 81 28 33     .#....()f.(1..(3
+ 89a:	00 00 00 66 83 e9 25 83 e9 37 66 83 28 31 83 28     ...f..%..7f.(1.(
+ 8aa:	33 28 cd 66 29 e3 29 ca 28 38 66 29 18 29 18 2a     3(.f).).(8f).).*
+ 8ba:	08 66 2b 08 2b 08 0f 34 a8 03 66 a9 07 00 a9 11     .f+.+..4..f.....
+ 8ca:	00 00 00 f6 c3 13 66 f7 c3 17 00 f7 c3 23 00 00     ......f......#..
+ 8da:	00 f6 00 29 66 f7 00 31 00 f7 00 33 00 00 00 84     ...)f..1...3....
+ 8ea:	cd 66 85 e3 85 ca 84 38 66 85 18 85 18 84 08 66     .f.....8f......f
+ 8fa:	85 08 85 08 0f 00 e3 0f 00 23 0f 00 eb 0f 00 2b     .........#.....+
+ 90a:	9b 0f 09 0f 30 0f c0 eb 66 0f c1 d1 0f c1 f2 0f     ....0...f.......
+ 91a:	c0 03 66 0f c1 0b 0f c1 0b 90 66 93 93 66 87 08     ..f.......f..f..
+ 92a:	66 87 08 87 c0 d7 34 03 66 35 07 00 35 11 00 00     f.....4.f5..5...
+ 93a:	00 80 f3 13 66 81 f3 17 00 81 f3 23 00 00 00 80     ....f......#....
+ 94a:	30 29 66 81 30 31 00 81 30 33 00 00 00 66 83 f1     0)f.01..03...f..
+ 95a:	25 83 f1 37 66 83 30 31 83 30 33 30 cd 66 31 e3     %..7f.01.030.f1.
+ 96a:	31 ca 30 38 66 31 18 31 18 32 08 66 33 08 33 08     1.08f1.1.2.f3.3.

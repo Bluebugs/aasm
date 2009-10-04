@@ -1,0 +1,58 @@
+
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	.mod_asm opcodes v8
+
+	cmp g4, g7
+	cmp i3, 0x123
+
+	jmp g3 + 5
+	calla g3 + 5
+
+	ret
+	retl
+
+	tst g5
+
+	restore
+	save
+
+	not i5, g3
+	not o6
+
+	neg i5, g3
+	neg o6
+
+	inc g4
+	inc 0x43, i2
+	inccc g4
+	inccc 0x43, i2
+
+	dec g4
+	dec 0x43, i2
+	deccc g4
+	deccc 0x43, i2
+
+	btst g4, o5
+	btst 0x45, i1
+	bset g4, o5
+	bset 0x45, i1
+	bclr g4, o5
+	bclr 0x45, i1
+	btog g4, o5
+	btog 0x45, i1
+
+	clr g5
+	clr [g4 + 3]
+	clrb [g4 + 3]
+	clrh [g4 + 3]
+
+	mov i4, o5
+	mov 0x123, o5
+
+.ends
+

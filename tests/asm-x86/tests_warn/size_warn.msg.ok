@@ -1,0 +1,6 @@
+ [Warning] tests_warn/size_warn.aam:4: binary: no base address defined for `.text' section
+ [Warning] tests_warn/size_warn.aam:6: x86: cpu size mode undefined before instruction, 32 bits mode assumed
+ [Warning] tests_warn/size_warn.aam:6: x86: byte value could be used instead of dword value
+ [Warning] tests_warn/size_warn.aam:7: x86: byte value could be used instead of dword value
+ [Warning] tests_warn/size_warn.aam:8: x86: byte value could be used instead of dword value
+ [Warning] tests_warn/size_warn.aam:17: x86: byte value could be used instead of dword value

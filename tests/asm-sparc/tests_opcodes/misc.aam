@@ -1,0 +1,25 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+
+	swapa [i2], 0, i3
+	swap [o5], g1
+
+	sethi 0, i5
+	nop
+
+	save i4, o3, g7
+	save i2, 0, o1
+	restore i4, o3, g7
+	restore i2, 0, o1
+	stbar
+	flush i3 + g4
+
+	cpop1 0x11, c2, c5, c13
+	cpop2 0x11, c2, c5, c13
+
+.ends
+

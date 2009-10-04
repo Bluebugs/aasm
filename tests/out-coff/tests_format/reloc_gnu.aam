@@ -1,0 +1,38 @@
+
+.mod_load asm-x86
+
+.mod_load out-coff
+.mod_out notime
+.mod_out variant gnu
+
+.section data .data
+
+	.dump dword str_local
+	.dump dword (str_local + 4)
+	.dump dword (str_local - 4)
+
+	.string str_local "test\0"
+
+	.string str_global "test\0"
+	.export str_global
+
+.ends
+
+.section code .text
+
+	.proc main
+		.export main
+
+		call dword sub
+		ret
+	.endp
+
+	.proc sub
+		mov eax, .data:str_global
+		mov ebx, .data:str_global + 5
+		mov ecx, .data:str_global + (.data:str_global - .data:str_local)
+		ret
+	.endp
+
+.ends
+

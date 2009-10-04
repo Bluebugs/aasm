@@ -1,0 +1,43 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+	.mod_asm mode 32bits
+	.mod_asm ext mmxext
+
+	maskmovq mm1, mm2
+	movntq [eax], mm3
+	pavgb mm6, mm7
+	pavgb mm1, [eax]
+	pavgw mm5, mm4
+	pavgw mm7, [eax]
+	pextrw esi, mm5, 7
+	pinsrw mm3, ebx, 5
+	pinsrw mm3, [eax], 5
+	pmaxsw mm2, mm7
+	pmaxsw mm1, [eax]
+	pmaxub mm2, mm7
+	pmaxub mm1, [eax]
+	pminsw mm2, mm7
+	pminsw mm1, [eax]
+	pminub mm2, mm7
+	pminub mm1, [eax]
+	pmovmskb edx, mm4
+	pmulhuw mm2, mm4
+	pmulhuw mm2, [eax]
+	prefetchnta dword [eax]
+	prefetch0 word [eax]
+	prefetch1 word [eax]
+	prefetch2 word [eax]
+	psadbw mm3, mm4
+	psadbw mm3, [eax]
+	pshufw mm1, mm3, 7
+	pshufw mm1, [eax], 7
+	sfence
+
+.ends
+

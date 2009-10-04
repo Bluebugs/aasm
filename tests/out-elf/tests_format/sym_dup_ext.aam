@@ -1,0 +1,18 @@
+
+.section code .text
+
+	.proc main
+		.export main
+		label:
+		.extern ext_label
+		ret
+	.endp
+
+	.proc f1
+		.extern ext_label
+		.extern ext_label
+		nop
+	.endp
+
+.ends
+

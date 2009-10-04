@@ -1,0 +1,13 @@
+ [Warning] tests_parse/err_scan.aam:10: empty quoted value (zero)
+ [ Error ] tests_parse/err_scan.aam:18: .string directive with zero sized string
+ [ Error ] tests_parse/err_scan.aam:19: invalid use of .string directive
+ [ Error ] tests_parse/err_scan.aam:21: invalid use of .string directive
+ [ Error ] tests_parse/err_scan.aam:22: invalid use of .string directive
+ [Warning] tests_parse/err_scan.aam:24: invalid escape char in string (ignored)
+ [ Error ] tests_parse/err_scan.aam:24: .string directive with zero sized string
+ [Warning] tests_parse/err_scan.aam:25: invalid escape char in string (ignored)
+ [ Error ] tests_parse/err_scan.aam:25: .string directive with zero sized string
+ [Warning] tests_parse/err_scan.aam:26: invalid escape char in string (ignored)
+ [ Error ] tests_parse/err_scan.aam:27: invalid use of .string directive
+ [ Error ] tests_parse/err_scan.aam:28: invalid use of .string directive
+ [ Error ] tests_parse/err_scan.aam:29: invalid use of .string directive

@@ -1,0 +1,28 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	.mod_asm opcodes v9
+
+	; v9 opcodes
+
+	fcmps fcc0, f1, f4
+	fcmpd fcc0, f2, f4
+	fcmpq fcc0, f0, f4
+
+	fcmps fcc3, f1, f4
+	fcmpd fcc3, f2, f4
+	fcmpq fcc3, f0, f4
+
+	fcmpes fcc0, f1, f4
+	fcmped fcc0, f2, f4
+	fcmpeq fcc0, f0, f4
+
+	fcmpes fcc3, f1, f4
+	fcmped fcc3, f2, f4
+	fcmpeq fcc3, f0, f4
+
+.ends
+

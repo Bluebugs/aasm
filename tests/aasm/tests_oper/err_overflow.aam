@@ -1,0 +1,14 @@
+
+
+.section data .data
+
+	.define a 0xffffffffffffffffffffffffffffffff
+	.dump oword (a * 1)
+	.dump oword (a + 0)
+
+	.dump oword (a * 2)
+	.dump oword (a + 1)
+	.dump oword -a
+
+.ends
+

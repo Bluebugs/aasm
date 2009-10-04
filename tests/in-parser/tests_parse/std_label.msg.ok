@@ -1,0 +1,9 @@
+ [Warning] tests_parse/std_label.aam:4: label `lbl0' defined but not used
+ [Warning] tests_parse/std_label.aam:6: label `lbl1' defined but not used
+ [Warning] tests_parse/std_label.aam:8: x86: cpu size mode undefined before instruction, 32 bits mode assumed
+ [Warning] tests_parse/std_label.aam:10: label `lbl2' defined but not used
+ [Warning] tests_parse/std_label.aam:12: label `lbl3' defined but not used
+ [Warning] tests_parse/std_label.aam:12: label `lbl4' defined but not used
+ [Warning] tests_parse/std_label.aam:14: label `end_lbl' defined but not used
+ [Warning] binary: object base address set to zero
+ [Warning] tests_parse/std_label.aam:2: binary: no base address defined for `.text' section

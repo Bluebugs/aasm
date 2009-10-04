@@ -1,0 +1,2 @@
+ [ Error ] tests_scope/err_section_noend.aam:12: previous section `.text' not ended
+ [ Error ] tests_scope/err_section_noend.aam:12: section `.textb' not ended at end of file

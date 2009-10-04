@@ -1,0 +1,20 @@
+
+
+.section code .text
+
+	.macro mac
+		nop
+	.endm
+
+	add eax, eax
+	@mac
+
+	label: label2: label3:
+	sub eax, eax
+
+	jmp label
+	jmp label2
+	jmp label3
+
+.ends
+

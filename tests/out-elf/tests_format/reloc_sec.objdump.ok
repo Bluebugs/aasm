@@ -1,0 +1,47 @@
+
+tests_format/reloc_sec.o:     file format elf32-i386
+tests_format/reloc_sec.o
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000a  00000000  00000000  00000174  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000014  00000000  00000000  0000017e  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .comment      00000077  00000000  00000000  000001cc  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .data	00000000 
+00000000 l    d  .text	00000000 
+00000000 l     O .data	00000000 str1
+00000005 l     O .data	00000000 str2
+
+
+Contents of section .data:
+ 0000 74657374 00746573 7400               test.test.      
+Contents of section .text:
+ 0000 b8000000 00bb0000 0000b905 000000ba  ................
+ 0010 05000000                             ....            
+Contents of section .comment:
+ 0000 41737365 6d626c65 64207769 74683a20  Assembled with: 
+ 0010 4141534d 20302e39 2e302c20 47504c20  AASM 0.9.0, GPL 
+ 0020 41647661 6e636564 20417373 656d626c  Advanced Assembl
+ 0030 65722e20 4f626a65 63743a20 74657374  er. Object: test
+ 0040 735f666f 726d6174 2f72656c 6f635f73  s_format/reloc_s
+ 0050 65632e20 436f7079 72696768 743a206e  ec. Copyright: n
+ 0060 6f6e652e 20446573 63726970 74696f6e  one. Description
+ 0070 3a206e6f 6e6500                      : none.         
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	b8 00 00 00 00       	mov    $0x0,%eax
+			1: R_386_32	.data
+   5:	bb 00 00 00 00       	mov    $0x0,%ebx
+			6: R_386_32	str2
+   a:	b9 05 00 00 00       	mov    $0x5,%ecx
+			b: R_386_32	.data
+   f:	ba 05 00 00 00       	mov    $0x5,%edx
+			10: R_386_32	.data

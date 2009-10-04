@@ -1,0 +1,22 @@
+
+.mod_load asm-x86
+.obj_base 0x0
+
+.section data .data
+
+	.section_base 0x10
+
+	.dump dword label_a
+	.dump dword label_b
+	.dump dword label_c
+	.dump dword label_d
+
+	.db 0
+	label_a:
+	.db 0
+
+	label_b: label_c: .db 0x90
+	label_d:
+
+.ends
+

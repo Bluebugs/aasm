@@ -1,0 +1,2 @@
+ [ Error ] tests_error/invalid_scale.aam:12: x86: invalid scale factor in address
+ [ Error ] tests_error/invalid_scale.aam:13: x86: invalid scale factor in address

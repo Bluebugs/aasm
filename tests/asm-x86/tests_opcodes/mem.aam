@@ -1,0 +1,50 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+	.mod_asm mode 32bits
+
+	mov eax, [eax]
+	mov eax, [edi]
+	mov eax, [ebp]		; ebp + 0
+	mov eax, [ebx + edi]
+	mov eax, [ebx + edi * 4]
+	mov eax, [ebx * 2 + edi]
+	mov eax, [ebx + esp]
+	mov eax, [esp + ebx]
+	mov eax, [ebp + dword 5]
+	mov eax, [ebp + byte 5]
+	mov eax, [ebp + esp]
+	mov eax, [ebx + eax + byte 5]
+	mov eax, [dword 0x01234567]
+	mov eax, [dword 0]
+	mov eax, [ecx + edx * 8 + byte 8]
+	mov eax, [esp]
+	mov eax, [esp + byte 0x55]
+
+	add dword [esi + ebp * 4], byte 5
+	sidt [edx + edx * 2]
+
+	nop
+
+	; 16 bits
+
+	mov eax, [bx]
+	mov eax, [bx + si]
+	mov eax, [bp + di - word 0x1234]
+	mov eax, [bp + di - byte 0x1]
+	mov eax, [bp]
+	mov eax, [word 0x0123]
+
+	mov eax, [bp]
+	mov eax, [bp + word 2]
+	mov eax, [bp + byte 2]
+
+	nop
+
+.ends
+

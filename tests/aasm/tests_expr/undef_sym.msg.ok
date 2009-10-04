@@ -1,0 +1,1 @@
+ [ Error ] tests_expr/undef_sym.aam:11: use of undefined symbol `sym' (reported only once)

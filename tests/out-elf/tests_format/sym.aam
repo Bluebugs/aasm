@@ -1,0 +1,27 @@
+
+.mod_load asm-x86
+
+.section data .data
+
+	.string str_local "test\0"
+
+	.string str_global "test\0"
+	.export str_global
+
+.ends
+
+.section code .text
+
+	.proc main
+		.export main
+
+		call dword sub
+		ret
+	.endp
+
+	.proc sub
+		ret
+	.endp
+
+.ends
+

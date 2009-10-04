@@ -1,0 +1,22 @@
+
+.mod_load asm-x86
+
+.mod_load out-coff
+.mod_out notime
+.mod_out variant microsoft
+
+.section code .text
+
+	.proc main
+		.export main
+
+		.extern not_in_obj
+
+		call dword not_in_obj
+		mov eax, dword not_in_obj
+
+		ret
+	.endp
+
+.ends
+

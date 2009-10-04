@@ -1,0 +1,22 @@
+
+export AASM_OUT_EXT=".o"
+export AASM_PARAM="-m out-elf32 -Wnone -q"
+export AASM_BIN=${AASM_TEST_BIN:aasm}
+export AASM_OUT_CLEAN="*.sym *.bin *.o"
+
+export TEST_BIN=${ELF32_I386_OBJDUMP:-objdump}
+export TEST_NAME="objdump"
+export TEST_BIN_PARAM="-sxd"
+
+if ! test -x "`which $TEST_BIN`" ; then
+	echo "$TEST_BIN not available, skipping tests"
+	return 1	
+fi
+
+if ! $TEST_BIN -i | grep elf32-i386 >& /dev/null ; then
+	echo "elf32-i386 objdump not available, skipping tests"
+	return 1
+fi
+
+return 0
+

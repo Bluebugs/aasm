@@ -1,0 +1,13 @@
+
+.mod_load asm-x86
+
+.section code .text
+
+	.mod_asm mode 32bits
+
+	add ebx, byte byte 5
+	mov byte eax, 5
+	mov edx, byte word dword 6
+
+.ends
+

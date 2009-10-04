@@ -1,0 +1,26 @@
+
+tests_format/reloc_rel_gnu.o:     file format coff-i386
+tests_format/reloc_rel_gnu.o
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000010  00000000  00000000  00000094  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, CODE
+SYMBOL TABLE:
+[  0](sec  1)(fl 0x00)(ty   0)(scl   3) (nx 0) 0x00000000 .text
+[  1](sec  0)(fl 0x00)(ty   0)(scl   2) (nx 0) 0x00000000 printf
+[  2](sec  1)(fl 0x00)(ty  20)(scl   2) (nx 0) 0x00000000 main
+
+
+RELOCATION RECORDS FOR [.text]:
+OFFSET   TYPE              VALUE 
+0000000b DISP32            printf
+00000006 DISP32            printf
+00000001 DISP32            printf
+
+
+Contents of section .text:
+ 0000 e8fbffff ffe8faff ffffe8ed ffffffc3  ................

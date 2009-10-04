@@ -1,0 +1,1 @@
+ [ Error ] tests_expr/already_def.aam:11: symbol `truc' already defined in current scope at tests_expr/already_def.aam:10

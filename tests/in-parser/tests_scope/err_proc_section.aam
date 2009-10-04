@@ -1,0 +1,16 @@
+
+.mod_load asm-x86
+.obj_base 0x0
+
+.proc main
+	nop
+.endp
+
+.section code .text
+
+	.section_base 0x0
+
+	nop
+
+.ends
+

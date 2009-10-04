@@ -1,0 +1,28 @@
+
+
+.mod_load out-elf32
+.mod_load asm-sparc
+
+.section code .text
+
+	.section_align 4
+
+	nop
+	nop
+
+	.mod_asm opcodes v9
+
+	std fq, [g1]
+	fdtoi f30, f0
+	fdtoi f32, f0
+	rd wim, g2
+
+	.mod_asm opcodes v8
+
+	std fq, [g1]
+	fdtoi f30, f0
+	fdtoi f32, f0
+	rd wim, g2
+
+.ends
+

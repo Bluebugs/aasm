@@ -1,0 +1,34 @@
+
+.mod_load out-binary
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+
+	.mod_asm mode 32bits
+
+	; assume disp 32
+	mov eax, [eax + 6]
+
+	; assume disp 16
+	mov eax, [bx + 6]
+
+	; assume disp 32
+	mov eax, [6]
+
+	.mod_asm mode 16bits
+
+	; assume disp 32
+	mov eax, [eax + 6]
+
+	; assume disp 16
+	mov eax, [bx + 6]
+
+	; assume disp 16
+	mov eax, [6]
+
+.ends
+

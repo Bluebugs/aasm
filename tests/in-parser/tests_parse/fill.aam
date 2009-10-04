@@ -1,0 +1,10 @@
+
+
+.section data .data
+
+	.define a 256
+
+	.fill 0x90 a
+
+.ends
+

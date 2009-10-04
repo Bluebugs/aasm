@@ -1,0 +1,32 @@
+
+tests_format/bss.o:     file format coff-i386
+tests_format/bss.o
+architecture: i386, flags 0x00000133:
+HAS_RELOC, EXEC_P, HAS_SYMS, HAS_LOCALS, D_PAGED
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000001  00000000  00000000  000000f4  2**2
+                  CONTENTS, ALLOC, LOAD, CODE
+  1 .bss          0000000a  00000000  00000001  00000000  2**2
+                  ALLOC
+  2 .data         00000004  00000000  0000000b  000000f5  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+SYMBOL TABLE:
+[  0](sec  1)(fl 0x00)(ty   0)(scl   3) (nx 0) 0x00000000 .text
+[  1](sec  2)(fl 0x00)(ty   0)(scl   3) (nx 0) 0x00000000 .bss
+[  2](sec  3)(fl 0x00)(ty   0)(scl   3) (nx 0) 0x00000000 .data
+[  3](sec  1)(fl 0x00)(ty  20)(scl   2) (nx 0) 0x00000000 main
+[  4](sec  2)(fl 0x00)(ty   0)(scl   3) (nx 0) 0x00000008 label
+
+
+RELOCATION RECORDS FOR [.data]:
+OFFSET   TYPE              VALUE 
+00000000 dir32             label+0xfffffff8
+
+
+Contents of section .text:
+ 0000 c3                                   .               
+Contents of section .data:
+ 0000 08000000                             ....            

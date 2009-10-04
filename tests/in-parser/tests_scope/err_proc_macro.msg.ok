@@ -1,0 +1,3 @@
+ [Warning] tests_scope/err_proc_macro.aam:11: macro `mac_section' defined but not used
+ [ Error ] tests_scope/err_proc_macro.aam:14: can't define function inside `mac_section' macro
+ [ Error ] tests_scope/err_proc_macro.aam:16: no function to end

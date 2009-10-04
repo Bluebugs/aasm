@@ -1,0 +1,17 @@
+
+.section code .text
+
+	lbl0:
+
+	lbl1:	;label with comment
+
+	nop
+
+	lbl2: mov eax, 6
+
+	lbl3: lbl4: ret ; multiple label on line
+
+	end_lbl:
+
+.ends
+

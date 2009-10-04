@@ -1,0 +1,14 @@
+ [Warning] tests_parse/err_num.aam:4: invalid escape char in string (ignored)
+ [ Error ] tests_parse/err_num.aam:4: no ending quote found
+ [Warning] tests_parse/err_num.aam:5: invalid escape char in string (ignored)
+ [ Error ] tests_parse/err_num.aam:6: no ending quote found
+ [ Error ] tests_parse/err_num.aam:7: no ending quote found
+ [ Error ] tests_parse/err_num.aam:8: quoted value overflow
+ [ Error ] tests_parse/err_num.aam:9: unsigned value do not fit in word destination
+ [Warning] tests_parse/err_num.aam:10: empty quoted value (zero)
+ [Warning] tests_parse/err_num.aam:11: invalid escape char in string (ignored)
+ [Warning] tests_parse/err_num.aam:12: invalid escape char in string (ignored)
+ [Warning] tests_parse/err_num.aam:12: empty quoted value (zero)
+ [ Error ] tests_parse/err_num.aam:13: unexpected token `'' in expression, binary operator expected
+ [ Error ] tests_parse/err_num.aam:14: invalid use of .dump directive
+ [ Error ] tests_parse/err_num.aam:15: invalid use of .dump directive

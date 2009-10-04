@@ -1,0 +1,62 @@
+
+tests_opcodes/arith.o:     file format elf32-sparc
+tests_opcodes/arith.o
+architecture: sparc, flags 0x00000010:
+HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000a8  00000000  00000000  00000124  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000074  00000000  00000000  000001f6  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	8e 07 00 0b 	add  %i4, %o3, %g7
+   4:	92 06 a0 00 	add  %i2, 0, %o1
+   8:	8e 87 00 0b 	addcc  %i4, %o3, %g7
+   c:	92 86 a0 00 	addcc  %i2, 0, %o1
+  10:	8e 47 00 0b 	addx  %i4, %o3, %g7
+  14:	92 46 a0 00 	addx  %i2, 0, %o1
+  18:	8e c7 00 0b 	addxcc  %i4, %o3, %g7
+  1c:	92 c6 a0 00 	addxcc  %i2, 0, %o1
+  20:	8f 07 00 0b 	taddcc  %i4, %o3, %g7
+  24:	93 06 a0 00 	taddcc  %i2, 0, %o1
+  28:	8f 17 00 0b 	taddcctv  %i4, %o3, %g7
+  2c:	93 16 a0 00 	taddcctv  %i2, 0, %o1
+  30:	8e 27 00 0b 	sub  %i4, %o3, %g7
+  34:	92 26 a0 00 	sub  %i2, 0, %o1
+  38:	8e a7 00 0b 	subcc  %i4, %o3, %g7
+  3c:	92 a6 a0 00 	subcc  %i2, 0, %o1
+  40:	8e 67 00 0b 	subx  %i4, %o3, %g7
+  44:	92 66 a0 00 	subx  %i2, 0, %o1
+  48:	8e e7 00 0b 	subxcc  %i4, %o3, %g7
+  4c:	92 e6 a0 00 	subxcc  %i2, 0, %o1
+  50:	8f 0f 00 0b 	tsubcc  %i4, %o3, %g7
+  54:	93 0e a0 00 	tsubcc  %i2, 0, %o1
+  58:	8f 1f 00 0b 	tsubcctv  %i4, %o3, %g7
+  5c:	93 1e a0 00 	tsubcctv  %i2, 0, %o1
+  60:	8f 27 00 0b 	mulscc  %i4, %o3, %g7
+  64:	93 26 a0 00 	mulscc  %i2, 0, %o1
+  68:	8e 57 00 0b 	umul  %i4, %o3, %g7
+  6c:	92 56 a0 00 	umul  %i2, 0, %o1
+  70:	8e 5f 00 0b 	smul  %i4, %o3, %g7
+  74:	92 5e a0 00 	smul  %i2, 0, %o1
+  78:	8e d7 00 0b 	umulcc  %i4, %o3, %g7
+  7c:	92 d6 a0 00 	umulcc  %i2, 0, %o1
+  80:	8e df 00 0b 	smulcc  %i4, %o3, %g7
+  84:	92 de a0 00 	smulcc  %i2, 0, %o1
+  88:	8e 77 00 0b 	udiv  %i4, %o3, %g7
+  8c:	92 76 a0 00 	udiv  %i2, 0, %o1
+  90:	8e 7f 00 0b 	sdiv  %i4, %o3, %g7
+  94:	92 7e a0 00 	sdiv  %i2, 0, %o1
+  98:	8e f7 00 0b 	udivcc  %i4, %o3, %g7
+  9c:	92 f6 a0 00 	udivcc  %i2, 0, %o1
+  a0:	8e ff 00 0b 	sdivcc  %i4, %o3, %g7
+  a4:	92 fe a0 00 	sdivcc  %i2, 0, %o1

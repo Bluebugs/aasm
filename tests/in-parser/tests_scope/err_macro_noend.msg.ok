@@ -1,0 +1,7 @@
+ [Warning] tests_scope/err_macro_noend.aam:12: function `main' defined but not used
+ [ Error ] tests_scope/err_macro_noend.aam:13: macro `mac_proc' not ended at end of `main' function
+ [Warning] tests_scope/err_macro_noend.aam:13: macro `mac_proc' defined but not used
+ [ Error ] tests_scope/err_macro_noend.aam:17: macro `mac_section' not ended at end of `.text' section
+ [Warning] tests_scope/err_macro_noend.aam:17: macro `mac_section' defined but not used
+ [ Error ] tests_scope/err_macro_noend.aam:22: macro `mac_object' not at ended of file
+ [Warning] tests_scope/err_macro_noend.aam:22: macro `mac_object' defined but not used

@@ -1,0 +1,22 @@
+
+.mod_load asm-x86
+
+.mod_load out-coff
+.mod_out notime
+.mod_out variant microsoft
+
+.section code .text
+
+	.extern printf
+
+	.proc main
+		.export main
+
+		call dword printf
+		call dword (printf + 4)
+		call dword (printf - 4)
+		ret
+	.endp
+
+.ends
+

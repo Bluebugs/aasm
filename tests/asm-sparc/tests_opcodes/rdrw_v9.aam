@@ -1,0 +1,22 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	.mod_asm opcodes v9
+
+	rd ccr, i4
+	rd asi, i4
+	rd tick, i4
+	rd pc, i4
+	rd fprs, i4
+
+	wr g3, i1, ccr
+	wr g3, i1, asi
+	wr g3, i1, tick
+	wr g3, i1, pc
+	wr g3, i1, fprs
+
+.ends
+

@@ -1,0 +1,27 @@
+
+
+.mod_load asm-x86
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+
+	nop
+
+	.proc main
+		.macro mac_proc
+			nop
+
+.ends
+
+.section code .textb
+
+	.section_base 0x10
+
+	nop
+
+	.proc mainb
+		.macro mac_procb
+			nop
+

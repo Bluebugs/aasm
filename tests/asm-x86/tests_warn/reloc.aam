@@ -1,0 +1,43 @@
+
+.mod_load out-binary
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+	.mod_asm mode 32bits
+
+	nop
+	label:
+	ret
+
+.ends
+
+.section code .textb
+
+	.section_base 0x10
+	.mod_asm mode 32bits
+
+	labelb:
+
+	; relativ relocation to other section
+	; considered as numerical value
+	jz dword .text:label
+
+	; numerical value used for relativ instruction
+	jz byte 5
+
+	; byte value could be used (direct num write)
+	jz dword 5	; numerical value used for relativ instruction
+	add eax, dword 5
+
+	; byte value could be used (detected on relativ reloc reduce)
+	jmp dword labelb
+	jz dword labelb
+	jmp word labelb
+	jz word labelb
+
+.ends
+

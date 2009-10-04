@@ -1,0 +1,36 @@
+
+.mod_load out-binary
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+
+	; 16/32 bits mode undeclared
+	nop	
+
+	; undeclared cpu instruction
+	cmovb eax, ecx
+
+	.mod_asm cpu 686
+
+	; declared cpu instruction
+	cmovb eax, ecx
+
+	; undeclared cpu extention
+	movq mm0, mm3
+
+	.mod_asm ext mmx
+
+	; declared cpu extention
+	movq mm0, mm3
+
+	.mod_asm ext none
+
+	; undeclared cpu extention
+	movq mm0, mm3
+
+.ends
+

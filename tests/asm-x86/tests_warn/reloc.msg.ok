@@ -1,0 +1,10 @@
+ [Warning] tests_warn/reloc.aam:27: x86: relative relocation to other section
+ [Warning] tests_warn/reloc.aam:27: x86: numerical value used for relativ target instruction
+ [Warning] tests_warn/reloc.aam:30: x86: numerical value used for relativ target instruction
+ [Warning] tests_warn/reloc.aam:33: x86: numerical value used for relativ target instruction
+ [Warning] tests_warn/reloc.aam:33: x86: byte value could be used instead of dword value
+ [Warning] tests_warn/reloc.aam:34: x86: byte value could be used instead of dword value
+ [Warning] tests_warn/reloc.aam:37: x86: byte value could be used instead of dword value
+ [Warning] tests_warn/reloc.aam:38: x86: byte value could be used instead of dword value
+ [Warning] tests_warn/reloc.aam:39: x86: byte value could be used instead of word value
+ [Warning] tests_warn/reloc.aam:40: x86: byte value could be used instead of word value

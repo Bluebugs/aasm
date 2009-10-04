@@ -1,0 +1,7 @@
+ [Warning] tests_scope/err_proc_noend.aam:12: function `main' defined but not used
+ [ Error ] tests_scope/err_proc_noend.aam:15: previous function `main' not ended
+ [ Error ] tests_scope/err_proc_noend.aam:15: function `sub' not ended at end of `.text' section
+ [Warning] tests_scope/err_proc_noend.aam:15: function `sub' defined but not used
+ [ Error ] tests_scope/err_proc_noend.aam:20: section `.textb' not ended at end of file
+ [ Error ] tests_scope/err_proc_noend.aam:26: function `mainb' not ended at end of `.textb' section
+ [Warning] tests_scope/err_proc_noend.aam:26: function `mainb' defined but not used

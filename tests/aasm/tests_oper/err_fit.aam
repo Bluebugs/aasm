@@ -1,0 +1,10 @@
+
+.section data .data
+
+	.dump word - 0x1
+	.dump word 0xffff
+
+	.dump word - 0x8001
+	.dump word 0x1ffff
+
+.ends

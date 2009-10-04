@@ -1,0 +1,31 @@
+
+.mod_load asm-x86
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+	.mod_asm mode 32bits
+
+	mov eax, ''
+
+.ends
+
+.section data .data
+
+	.section_base 0x40
+
+	.string ""
+	.string """
+
+	.string "\
+	.string "\"
+
+	.string "\c"
+	.string "\x"
+	.string "\xag"
+	.string "\x
+	.string "
+	.string "noend
+.ends
+

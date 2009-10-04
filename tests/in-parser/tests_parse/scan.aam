@@ -1,0 +1,25 @@
+.mod_load asm-x86
+.obj_base 0x0
+
+.section code .text
+
+        .section_base 0x0
+        .mod_asm mode 32bits
+
+        mov eax, '\x00\x12\x34'
+        mov eax, '\x12\x34'
+        mov eax, '\"\''
+
+.ends
+
+.section data .data
+
+        .section_base 0x40
+
+        .string "abcd"
+        .string "\0\a\b\t\n\v\f\r\\\'\""
+        .string "\x00\x12\x34"
+        .string "\\"
+
+.ends
+

@@ -1,0 +1,2 @@
+ [Warning] binary: object base address set to zero
+ [Warning] tests_msg/warn_align.aam:4: binary: no base address defined for `.data' section

@@ -1,0 +1,22 @@
+
+.mod_load out-binary
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+	.mod_asm mode 32bits
+
+	; invalid form based on operand count
+	mov eax
+
+	; invalid form based on size
+	movzx eax, ebx
+
+	; invalid form based on type
+	add mm0, eax
+
+.ends
+

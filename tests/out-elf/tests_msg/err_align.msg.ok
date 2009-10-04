@@ -1,0 +1,3 @@
+ [Warning] tests_msg/err_align.aam:7: section alignment isn't a power of 2
+ [Warning] binary: object base address set to zero
+ [Warning] tests_msg/err_align.aam:4: binary: no base address defined for `.text' section

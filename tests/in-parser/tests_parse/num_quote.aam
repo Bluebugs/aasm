@@ -1,0 +1,14 @@
+
+.section code
+
+	.dump dword 'truc'
+	.dump oword 'test'
+	.dump oword 'glou'
+	.dump dword '\r\n\x20'
+	.dump word '\'a'
+	.dump oword '0123456789ABCDEF'
+
+	.dump dword ('TRUC'+ 0x2020)
+
+.ends
+
