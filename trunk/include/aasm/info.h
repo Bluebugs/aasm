@@ -24,7 +24,7 @@
 
 # define AASM_PROJECT_NAME	"AASM"
 # define AASM_PROJECT_DESC	"GPL Advanced Assembler"
-# define AASM_PROJECT_VER	"0.9.0"
+# define AASM_PROJECT_VER	"0.9.1"
 
 # define AASM_AUTHOR		"Alexandre Becoulet, Cedric Bail"
 # define AASM_COPYRIGHT		"Copyright (C) 2002"

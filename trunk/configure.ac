@@ -1,9 +1,9 @@
 
-AC_INIT(aasm, 0.9.0)
+AC_INIT(aasm, 0.9.1)
 
 AC_CONFIG_AUX_DIR([build])
 
-AM_INIT_AUTOMAKE(aasm, 0.9.0)
+AM_INIT_AUTOMAKE(aasm, 0.9.1)
 AC_CONFIG_HEADERS(config.h)
 
 AC_CHECK_PROGS(GPERF, gperf, [no])
@@ -47,7 +47,7 @@ AC_CONFIG_FILES([
 ])
 
 CFLAGS+=" -Wall -Wno-unused-parameter "
-LDFLAGS+=" -version-info 0:9:0"
+LDFLAGS+=" -version-info 0:9:1"
 
 libdir="${libdir}/aasm"
 
