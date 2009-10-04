@@ -1,0 +1,30 @@
+
+tests_opcodes/rdrw_v9.o:     file format elf64-sparc
+tests_opcodes/rdrw_v9.o
+architecture: sparc:v9, flags 0x00000010:
+HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000028  0000000000000000  0000000000000000  000001c0  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000076  0000000000000000  0000000000000000  00000212  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    d  .text	0000000000000000 
+
+
+Disassembly of section .text:
+
+0000000000000000 <.text>:
+   0:	b9 40 80 00 	rd  %ccr, %i4
+   4:	b9 40 c0 00 	rd  %asi, %i4
+   8:	b9 41 00 00 	rd  %tick, %i4
+   c:	b9 41 40 00 	rd  %pc, %i4
+  10:	b9 41 80 00 	rd  %fprs, %i4
+  14:	85 80 c0 19 	wr  %g3, %i1, %ccr
+  18:	87 80 c0 19 	wr  %g3, %i1, %asi
+  1c:	89 80 c0 19 	wr  %g3, %i1, %asr4
+  20:	8b 80 c0 19 	wr  %g3, %i1, %asr5
+  24:	8d 80 c0 19 	wr  %g3, %i1, %fprs

@@ -1,0 +1,19 @@
+
+
+.mod_load asm-sparc
+.mod_load out-elf32
+
+.section code .text
+
+	; immediate write
+
+	sethi lb - la, i6
+	ldsha [o4], lb - la, g4
+
+	la:
+
+	nop
+	lb:
+
+.ends
+

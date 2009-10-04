@@ -1,0 +1,4 @@
+ [Warning] tests_opcodes/arch.aam:10: sparc: no architecture version declared before `nop' instruction
+ [Warning] tests_opcodes/arch.aam:15: sparc: `std' instruction form not available on declared architecture
+ [Warning] tests_opcodes/arch.aam:18: sparc: `rd' instruction form not available on declared architecture
+ [Warning] tests_opcodes/arch.aam:24: sparc: register not available on declared architecture

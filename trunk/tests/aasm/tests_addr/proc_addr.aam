@@ -1,0 +1,34 @@
+
+.mod_load asm-x86
+.obj_base 0x10
+
+.section code .text
+
+	.section_base 0x20
+	.mod_asm mode 32bits
+
+	label_start:
+	nop
+
+	.proc func_a
+		nop
+	.endp
+
+	label_end:
+
+.ends
+
+.section data .data
+
+	.section_base 0x80
+	.mod_asm mode 32bits
+
+	.dump dword .text
+	.dump dword .text:label_start
+	.dump dword .text:func_a
+	.dump dword .text:label_end
+
+	.dump dword .data
+
+.ends
+

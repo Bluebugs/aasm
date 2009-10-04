@@ -1,0 +1,58 @@
+[using: asm-x86] 
+-------------------------------------------------------------------------------
+                              mov instruction help
+-------------------------------------------------------------------------------
+
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0x88 
+  mov       byte word dword | reg [address] , byte word dword | reg [address] 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0xb0 
+  mov       byte word dword | reg , byte word dword | imm value 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0xc6 
+  mov       byte word dword | reg [address] , byte word dword | imm value 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0x8c 
+  mov       word dword | reg , word | cs fs gs ss ds es 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0x8c 
+  mov       word | [address] , word | cs fs gs ss ds es 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0x8e 
+  mov       word | fs gs ss ds es , word | reg [address] 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0x0f 0x22 
+  mov       dword | cr? , dword | reg 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0x0f 0x20 
+  mov       dword | reg , dword | cr? 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0x0f 0x23 
+  mov       dword | dr? , dword | reg 
+
+  desc      no description
+  instr set i386 i486 i586 i686 
+  opcode    0x0f 0x21 
+  mov       dword | reg , dword | dr? 
+
+
+[Done]

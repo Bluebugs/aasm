@@ -1,0 +1,10 @@
+
+.section data .data
+
+	.dump oword (0xaa shl -2)
+	.dump oword (0xaa shl 127)
+	.dump oword (0xaa shl 128)
+	.dump oword (0xaa shl 13654)
+
+.ends
+

@@ -1,0 +1,33 @@
+
+.mod_load asm-x86
+.obj_base 0x10
+
+.section code .text
+
+	.section_base 0x20
+	.mod_asm mode 32bits
+
+	mov %eax, 7
+	mov eax, not 5
+
+	.define sym eax
+	mov sym, 5
+
+.ends
+
+.section data .data
+
+	.section_base 0x40
+
+	.mod_asm mode 32bits
+
+	.dump dword -5
+	.dump dword (5)
+
+	label:
+
+	.dump dword .data
+	.dump dword .data:label
+
+.ends
+

@@ -1,0 +1,6 @@
+ [Warning] tests_warn/disp_size.aam:14: x86: address displacement size unknown, dword assumed
+ [Warning] tests_warn/disp_size.aam:17: x86: address displacement size unknown, word assumed
+ [Warning] tests_warn/disp_size.aam:20: x86: address displacement size unknown, dword assumed
+ [Warning] tests_warn/disp_size.aam:25: x86: address displacement size unknown, dword assumed
+ [Warning] tests_warn/disp_size.aam:28: x86: address displacement size unknown, word assumed
+ [Warning] tests_warn/disp_size.aam:31: x86: address displacement size unknown, word assumed

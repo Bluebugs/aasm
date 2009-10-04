@@ -1,0 +1,51 @@
+
+.mod_load asm-x86
+.obj_base 0x10
+
+.section code .text
+
+	.section_base 0x20
+	.mod_asm mode 32bits
+
+	label_start:
+	mov eax, 1
+
+	.align offset 7
+	.proc func_a
+		mov eax, 2
+	.endp
+
+	.align boundary 4
+	mov eax, 3
+
+	.proc func_b
+		mov eax, 4
+	.endp
+
+	mov eax, 5
+
+	.align boundary 32
+	.proc func_c
+		mov eax, 6
+	.endp
+
+	mov eax, 7
+
+	label_end:
+
+.ends
+
+.section data .data
+
+	.section_base 0x80
+	.mod_asm mode 32bits
+
+	.dump dword .text
+	.dump dword .text:label_start
+	.dump dword .text:func_a
+	.dump dword .text:label_end
+
+	.dump dword .data
+
+.ends
+

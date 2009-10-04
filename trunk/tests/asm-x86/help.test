@@ -1,0 +1,7 @@
+
+export AASM_PARAM="--instr-help mov"
+export AASM_BIN=${AASM_TEST_BIN:aasm}
+
+export TEST_BIN="true"
+export TEST_NAME="help"
+

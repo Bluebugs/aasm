@@ -1,0 +1,33 @@
+
+.mod_load asm-x86
+
+.section code .text
+
+	.mod_asm mode 32bits
+	.section_align 0x4
+
+	.proc main
+		.export main
+		.extern ext_label
+		mov eax, ext_label
+		ret
+	.endp
+
+	.proc f1
+		ext_label:
+		nop
+		.export ext_label
+	.endp
+
+	.proc f2
+		.export f2
+		.export ext_label
+		label:
+		ext_label:
+		nop
+		call dword f1
+		jmp label
+	.endp
+
+.ends
+

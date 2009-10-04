@@ -1,0 +1,64 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	.mod_asm opcodes v8
+
+	; v8 opcodes
+
+	fitos f1, f1
+	fitos f6, f1
+
+	fitod f6, f32
+	fitoq f31, f60
+
+	fstoi f1, f6
+	fdtoi f40, f11
+	fqtoi f56, f6
+
+	fstod f3, f2
+	fstoq f5, f4
+	fdtos f6, f1
+	fdtoq f8, f8
+	fqtod f12, f10
+	fqtos f40, f11
+
+	fmovs f7, f3
+	fnegs f7, f3
+	fabss f7, f3
+
+	fsqrts f1, f4
+	fsqrtd f2, f4
+	fsqrtq f0, f4
+
+	fadds f1, f4, f7
+	faddd f2, f4, f10
+	faddq f0, f4, f12
+
+	fsubs f1, f4, f7
+	fsubd f2, f4, f10
+	fsubq f0, f4, f12
+
+	fmuls f1, f4, f7
+	fmuld f2, f4, f10
+	fmulq f0, f4, f12
+
+	fsmuld f2, f6, f4
+	fdmulq f2, f6, f4
+
+	fdivs f1, f4, f7
+	fdivd f2, f4, f10
+	fdivq f0, f4, f12
+
+	fcmps f1, f4
+	fcmpd f2, f4
+	fcmpq f0, f4
+
+	fcmpes f1, f4
+	fcmped f2, f4
+	fcmpeq f0, f4
+
+.ends
+

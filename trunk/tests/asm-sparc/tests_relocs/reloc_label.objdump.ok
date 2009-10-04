@@ -1,0 +1,46 @@
+
+tests_relocs/reloc_label.o:     file format elf32-sparc
+tests_relocs/reloc_label.o
+architecture: sparc, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000028  00000000  00000000  00000174  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .textb        00000004  00000000  00000000  0000019c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000079  00000000  00000000  000001dc  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+00000000 l    d  .textb	00000000 
+00000028 l     O .text	00000000 label
+00000000 l     O .textb	00000000 label
+00000000         *UND*	00000000 printf
+
+
+Disassembly of section .text:
+
+00000000 <label-0x28>:
+   0:	10 80 00 0a 	b  28 <label>
+   4:	40 00 00 09 	call  28 <label>
+   8:	07 00 00 00 	sethi  %hi(0), %g3
+			8: R_SPARC_22	label
+   c:	88 10 20 00 	clr  %g4
+			c: R_SPARC_13	label
+  10:	01 00 00 00 	nop 
+  14:	01 00 00 00 	nop 
+  18:	10 80 00 00 	b  18 <label-0x10>
+			18: R_SPARC_WDISP22	label
+  1c:	40 00 00 00 	call  1c <label-0xc>
+			1c: R_SPARC_WDISP30	label
+  20:	07 00 00 00 	sethi  %hi(0), %g3
+			20: R_SPARC_22	label
+  24:	88 10 20 00 	clr  %g4
+			24: R_SPARC_13	label
+Disassembly of section .textb:
+
+00000000 <label>:
+   0:	01 00 00 00                                         ....

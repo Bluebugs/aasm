@@ -1,0 +1,38 @@
+
+tests_relocs/reloc_extern.o:     file format elf32-sparc
+tests_relocs/reloc_extern.o
+architecture: sparc, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000001c  00000000  00000000  0000019c  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000009  00000000  00000000  000001b8  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+  2 .comment      0000007a  00000000  00000000  00000207  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+00000000 l    d  .data	00000000 
+00000000         *UND*	00000000 printf
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	f6 03 60 00 	ld  [ %o5 ], %i3
+			0: R_SPARC_13	printf
+   4:	19 00 00 00 	sethi  %hi(0), %o4
+			4: R_SPARC_22	printf
+   8:	19 00 00 00 	sethi  %hi(0), %o4
+			8: R_SPARC_22	printf+0x1
+   c:	40 00 00 00 	call  0xc
+			c: R_SPARC_WDISP30	printf
+  10:	40 00 00 00 	call  0x10
+			10: R_SPARC_WDISP30	printf+0x1
+  14:	10 80 00 00 	b  0x14
+			14: R_SPARC_WDISP22	printf
+  18:	10 80 00 00 	b  0x18
+			18: R_SPARC_WDISP22	printf+0x1

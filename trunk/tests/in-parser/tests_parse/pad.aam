@@ -1,0 +1,16 @@
+
+
+.section data
+
+	.string "test string"
+	.pad 0 64
+
+	.define pad_val	32
+	.string "test string"
+	.pad 0x55 pad_val * 2
+
+	.string "0123456789abcdef"
+	.pad 0xaa 16
+
+.ends
+

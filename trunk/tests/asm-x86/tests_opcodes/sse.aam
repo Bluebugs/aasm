@@ -1,0 +1,198 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+        .mod_asm mode 32bits
+	.mod_asm ext sse
+
+	addps xmm3, xmm7
+	addps xmm4, [eax]
+
+	addss xmm3, xmm7
+	addss xmm4, [eax]
+
+	andnps xmm3, xmm7
+	andnps xmm4, [eax]
+
+	andps xmm3, xmm7
+	andps xmm4, [eax]
+
+	cmpeqps xmm3, xmm7
+	cmpeqps xmm4, [eax]
+
+	cmpeqss xmm3, xmm7
+	cmpeqss xmm4, [eax]
+
+	cmpleps xmm3, xmm7
+	cmpleps xmm4, [eax]
+
+	cmpless xmm3, xmm7
+	cmpless xmm4, [eax]
+
+	cmpltps xmm3, xmm7
+	cmpltps xmm4, [eax]
+
+	cmpltss xmm3, xmm7
+	cmpltss xmm4, [eax]
+
+	cmpneqps xmm3, xmm7
+	cmpneqps xmm4, [eax]
+
+	cmpneqss xmm3, xmm7
+	cmpneqss xmm4, [eax]
+
+	cmpnleps xmm3, xmm7
+	cmpnleps xmm4, [eax]
+
+	cmpnless xmm3, xmm7
+	cmpnless xmm4, [eax]
+
+	cmpnltps xmm3, xmm7
+	cmpnltps xmm4, [eax]
+
+	cmpnltss xmm3, xmm7
+	cmpnltss xmm4, [eax]
+
+	cmpordps xmm3, xmm7
+	cmpordps xmm4, [eax]
+
+	cmpordss xmm3, xmm7
+	cmpordss xmm4, [eax]
+
+	cmpps xmm3, xmm7, 4
+	cmpps xmm4, [eax], 5
+
+	cmpss xmm3, xmm7, 4
+	cmpss xmm4, [eax], 5
+
+	cmpunordps xmm3, xmm7
+	cmpunordps xmm4, [eax]
+
+	cmpunordss xmm3, xmm7
+	cmpunordss xmm4, [eax]
+
+	comiss xmm3, xmm7
+	comiss xmm4, [eax]
+
+	cvtpi2ps xmm7, mm3
+	cvtpi2ps xmm7, [eax]
+
+	cvtps2pi mm3, [eax]
+	cvtps2pi mm3, xmm5
+
+	cvtsi2ss xmm5, [eax]
+	cvtsi2ss xmm5, ecx
+
+	cvtss2si esi, [eax]
+	cvtss2si esi, xmm5
+
+	cvttps2pi mm7, [eax]
+	cvttps2pi mm7, xmm5
+
+	cvtss2si esi, [eax]
+	cvtss2si esi, xmm5
+
+	divps xmm3, xmm7
+	divps xmm4, [eax]
+
+	divss xmm3, xmm7
+	divss xmm4, [eax]
+
+	ldmxcsr [eax]
+
+	maxps xmm5, xmm7
+	maxps xmm5, [eax]
+
+	maxss xmm5, xmm7
+	maxss xmm5, [eax]
+
+	maxps xmm5, xmm7
+	maxps xmm5, [eax]
+
+	minps xmm5, xmm7
+	minps xmm5, [eax]
+
+	minss xmm5, xmm7
+	minss xmm5, [eax]
+
+	movaps xmm5, xmm7
+	movaps xmm5, [eax]
+	movaps [eax], xmm5
+
+	movhlps xmm2, xmm1
+	movlhps xmm2, xmm1
+
+	movhps xmm4, [eax]
+	movhps [eax], xmm4
+
+	movlps xmm4, [eax]
+	movlps [eax], xmm4
+
+	movmskps eax, xmm6
+
+	movntps [eax], xmm2
+
+	movss xmm5, xmm7
+	movss xmm5, [eax]
+	movss [eax], xmm5
+
+	movups xmm5, xmm7
+	movups xmm5, [eax]
+	movups [eax], xmm5
+
+	mulps xmm3, xmm7
+	mulps xmm4, [eax]
+
+	mulss xmm3, xmm7
+	mulss xmm4, [eax]
+
+	orps xmm3, xmm7
+	orps xmm4, [eax]
+
+	rcpps xmm3, xmm7
+	rcpps xmm4, [eax]
+
+	rcpss xmm3, xmm7
+	rcpss xmm4, [eax]
+
+	rsqrtps xmm3, xmm7
+	rsqrtps xmm4, [eax]
+
+	rsqrtss xmm3, xmm7
+	rsqrtss xmm4, [eax]
+
+	shufps xmm3, xmm7, 1
+	shufps xmm4, [eax], 2
+
+	sqrtps xmm3, xmm7
+	sqrtps xmm4, [eax]
+
+	sqrtss xmm3, xmm7
+	sqrtss xmm4, [eax]
+
+	stmxcsr [eax]
+
+	subps xmm3, xmm7
+	subps xmm4, [eax]
+
+	subss xmm3, xmm7
+	subss xmm4, [eax]
+
+	ucomiss xmm3, xmm7
+	ucomiss xmm4, [eax]
+
+	unpckhps xmm3, xmm7
+	unpckhps xmm4, [eax]
+
+	unpcklps xmm3, xmm7
+	unpcklps xmm4, [eax]
+
+	xorps xmm3, xmm7
+	xorps xmm4, [eax]
+
+.ends
+

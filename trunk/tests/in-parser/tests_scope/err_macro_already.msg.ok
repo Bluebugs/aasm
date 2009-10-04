@@ -1,0 +1,3 @@
+ [Warning] tests_scope/err_macro_already.aam:10: macro `a' defined but not used
+ [ Error ] tests_scope/err_macro_already.aam:13: previous macro `a' not ended
+ [Warning] tests_scope/err_macro_already.aam:13: macro `b' defined but not used

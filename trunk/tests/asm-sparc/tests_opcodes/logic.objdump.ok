@@ -1,0 +1,50 @@
+
+tests_opcodes/logic.o:     file format elf32-sparc
+tests_opcodes/logic.o
+architecture: sparc, flags 0x00000010:
+HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000078  00000000  00000000  00000124  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000074  00000000  00000000  000001c6  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	8e 0f 00 0b 	and  %i4, %o3, %g7
+   4:	92 0e a0 00 	and  %i2, 0, %o1
+   8:	8e 8f 00 0b 	andcc  %i4, %o3, %g7
+   c:	92 8e a0 00 	andcc  %i2, 0, %o1
+  10:	8e 2f 00 0b 	andn  %i4, %o3, %g7
+  14:	92 2e a0 00 	andn  %i2, 0, %o1
+  18:	8e af 00 0b 	andncc  %i4, %o3, %g7
+  1c:	92 ae a0 00 	andncc  %i2, 0, %o1
+  20:	8e 17 00 0b 	or  %i4, %o3, %g7
+  24:	92 16 a0 00 	mov  %i2, %o1
+  28:	8e 97 00 0b 	orcc  %i4, %o3, %g7
+  2c:	92 96 a0 00 	orcc  %i2, 0, %o1
+  30:	8e 37 00 0b 	orn  %i4, %o3, %g7
+  34:	92 36 a0 00 	orn  %i2, 0, %o1
+  38:	8e b7 00 0b 	orncc  %i4, %o3, %g7
+  3c:	92 b6 a0 00 	orncc  %i2, 0, %o1
+  40:	8e 1f 00 0b 	xor  %i4, %o3, %g7
+  44:	92 1e a0 00 	xor  %i2, 0, %o1
+  48:	8e 9f 00 0b 	xorcc  %i4, %o3, %g7
+  4c:	92 9e a0 00 	xorcc  %i2, 0, %o1
+  50:	8e 3f 00 0b 	xnor  %i4, %o3, %g7
+  54:	92 3e a0 00 	xnor  %i2, 0, %o1
+  58:	8e bf 00 0b 	xnorcc  %i4, %o3, %g7
+  5c:	92 be a0 00 	xnorcc  %i2, 0, %o1
+  60:	8f 2f 00 0b 	sll  %i4, %o3, %g7
+  64:	93 2e a0 00 	sll  %i2, 0, %o1
+  68:	8f 37 00 0b 	srl  %i4, %o3, %g7
+  6c:	93 36 a0 00 	srl  %i2, 0, %o1
+  70:	8f 3f 00 0b 	sra  %i4, %o3, %g7
+  74:	93 3e a0 00 	sra  %i2, 0, %o1

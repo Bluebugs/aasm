@@ -1,0 +1,24 @@
+
+.mod_load asm-x86
+
+.mod_load out-coff
+.mod_out notime
+.mod_out variant gnu
+
+.section code .text
+
+	.proc main
+		.export main
+		label:
+		.extern ext_label
+		ret
+	.endp
+
+	.proc f1
+		.extern ext_label
+		.extern ext_label
+		nop
+	.endp
+
+.ends
+

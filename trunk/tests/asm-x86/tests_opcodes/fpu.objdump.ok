@@ -1,0 +1,159 @@
+
+tests_opcodes/fpu.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	d9 f0                	f2xm1  
+   2:	d9 e1                	fabs   
+   4:	d8 04 5d 00 00 00 00 	fadds  0x0(,%ebx,2)
+   b:	dc 04 45 00 00 00 00 	faddl  0x0(,%eax,2)
+  12:	d8 c2                	fadd   %st(2),%st
+  14:	dc c7                	fadd   %st,%st(7)
+  16:	de c5                	faddp  %st,%st(5)
+  18:	de c1                	faddp  %st,%st(1)
+  1a:	da 04 0a             	fiaddl (%edx,%ecx,1)
+  1d:	de 04 08             	fiadd  (%eax,%ecx,1)
+  20:	df 24 06             	fbld   (%esi,%eax,1)
+  23:	df 34 30             	fbstp  (%eax,%esi,1)
+  26:	d9 e0                	fchs   
+  28:	9b db e2             	fclex  
+  2b:	db e2                	fnclex 
+  2d:	da c5                	fcmovb %st(5),%st
+  2f:	da d5                	fcmovbe %st(5),%st
+  31:	db c5                	fcmovnb %st(5),%st
+  33:	da cd                	fcmove %st(5),%st
+  35:	db d5                	fcmovnbe %st(5),%st
+  37:	db cd                	fcmovne %st(5),%st
+  39:	db dd                	fcmovnu %st(5),%st
+  3b:	da dd                	fcmovu %st(5),%st
+  3d:	d8 92 05 00 00 00    	fcoms  0x5(%edx)
+  43:	dc 92 05 00 00 00    	fcoml  0x5(%edx)
+  49:	d8 d4                	fcom   %st(4)
+  4b:	d8 d1                	fcom   %st(1)
+  4d:	d8 9a 05 00 00 00    	fcomps 0x5(%edx)
+  53:	dc 9a 05 00 00 00    	fcompl 0x5(%edx)
+  59:	d8 db                	fcomp  %st(3)
+  5b:	d8 d9                	fcomp  %st(1)
+  5d:	de d9                	fcompp 
+  5f:	db f3                	fcomi  %st(3),%st
+  61:	df f4                	fcomip %st(4),%st
+  63:	db ed                	fucomi %st(5),%st
+  65:	df ee                	fucomip %st(6),%st
+  67:	d9 f6                	fdecstp 
+  69:	d9 ff                	fcos   
+  6b:	d8 34 5d 00 00 00 00 	fdivs  0x0(,%ebx,2)
+  72:	dc 34 45 00 00 00 00 	fdivl  0x0(,%eax,2)
+  79:	d8 f2                	fdiv   %st(2),%st
+  7b:	dc ff                	fdivr  %st,%st(7)
+  7d:	de fd                	fdivrp %st,%st(5)
+  7f:	de f9                	fdivrp %st,%st(1)
+  81:	da 34 0a             	fidivl (%edx,%ecx,1)
+  84:	de 34 08             	fidiv  (%eax,%ecx,1)
+  87:	d8 3c 5d 00 00 00 00 	fdivrs 0x0(,%ebx,2)
+  8e:	dc 3c 45 00 00 00 00 	fdivrl 0x0(,%eax,2)
+  95:	d8 fa                	fdivr  %st(2),%st
+  97:	dc f7                	fdiv   %st,%st(7)
+  99:	de f5                	fdivp  %st,%st(5)
+  9b:	de f1                	fdivp  %st,%st(1)
+  9d:	da 3c 0a             	fidivrl (%edx,%ecx,1)
+  a0:	de 3c 08             	fidivr (%eax,%ecx,1)
+  a3:	dd c2                	ffree  %st(2)
+  a5:	da 94 24 06 00 00 00 	ficoml 0x6(%esp,1)
+  ac:	de 14 ad 00 00 00 00 	ficom  0x0(,%ebp,4)
+  b3:	da 9c 24 06 00 00 00 	ficompl 0x6(%esp,1)
+  ba:	de 1c ad 00 00 00 00 	ficomp 0x0(,%ebp,4)
+  c1:	df 04 ad 00 00 00 00 	fild   0x0(,%ebp,4)
+  c8:	db 04 ad 00 00 00 00 	fildl  0x0(,%ebp,4)
+  cf:	df 2c ad 00 00 00 00 	fildll 0x0(,%ebp,4)
+  d6:	d9 f7                	fincstp 
+  d8:	9b db e3             	finit  
+  db:	db e3                	fninit 
+  dd:	db 16                	fistl  (%esi)
+  df:	df 17                	fist   (%edi)
+  e1:	df 1f                	fistp  (%edi)
+  e3:	db 1f                	fistpl (%edi)
+  e5:	df 3f                	fistpll (%edi)
+  e7:	df 17                	fist   (%edi)
+  e9:	db 17                	fistl  (%edi)
+  eb:	d9 07                	flds   (%edi)
+  ed:	dd 07                	fldl   (%edi)
+  ef:	db 2f                	fldt   (%edi)
+  f1:	d9 c3                	fld    %st(3)
+  f3:	d9 e8                	fld1   
+  f5:	d9 e9                	fldl2t 
+  f7:	d9 ea                	fldl2e 
+  f9:	d9 eb                	fldpi  
+  fb:	d9 ec                	fldlg2 
+  fd:	d9 ed                	fldln2 
+  ff:	d9 ee                	fldz   
+ 101:	d9 2c 85 00 00 00 00 	fldcw  0x0(,%eax,4)
+ 108:	d9 24 3e             	fldenv (%esi,%edi,1)
+ 10b:	d8 0c 5d 00 00 00 00 	fmuls  0x0(,%ebx,2)
+ 112:	dc 0c 45 00 00 00 00 	fmull  0x0(,%eax,2)
+ 119:	d8 ca                	fmul   %st(2),%st
+ 11b:	dc cf                	fmul   %st,%st(7)
+ 11d:	de cd                	fmulp  %st,%st(5)
+ 11f:	de c9                	fmulp  %st,%st(1)
+ 121:	da 0c 0a             	fimull (%edx,%ecx,1)
+ 124:	de 0c 08             	fimul  (%eax,%ecx,1)
+ 127:	d9 d0                	fnop   
+ 129:	d9 f3                	fpatan 
+ 12b:	d9 f8                	fprem  
+ 12d:	d9 f5                	fprem1 
+ 12f:	d9 f2                	fptan  
+ 131:	d9 fc                	frndint 
+ 133:	dd a1 07 00 00 00    	frstor 0x7(%ecx)
+ 139:	9b dd 34 55 02 00 00 	fsave  0x2(,%edx,2)
+ 140:	00 
+ 141:	dd 34 7d 02 00 00 00 	fnsave 0x2(,%edi,2)
+ 148:	d9 fd                	fscale 
+ 14a:	d9 fe                	fsin   
+ 14c:	d9 fb                	fsincos 
+ 14e:	d9 fa                	fsqrt  
+ 150:	d9 12                	fsts   (%edx)
+ 152:	dd 17                	fstl   (%edi)
+ 154:	dd d2                	fst    %st(2)
+ 156:	d9 1a                	fstps  (%edx)
+ 158:	dd 1f                	fstpl  (%edi)
+ 15a:	db 3e                	fstpt  (%esi)
+ 15c:	dd da                	fstp   %st(2)
+ 15e:	9b d9 3c 9d 00 00 00 	fstcw  0x0(,%ebx,4)
+ 165:	00 
+ 166:	d9 3c 9d 00 00 00 00 	fnstcw 0x0(,%ebx,4)
+ 16d:	9b d9 34 9d 00 00 00 	fstenv 0x0(,%ebx,4)
+ 174:	00 
+ 175:	d9 34 9d 00 00 00 00 	fnstenv 0x0(,%ebx,4)
+ 17c:	9b dd ba 04 00 00 00 	fstsw  0x4(%edx)
+ 183:	9b df e0             	fstsw  %ax
+ 186:	dd ba 04 00 00 00    	fnstsw 0x4(%edx)
+ 18c:	df e0                	fnstsw %ax
+ 18e:	d8 24 5d 00 00 00 00 	fsubs  0x0(,%ebx,2)
+ 195:	dc 24 45 00 00 00 00 	fsubl  0x0(,%eax,2)
+ 19c:	d8 e2                	fsub   %st(2),%st
+ 19e:	dc ef                	fsubr  %st,%st(7)
+ 1a0:	de ed                	fsubrp %st,%st(5)
+ 1a2:	de e9                	fsubrp %st,%st(1)
+ 1a4:	da 24 0a             	fisubl (%edx,%ecx,1)
+ 1a7:	de 24 08             	fisub  (%eax,%ecx,1)
+ 1aa:	d8 2c 5d 00 00 00 00 	fsubrs 0x0(,%ebx,2)
+ 1b1:	dc 2c 45 00 00 00 00 	fsubrl 0x0(,%eax,2)
+ 1b8:	d8 ea                	fsubr  %st(2),%st
+ 1ba:	dc e7                	fsub   %st,%st(7)
+ 1bc:	de e5                	fsubp  %st,%st(5)
+ 1be:	de e1                	fsubp  %st,%st(1)
+ 1c0:	da 2c 0a             	fisubrl (%edx,%ecx,1)
+ 1c3:	de 2c 08             	fisubr (%eax,%ecx,1)
+ 1c6:	d9 e4                	ftst   
+ 1c8:	dd e7                	fucom  %st(7)
+ 1ca:	d8 d1                	fcom   %st(1)
+ 1cc:	dd ef                	fucomp %st(7)
+ 1ce:	d8 d9                	fcomp  %st(1)
+ 1d0:	da e9                	fucompp 
+ 1d2:	9b                   	fwait
+ 1d3:	d9 e5                	fxam   
+ 1d5:	d9 cb                	fxch   %st(3)
+ 1d7:	d9 c9                	fxch   %st(1)
+ 1d9:	d9 f4                	fxtract 
+ 1db:	d9 f1                	fyl2x  
+ 1dd:	d9 f9                	fyl2xp1 

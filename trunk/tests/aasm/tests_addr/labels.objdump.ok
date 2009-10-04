@@ -1,0 +1,37 @@
+
+tests_addr/labels.o:     file format elf32-i386
+tests_addr/labels.o
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000008  00000000  00000000  0000014c  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .comment      00000072  00000000  00000000  00000188  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+00000008 l     O .text	00000000 real_end
+00000001 l     O .text	00000000 middle
+00000002 l     O .text	00000000 end_
+00000001 l     O .text	00000000 middle__
+00000008 l     O .text	00000000 real_end___
+00000001 l     O .text	00000000 middle_
+00000002 l     O .text	00000000 end
+00000008 l     O .text	00000000 real_end_
+00000008 l     O .text	00000000 real_end__
+00000000 l     O .text	00000000 begin
+
+
+Disassembly of section .text:
+
+00000000 <begin>:
+   0:	90                                                  .
+
+00000001 <middle>:
+   1:	90                                                  .
+
+00000002 <end>:
+   2:	eb fd eb fb eb f9                                   ......

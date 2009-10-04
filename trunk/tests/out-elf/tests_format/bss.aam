@@ -1,0 +1,21 @@
+
+
+.section code .text
+	.proc main
+		.export main
+		ret
+	.endp
+.ends
+
+.section bss .bss
+
+	.reserve 8
+	label:
+	.reserve 2
+
+.ends
+
+.section data .data
+	.dump dword .bss:label
+.ends
+

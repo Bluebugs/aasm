@@ -1,0 +1,39 @@
+
+.section code .text
+
+	.mod_asm mode 32bits
+
+	.define mac3 5
+
+	.macro mac2 a b c 
+
+		.define d eax * 4
+
+		@mac1 a, c, b
+
+		mov a, [b + dword d]
+		sub c, a
+
+	.endm
+
+	nop
+
+	@mac2 edi, esi, ebp
+
+	nop
+
+	@mac2 edi, 8, esp
+
+	nop
+
+	@mac1 eax, ebx, ecx
+
+.ends
+
+.macro mac1 a b c
+
+	add a, b
+	xor a, c
+
+.endm
+

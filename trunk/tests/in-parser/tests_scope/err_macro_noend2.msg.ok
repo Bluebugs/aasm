@@ -1,0 +1,9 @@
+ [ Error ] tests_scope/err_macro_noend2.aam:12: function `main' not ended at end of `.text' section
+ [Warning] tests_scope/err_macro_noend2.aam:12: function `main' defined but not used
+ [ Error ] tests_scope/err_macro_noend2.aam:13: macro `mac_proc' not ended at end of `main' function
+ [Warning] tests_scope/err_macro_noend2.aam:13: macro `mac_proc' defined but not used
+ [ Error ] tests_scope/err_macro_noend2.aam:18: section `.textb' not ended at end of file
+ [ Error ] tests_scope/err_macro_noend2.aam:24: function `mainb' not ended at end of `.textb' section
+ [Warning] tests_scope/err_macro_noend2.aam:24: function `mainb' defined but not used
+ [ Error ] tests_scope/err_macro_noend2.aam:25: macro `mac_procb' not ended at end of `mainb' function
+ [Warning] tests_scope/err_macro_noend2.aam:25: macro `mac_procb' defined but not used

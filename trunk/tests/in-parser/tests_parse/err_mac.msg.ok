@@ -1,0 +1,3 @@
+ [ Error ] tests_parse/err_mac.aam:11: no section/macro defined before use of `mac' macro
+ [ Error ] tests_parse/err_mac.aam:24: invalid use of macro
+ [ Error ] tests_parse/err_mac.aam:25: invalid use of macro

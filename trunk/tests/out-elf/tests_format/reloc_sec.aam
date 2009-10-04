@@ -1,0 +1,18 @@
+
+
+.section data .data
+
+	.string str1 "test\0"
+	.string str2 "test\0"
+
+.ends
+
+.section code .text
+
+	mov eax, .data
+	mov ebx, .data:str2
+	mov ecx, .data + 5
+	mov edx, .data + (.data:str2 - .data:str1)
+
+.ends
+

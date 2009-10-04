@@ -1,0 +1,23 @@
+
+.mod_load asm-x86
+.obj_base 0x10
+
+.define a (1+
+
+.section code .text
+
+	.section_base 0x20
+
+	.mod_asm mode 32bits
+
+	mov eax, .text:1234
+
+	mov %bad, 5
+
+	mov eax, *5
+	mov eax, 5 not 5
+	mov eax, 5 @ 6
+	mov eax, eax + 
+
+.ends
+

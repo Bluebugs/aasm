@@ -1,0 +1,12 @@
+
+.mod_load asm-x86
+
+.section data .data
+
+	.mod_asm mode 32bits
+	;.section_align 0x4
+
+	.db 0
+
+.ends
+

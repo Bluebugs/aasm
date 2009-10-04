@@ -1,0 +1,57 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	add i4, o3, g7
+	add i2, 0, o1
+	addcc i4, o3, g7
+	addcc i2, 0, o1
+	addx i4, o3, g7
+	addx i2, 0, o1
+	addxcc i4, o3, g7
+	addxcc i2, 0, o1
+
+	taddcc i4, o3, g7
+	taddcc i2, 0, o1
+	taddcctv i4, o3, g7
+	taddcctv i2, 0, o1
+
+	sub i4, o3, g7
+	sub i2, 0, o1
+	subcc i4, o3, g7
+	subcc i2, 0, o1
+	subx i4, o3, g7
+	subx i2, 0, o1
+	subxcc i4, o3, g7
+	subxcc i2, 0, o1
+
+	tsubcc i4, o3, g7
+	tsubcc i2, 0, o1
+	tsubcctv i4, o3, g7
+	tsubcctv i2, 0, o1
+
+	mulscc i4, o3, g7
+	mulscc i2, 0, o1
+
+	umul i4, o3, g7
+	umul i2, 0, o1
+	smul i4, o3, g7
+	smul i2, 0, o1
+	umulcc i4, o3, g7
+	umulcc i2, 0, o1
+	smulcc i4, o3, g7
+	smulcc i2, 0, o1
+
+	udiv i4, o3, g7
+	udiv i2, 0, o1
+	sdiv i4, o3, g7
+	sdiv i2, 0, o1
+	udivcc i4, o3, g7
+	udivcc i2, 0, o1
+	sdivcc i4, o3, g7
+	sdivcc i2, 0, o1
+
+.ends
+

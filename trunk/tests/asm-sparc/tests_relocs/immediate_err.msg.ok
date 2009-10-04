@@ -1,0 +1,7 @@
+ [ Error ] tests_relocs/immediate_err.aam:9: sparc: 23 bits value can't fit in 22 bits unsigned location
+ [ Error ] tests_relocs/immediate_err.aam:10: sparc: negative value can't fit in unsigned location
+ [ Error ] tests_relocs/immediate_err.aam:13: sparc: 9 bits value can't fit in 8 bits unsigned location
+ [ Error ] tests_relocs/immediate_err.aam:14: sparc: negative value can't fit in unsigned location
+ [ Error ] tests_relocs/immediate_err.aam:17: sparc: 14 bits value can't fit in 13 bits signed location
+ [ Error ] tests_relocs/immediate_err.aam:18: sparc: 15 bits value can't fit in 13 bits signed location
+ [ Error ] tests_relocs/immediate_err.aam:21: sparc: 14 bits value can't fit in 13 bits signed location

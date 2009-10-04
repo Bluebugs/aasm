@@ -1,0 +1,29 @@
+
+.mod_load out-binary
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+	.mod_asm mode 32bits
+	.mod_asm ext mmx
+
+	; over 3
+	mov eax, ebx, ecx, edx, esi	
+
+	; two mem operands
+	mov [eax], [ebx]
+
+	; invalid operand size
+	mov qword [eax], 6
+	movq mm0, word [eax]
+	shld eax, ebx, word 4
+
+	; can't deduce operand size
+	not [eax]
+	jmpf 0x1234, 0x1234
+
+.ends
+

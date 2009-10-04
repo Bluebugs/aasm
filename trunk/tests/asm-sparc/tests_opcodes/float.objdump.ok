@@ -1,0 +1,59 @@
+
+tests_opcodes/float.o:     file format elf32-sparc
+tests_opcodes/float.o
+architecture: sparc, flags 0x00000010:
+HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000009c  00000000  00000000  00000124  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000074  00000000  00000000  000001ea  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	83 a0 18 81 	fitos  %f1, %f1
+   4:	83 a0 18 86 	fitos  %f6, %f1
+   8:	83 a0 19 06 	fitod  %f6, %f32
+   c:	bb a0 19 9f 	fitoq  %f31, %f60
+  10:	8d a0 1a 21 	fstoi  %f1, %f6
+  14:	97 a0 1a 49 	fdtoi  %f40, %f11
+  18:	8d a0 1a 79 	fqtoi  %f56, %f6
+  1c:	85 a0 19 23 	fstod  %f3, %f2
+  20:	89 a0 19 a5 	fstoq  %f5, %f4
+  24:	83 a0 18 c6 	fdtos  %f6, %f1
+  28:	91 a0 19 c8 	fdtoq  %f8, %f8
+  2c:	95 a0 19 6c 	fqtod  %f12, %f10
+  30:	97 a0 18 e9 	fqtos  %f40, %f11
+  34:	87 a0 00 27 	fmovs  %f7, %f3
+  38:	87 a0 00 a7 	fnegs  %f7, %f3
+  3c:	87 a0 01 27 	fabss  %f7, %f3
+  40:	89 a0 05 21 	fsqrts  %f1, %f4
+  44:	89 a0 05 42 	fsqrtd  %f2, %f4
+  48:	89 a0 05 60 	fsqrtq  %f0, %f4
+  4c:	8f a0 48 24 	fadds  %f1, %f4, %f7
+  50:	95 a0 88 44 	faddd  %f2, %f4, %f10
+  54:	99 a0 08 64 	faddq  %f0, %f4, %f12
+  58:	8f a0 48 a4 	fsubs  %f1, %f4, %f7
+  5c:	95 a0 88 c4 	fsubd  %f2, %f4, %f10
+  60:	99 a0 08 e4 	fsubq  %f0, %f4, %f12
+  64:	8f a0 49 24 	fmuls  %f1, %f4, %f7
+  68:	95 a0 89 44 	fmuld  %f2, %f4, %f10
+  6c:	99 a0 09 64 	fmulq  %f0, %f4, %f12
+  70:	89 a0 8d 26 	fsmuld  %f2, %f6, %f4
+  74:	89 a0 8d c6 	fdmulq  %f2, %f6, %f4
+  78:	8f a0 49 a4 	fdivs  %f1, %f4, %f7
+  7c:	95 a0 89 c4 	fdivd  %f2, %f4, %f10
+  80:	99 a0 09 e4 	fdivq  %f0, %f4, %f12
+  84:	81 a8 4a 24 	fcmps  %f1, %f4
+  88:	81 a8 8a 44 	fcmpd  %f2, %f4
+  8c:	81 a8 0a 64 	fcmpq  %f0, %f4
+  90:	81 a8 4a a4 	fcmpes  %f1, %f4
+  94:	81 a8 8a c4 	fcmped  %f2, %f4
+  98:	81 a8 0a e4 	fcmpeq  %f0, %f4

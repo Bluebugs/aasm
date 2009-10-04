@@ -1,0 +1,4 @@
+ [Warning] tests_warn/undef_mode.aam:12: x86: cpu size mode undefined before instruction, 32 bits mode assumed
+ [Warning] tests_warn/undef_mode.aam:15: x86: instruction `cmovb' is not available on declared cpu
+ [Warning] tests_warn/undef_mode.aam:23: x86: instruction `movq' is part of undeclared cpu extension
+ [Warning] tests_warn/undef_mode.aam:33: x86: instruction `movq' is part of undeclared cpu extension

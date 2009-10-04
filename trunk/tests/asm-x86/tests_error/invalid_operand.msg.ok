@@ -1,0 +1,7 @@
+ [ Error ] tests_error/invalid_operand.aam:14: x86: invalid operand count for mov
+ [ Error ] tests_error/invalid_operand.aam:17: x86: two memory operands for mov
+ [ Error ] tests_error/invalid_operand.aam:20: x86: invalid first operand size for mov
+ [ Error ] tests_error/invalid_operand.aam:21: x86: invalid second operand size for movq
+ [ Error ] tests_error/invalid_operand.aam:22: x86: invalid third operand size for shld
+ [ Error ] tests_error/invalid_operand.aam:25: x86: can't deduce first operand size for not
+ [ Error ] tests_error/invalid_operand.aam:26: x86: can't deduce second operand size for jmpf

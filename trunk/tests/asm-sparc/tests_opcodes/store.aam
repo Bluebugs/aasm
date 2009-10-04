@@ -1,0 +1,25 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	stb o4, [i6 + g2]
+	sth o4, [i6 + g2]
+	st o4, [i6 + g2]
+	std o4, [i6 + g2]
+	stba o4, [g2], 0
+	stha o4, [g2], 0
+	sta o4, [g2], 0
+	stda o4, [g2], 0
+	st f4, [o5 + g1]
+	std f32, [g3 + g0]
+	st fsr, [o5 + g1]
+	std fq, [o5 + g1]
+	std c13, [g1 + g5]
+	st c13, [g1 + g5]
+	st csr, [g4 + i6]
+	std cq, [g4 + i6]
+
+.ends
+

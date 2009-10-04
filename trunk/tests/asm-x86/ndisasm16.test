@@ -1,0 +1,15 @@
+
+export AASM_OUT_EXT=".bin"
+export AASM_PARAM="-m out-binary -Wnone -q"
+export AASM_BIN=${AASM_TEST_BIN:aasm}
+export AASM_OUT_CLEAN="*.sym *.bin *.o"
+
+export TEST_BIN="ndisasm"
+export TEST_NAME="ndisasm16"
+export TEST_BIN_PARAM=""
+
+if ! test -x "`which $TEST_BIN`" ; then
+	echo "$TEST_BIN not available, skipping tests"
+	return 1	
+fi
+

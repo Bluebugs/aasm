@@ -1,0 +1,2 @@
+ [ Error ] tests_parse/err_instr.aam:5: no section/macro defined before `nop' instruction
+ [ Error ] tests_parse/err_instr.aam:17: invalid instruction `invalid_instr'

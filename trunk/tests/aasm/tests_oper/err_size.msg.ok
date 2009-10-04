@@ -1,0 +1,3 @@
+ [ Error ] tests_oper/err_size.aam:9: size operator `byte' can't be used here
+ [ Error ] tests_oper/err_size.aam:10: size operator `word' can't be used here
+ [ Error ] tests_oper/err_size.aam:10: size operator `byte' can't be used here

@@ -1,0 +1,3 @@
+ [ Error ] tests_expr/symloop.aam:6: recursive use of symbol `b'
+ [ Error ] tests_expr/symloop.aam:7: recursive use of symbol `B'
+ [ Error ] tests_expr/symloop.aam:9: recursive use of symbol `A'

@@ -1,0 +1,3 @@
+ [ Error ] tests_scope/err_proc_section.aam:5: no section defined before `main' function
+ [ Error ] tests_scope/err_proc_section.aam:6: no section/macro defined before `nop' instruction
+ [ Error ] tests_scope/err_proc_section.aam:7: no function to end

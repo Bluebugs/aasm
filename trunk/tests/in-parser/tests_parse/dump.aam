@@ -1,0 +1,7 @@
+
+.section data .data
+
+	.dump dword 5, word 3, byte 7
+
+.ends
+

@@ -1,0 +1,228 @@
+
+.section code .text
+
+	addpd xmm2, xmm1
+	addpd xmm3, [eax]
+	addsd xmm2, xmm1
+	addsd xmm3, [eax]
+
+	andpd xmm2, xmm1
+	andpd xmm3, [eax]
+	andnpd xmm2, xmm1
+	andnpd xmm3, [eax]
+
+	cmppd xmm3, xmm7, 4
+	cmppd xmm4, [eax], 5
+	cmpsd xmm3, xmm7, 4
+	cmpsd xmm4, [eax], 5
+
+	cmpordpd xmm3, xmm7
+	cmpnlepd xmm4, [eax]
+	cmpnltsd xmm3, xmm7
+	cmpltsd xmm4, [eax]
+
+	comisd xmm2, xmm1
+	comisd xmm3, [eax]
+
+	cvtpi2pd xmm2, mm5
+	cvtpi2pd xmm2, [eax]
+
+	cvtpd2pi mm2, xmm5
+	cvtpd2pi mm2, [eax]
+
+	cvtsi2sd xmm4, esi
+	cvtsi2sd xmm4, [eax]
+
+	cvtsd2si ecx, xmm6
+	cvtsd2si ecx, [eax]
+
+	cvttpd2pi mm3, [eax]
+	cvttpd2pi mm3, xmm5
+
+	cvttsd2si ecx, xmm6
+	cvttsd2si ecx, [eax]
+
+	cvtpd2ps xmm2, xmm1
+	cvtpd2ps xmm3, [eax]
+
+	cvtps2pd xmm2, xmm1
+	cvtps2pd xmm3, [eax]
+
+	cvtsd2ss xmm2, xmm1
+	cvtsd2ss xmm3, [eax]
+
+	cvtss2sd xmm2, xmm1
+	cvtss2sd xmm3, [eax]
+
+	cvtpd2dq xmm2, xmm1
+	cvtpd2dq xmm3, [eax]
+
+	cvttpd2dq xmm2, xmm1
+	cvttpd2dq xmm3, [eax]
+
+	cvtdq2ps xmm2, xmm1
+	cvtdq2ps xmm3, [eax]
+
+	cvtdq2pd xmm2, xmm1
+	cvtdq2pd xmm3, [eax]
+
+	cvtps2dq xmm2, xmm1
+	cvtps2dq xmm3, [eax]
+
+	cvttps2dq xmm2, xmm1
+	cvttps2dq xmm3, [eax]
+
+	cvtdq2ps xmm2, xmm1
+	cvtdq2ps xmm3, [eax]
+
+	divpd xmm2, xmm1
+	divpd xmm3, [eax]
+
+	divsd xmm2, xmm1
+	divsd xmm3, [eax]
+
+	maxpd xmm2, xmm1
+	maxpd xmm3, [eax]
+
+	maxsd xmm2, xmm1
+	maxsd xmm3, [eax]
+
+	minpd xmm2, xmm1
+	minpd xmm3, [eax]
+
+	minsd xmm2, xmm1
+	minsd xmm3, [eax]
+
+	movapd xmm5, xmm7
+	movapd xmm5, [eax]
+	movapd [eax], xmm5
+
+	movhpd xmm4, [eax]
+	movhpd [eax], xmm4
+
+	movlpd xmm4, [eax]
+	movlpd [eax], xmm4
+
+	movmskpd ecx, xmm6
+
+	movsd xmm5, xmm7
+	movsd xmm5, [eax]
+	movsd [eax], xmm5
+
+	movupd xmm5, xmm7
+	movupd xmm5, [eax]
+	movupd [eax], xmm5
+
+	mulpd xmm2, xmm1
+	mulpd xmm3, [eax]
+
+	mulsd xmm2, xmm1
+	mulsd xmm3, [eax]
+
+	orpd xmm2, xmm1
+	orpd xmm3, [eax]
+
+	shufpd xmm3, xmm7, 1
+	shufpd xmm4, [eax], 2
+
+	sqrtpd xmm3, xmm7
+	sqrtpd xmm4, [eax]
+
+	sqrtsd xmm3, xmm7
+	sqrtsd xmm4, [eax]
+
+	subpd xmm2, xmm1
+	subpd xmm3, [eax]
+
+	subsd xmm2, xmm1
+	subsd xmm3, [eax]
+
+	ucomisd xmm2, xmm1
+	ucomisd xmm3, [eax]
+
+	unpckhpd xmm3, xmm7
+	unpckhpd xmm4, [eax]
+
+	unpcklpd xmm3, xmm7
+	unpcklpd xmm4, [eax]
+
+	xorpd xmm2, xmm1
+	xorpd xmm3, [eax]
+
+	movd xmm2, esi
+	movd esi, xmm2
+
+	movd xmm2, [eax]
+	movd [eax], xmm2
+
+	movdqa xmm5, xmm7
+	movdqa xmm5, [eax]
+	movdqa [eax], xmm5
+
+	movdqu xmm5, xmm7
+	movdqu xmm5, [eax]
+	movdqu [eax], xmm5
+
+	movdq2q mm3, xmm5
+	movq2dq xmm3, mm5
+
+	movq xmm1, xmm3
+	movq xmm1, [eax]
+	movq [eax], xmm3
+
+	packsswb xmm1, xmm3
+	packsswb xmm1, [eax]
+
+	packuswb xmm1, xmm3
+	packuswb xmm1, [eax]
+
+	packssdw xmm1, xmm3
+	packssdw xmm1, [eax]
+
+	paddq mm1, mm2
+	paddq mm1, [eax]
+	paddq xmm1, xmm2
+	paddq xmm1, [eax]
+
+	psubq mm1, mm2
+	psubq mm1, [eax]
+	psubq xmm1, xmm2
+	psubq xmm1, [eax]
+
+	pmaddwd mm1, mm2
+	pmaddwd mm1, [eax]
+	pmaddwd xmm1, xmm2
+	pmaddwd xmm1, [eax]
+
+	pmuludq mm1, mm2
+	pmuludq mm1, [eax]
+	pmuludq xmm1, xmm2
+	pmuludq xmm1, [eax]
+
+	pshufd xmm3, xmm5, 5
+	pshufd xmm3, [eax], 5
+	pshufhw xmm3, xmm5, 5
+	pshufhw xmm3, [eax], 5
+	pshuflw xmm3, xmm5, 5
+	pshuflw xmm3, [eax], 5
+
+	pslldq xmm6, 5
+	psrldq xmm6, 5
+
+	punpckhqdq xmm1, xmm2
+	punpckhqdq xmm1, [eax]
+	punpcklqdq xmm1, xmm2
+	punpcklqdq xmm1, [eax]
+
+	cflush byte [ecx]
+
+	movntdq [eax], xmm2
+	movntpd [eax], xmm2
+	movnti [eax], esi
+
+	pause
+	lfence
+	mfence
+
+.ends
+

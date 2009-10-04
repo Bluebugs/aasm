@@ -1,0 +1,25 @@
+
+
+.section code .text
+
+	.dump dword (3 shl 7)
+	.dump dword (3 shl 15)
+
+	.dump dword (0xaa shl 13)
+	.dump dword (0xaa shl 16)
+
+	.dump oword (0xaa shl 32)
+	.dump oword (0xaa shl 121)
+
+	.dump dword (0x300000 shr 7)
+	.dump dword (0x300000 shr 15)
+
+	.dump dword (0xaa0000 shr 13)
+	.dump dword (0xaa0000 shr 16)
+	.dump dword (0xaa0000 shr 17)
+	.dump dword (0xaa0000 shr 18)
+
+	.dump byte (0xaa00000000 shr 32)
+
+.ends
+

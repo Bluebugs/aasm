@@ -1,0 +1,17 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	.mod_asm opcodes v9
+
+	sllx i4, o3, g7
+	sllx i2, 0, o1
+	srlx i4, o3, g7
+	srlx i2, 0, o1
+	srax i4, o3, g7
+	srax i2, 0, o1
+
+.ends
+

@@ -1,0 +1,157 @@
+00000000  D9F0              f2xm1
+00000002  D9E1              fabs
+00000004  D8045D00000000    fadd dword [ebx*2+0x0]
+0000000B  DC044500000000    fadd qword [eax*2+0x0]
+00000012  D8C2              fadd st2
+00000014  DCC7              fadd to st7
+00000016  DEC5              faddp st5
+00000018  DEC1              faddp st1
+0000001A  DA040A            fiadd dword [edx+ecx]
+0000001D  DE0408            fiadd word [eax+ecx]
+00000020  DF2406            fbld tword [esi+eax]
+00000023  DF3430            fbstp tword [eax+esi]
+00000026  D9E0              fchs
+00000028  9B                wait
+00000029  DBE2              fnclex
+0000002B  DBE2              fnclex
+0000002D  DAC5              fcmovb st5
+0000002F  DAD5              fcmovbe st5
+00000031  DBC5              fcmovnb st5
+00000033  DACD              fcmove st5
+00000035  DBD5              fcmovnbe st5
+00000037  DBCD              fcmovne st5
+00000039  DBDD              fcmovnu st5
+0000003B  DADD              fcmovu st5
+0000003D  D89205000000      fcom dword [edx+0x5]
+00000043  DC9205000000      fcom qword [edx+0x5]
+00000049  D8D4              fcom st4
+0000004B  D8D1              fcom st1
+0000004D  D89A05000000      fcomp dword [edx+0x5]
+00000053  DC9A05000000      fcomp qword [edx+0x5]
+00000059  D8DB              fcomp st3
+0000005B  D8D9              fcomp st1
+0000005D  DED9              fcompp
+0000005F  DBF3              fcomi st3
+00000061  DFF4              fcomip st4
+00000063  DBED              fucomi st5
+00000065  DFEE              fucomip st6
+00000067  D9F6              fdecstp
+00000069  D9FF              fcos
+0000006B  D8345D00000000    fdiv dword [ebx*2+0x0]
+00000072  DC344500000000    fdiv qword [eax*2+0x0]
+00000079  D8F2              fdiv st2
+0000007B  DCFF              fdiv to st7
+0000007D  DEFD              fdivp st5,st0
+0000007F  DEF9              fdivp st1,st0
+00000081  DA340A            fidiv dword [edx+ecx]
+00000084  DE3408            fidiv word [eax+ecx]
+00000087  D83C5D00000000    fdivr dword [ebx*2+0x0]
+0000008E  DC3C4500000000    fdivr qword [eax*2+0x0]
+00000095  D8FA              fdivr st2
+00000097  DCF7              fdivr to st7
+00000099  DEF5              fdivrp st5
+0000009B  DEF1              fdivrp st1
+0000009D  DA3C0A            fidivr dword [edx+ecx]
+000000A0  DE3C08            fidivr word [eax+ecx]
+000000A3  DDC2              ffree st2
+000000A5  DA942406000000    ficom dword [esp+0x6]
+000000AC  DE14AD00000000    ficom word [ebp*4+0x0]
+000000B3  DA9C2406000000    ficomp dword [esp+0x6]
+000000BA  DE1CAD00000000    ficomp word [ebp*4+0x0]
+000000C1  DF04AD00000000    fild word [ebp*4+0x0]
+000000C8  DB04AD00000000    fild dword [ebp*4+0x0]
+000000CF  DF2CAD00000000    fild qword [ebp*4+0x0]
+000000D6  D9F7              fincstp
+000000D8  9B                wait
+000000D9  DBE3              fninit
+000000DB  DBE3              fninit
+000000DD  DB16              fist dword [esi]
+000000DF  DF17              fist word [edi]
+000000E1  DF1F              fistp word [edi]
+000000E3  DB1F              fistp dword [edi]
+000000E5  DF3F              fistp qword [edi]
+000000E7  DF17              fist word [edi]
+000000E9  DB17              fist dword [edi]
+000000EB  D907              fld dword [edi]
+000000ED  DD07              fld qword [edi]
+000000EF  DB2F              fld tword [edi]
+000000F1  D9C3              fld st3
+000000F3  D9E8              fld1
+000000F5  D9E9              fldl2t
+000000F7  D9EA              fldl2e
+000000F9  D9EB              fldpi
+000000FB  D9EC              fldlg2
+000000FD  D9ED              fldln2
+000000FF  D9EE              fldz
+00000101  D92C8500000000    fldcw [eax*4+0x0]
+00000108  D9243E            fldenv [esi+edi]
+0000010B  D80C5D00000000    fmul dword [ebx*2+0x0]
+00000112  DC0C4500000000    fmul qword [eax*2+0x0]
+00000119  D8CA              fmul st2
+0000011B  DCCF              fmul to st7
+0000011D  DECD              fmulp st5
+0000011F  DEC9              fmulp st1
+00000121  DA0C0A            fimul dword [edx+ecx]
+00000124  DE0C08            fimul word [eax+ecx]
+00000127  D9D0              fnop
+00000129  D9F3              fpatan
+0000012B  D9F8              fprem
+0000012D  D9F5              fprem1
+0000012F  D9F2              fptan
+00000131  D9FC              frndint
+00000133  DDA107000000      frstor [ecx+0x7]
+00000139  9B                wait
+0000013A  DD345502000000    fnsave [edx*2+0x2]
+00000141  DD347D02000000    fnsave [edi*2+0x2]
+00000148  D9FD              fscale
+0000014A  D9FE              fsin
+0000014C  D9FB              fsincos
+0000014E  D9FA              fsqrt
+00000150  D912              fst dword [edx]
+00000152  DD17              fst qword [edi]
+00000154  DDD2              fst st2
+00000156  D91A              fstp dword [edx]
+00000158  DD1F              fstp qword [edi]
+0000015A  DB3E              fstp tword [esi]
+0000015C  DDDA              fstp st2
+0000015E  9B                wait
+0000015F  D93C9D00000000    fnstcw [ebx*4+0x0]
+00000166  D93C9D00000000    fnstcw [ebx*4+0x0]
+0000016D  9B                wait
+0000016E  D9349D00000000    fnstenv [ebx*4+0x0]
+00000175  D9349D00000000    fnstenv [ebx*4+0x0]
+0000017C  9B                wait
+0000017D  DDBA04000000      fnstsw [edx+0x4]
+00000183  9B                wait
+00000184  DFE0              fnstsw ax
+00000186  DDBA04000000      fnstsw [edx+0x4]
+0000018C  DFE0              fnstsw ax
+0000018E  D8245D00000000    fsub dword [ebx*2+0x0]
+00000195  DC244500000000    fsub qword [eax*2+0x0]
+0000019C  D8E2              fsub st2
+0000019E  DCEF              fsub to st7
+000001A0  DEED              fsubp st5
+000001A2  DEE9              fsubp st1
+000001A4  DA240A            fisub dword [edx+ecx]
+000001A7  DE2408            fisub word [eax+ecx]
+000001AA  D82C5D00000000    fsubr dword [ebx*2+0x0]
+000001B1  DC2C4500000000    fsubr qword [eax*2+0x0]
+000001B8  D8EA              fsubr st2
+000001BA  DCE7              fsubr to st7
+000001BC  DEE5              fsubrp st5
+000001BE  DEE1              fsubrp st1
+000001C0  DA2C0A            fisubr dword [edx+ecx]
+000001C3  DE2C08            fisubr word [eax+ecx]
+000001C6  D9E4              ftst
+000001C8  DDE7              fucom st7
+000001CA  D8D1              fcom st1
+000001CC  DDEF              fucomp st7
+000001CE  D8D9              fcomp st1
+000001D0  DAE9              fucompp
+000001D2  9B                wait
+000001D3  D9E5              fxam
+000001D5  D9CB              fxch st3
+000001D7  D9C9              fxch
+000001D9  D9F4              fxtract
+000001DB  D9F1              fyl2x
+000001DD  D9F9              fyl2xp1

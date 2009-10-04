@@ -1,0 +1,215 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+        .mod_asm mode 32bits
+	.mod_asm ext fpu
+
+	f2xm1
+	fabs
+
+	fadd dword [ebx * 2]
+	fadd qword [eax * 2]
+	fadd st0, st2
+	fadd st7, st0
+
+	faddp st5, st0
+	faddp
+
+	fiadd dword [edx + ecx]
+	fiadd word [eax + ecx]
+
+	fbld [esi + eax]
+	fbstp [eax + esi]
+
+	fchs
+
+	fclex
+	fnclex
+
+	fcmovb st0, st5
+	fcmovbe st0, st5
+	fcmovnb st0, st5
+	fcmove st0, st5
+	fcmovnbe st0, st5
+	fcmovne st0, st5
+	fcmovnu st0, st5
+	fcmovu st0, st5
+
+	fcom dword [edx + 5]
+	fcom qword [edx + 5]
+	fcom st4
+	fcom
+	fcomp dword [edx + 5]
+	fcomp qword [edx + 5]
+	fcomp st3
+	fcomp
+	fcompp
+
+	fcomi st0, st3
+	fcomip st0, st4
+	fucomi st0, st5
+	fucomip st0, st6
+	fdecstp
+	fcos
+
+	fdiv dword [ebx * 2]
+	fdiv qword [eax * 2]
+	fdiv st0, st2
+	fdiv st7, st0
+
+	fdivp st5, st0
+	fdivp
+
+	fidiv dword [edx + ecx]
+	fidiv word [eax + ecx]
+
+	fdivr dword [ebx * 2]
+	fdivr qword [eax * 2]
+	fdivr st0, st2
+	fdivr st7, st0
+
+	fdivrp st5, st0
+	fdivrp
+
+	fidivr dword [edx + ecx]
+	fidivr word [eax + ecx]
+
+	ffree st2
+
+	ficom dword [esp + 6]
+	ficom word [ebp * 4]
+
+	ficomp dword [esp + 6]
+	ficomp word [ebp * 4]
+
+	fild word [ebp * 4]
+	fild dword [ebp * 4]
+	fild qword [ebp * 4]
+
+	fincstp
+
+	finit
+	fninit
+
+	fist dword [esi]
+	fist word [edi]
+
+	fistp word [edi]
+	fistp dword [edi]
+	fistp qword [edi]
+
+	fist word [edi]
+	fist dword [edi]
+
+	fld dword [edi]
+	fld qword [edi]
+	fld tword [edi]
+	fld st3
+
+	fld1
+	fldl2t
+	fldl2e
+	fldpi
+	fldlg2
+	fldln2
+	fldz
+
+	fldcw [eax * 4]
+	fldenv [esi + edi]
+
+	fmul dword [ebx * 2]
+	fmul qword [eax * 2]
+	fmul st0, st2
+	fmul st7, st0
+
+	fmulp st5, st0
+	fmulp
+
+	fimul dword [edx + ecx]
+	fimul word [eax + ecx]
+
+	fnop
+	fpatan
+	fprem
+	fprem1
+	fptan
+	frndint
+
+	frstor [ecx + 7]
+	fsave [edx * 2 + 2]
+	fnsave [edi * 2 + 2]
+
+	fscale
+	fsin
+	fsincos
+	fsqrt
+
+	fst dword [edx]
+	fst qword [edi]
+	fst st2
+	fstp dword [edx]
+	fstp qword [edi]
+	fstp tword [esi]
+	fstp st2
+
+	fstcw [ebx * 4]
+	fnstcw [ebx * 4]
+
+	fstenv [ebx * 4]
+	fnstenv [ebx * 4]
+
+	fstsw [edx + 4]
+	fstsw ax
+
+	fnstsw [edx + 4]
+	fnstsw ax
+
+	fsub dword [ebx * 2]
+	fsub qword [eax * 2]
+	fsub st0, st2
+	fsub st7, st0
+
+	fsubp st5, st0
+	fsubp
+
+	fisub dword [edx + ecx]
+	fisub word [eax + ecx]
+
+	fsubr dword [ebx * 2]
+	fsubr qword [eax * 2]
+	fsubr st0, st2
+	fsubr st7, st0
+
+	fsubrp st5, st0
+	fsubrp
+
+	fisubr dword [edx + ecx]
+	fisubr word [eax + ecx]
+
+	ftst
+
+	fucom st7, st0
+	fcom
+	fucomp st7, st0
+	fcomp
+
+	fucompp
+
+	fwait
+
+	fxam
+
+	fxch st3, st0
+	fxch
+
+	fxtract
+	fyl2x
+	fyl2xp1
+
+.ends
+

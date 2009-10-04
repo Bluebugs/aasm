@@ -1,0 +1,9 @@
+
+.section code .text
+
+	.obj_name object_info
+	.obj_desc description
+	.obj_copyright copyright
+	.obj_base 0x10 * 0x10
+
+.ends

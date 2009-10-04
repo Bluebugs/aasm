@@ -1,0 +1,24 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.section_base 0x0
+        .mod_asm mode 32bits
+	.mod_asm ext 3dnowext
+
+	pf2iw mm3, mm1
+	pf2iw mm4, [eax]
+	pfnacc mm7, mm6
+	pfnacc mm2, [eax]
+	pfpnacc mm7, mm6
+	pfpnacc mm2, [eax]
+	pi2fw mm3, mm1
+	pi2fw mm4, [eax]
+	pswapd mm3, mm1
+	pswapd mm4, [eax]
+
+.ends
+

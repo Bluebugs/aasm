@@ -1,0 +1,20 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.define b B
+.define B b
+
+.define A A(0)
+
+.section code .text
+
+	.mod_asm mode 32bits
+
+	mov eax, A
+	mov eax, B
+	mov eax, b
+
+.ends
+

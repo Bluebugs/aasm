@@ -1,0 +1,6 @@
+ [Warning] tests_oper/err_shift.aam:4: logical shift left overflow
+ [Warning] tests_oper/err_shift.aam:5: logical shift left overflow
+ [Warning] tests_oper/err_shift.aam:6: logical shift left overflow
+ [Warning] tests_oper/err_shift.aam:7: logical shift left overflow
+ [Warning] binary: object base address set to zero
+ [Warning] tests_oper/err_shift.aam:2: binary: no base address defined for `.data' section

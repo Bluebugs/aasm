@@ -1,0 +1,16 @@
+
+tests_opcodes/3dnow_ext.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	0f 0f d9 1c          	pf2iw  %mm1,%mm3
+   4:	0f 0f 20 1c          	pf2iw  (%eax),%mm4
+   8:	0f 0f fe 8a          	pfnacc %mm6,%mm7
+   c:	0f 0f 10 8a          	pfnacc (%eax),%mm2
+  10:	0f 0f fe 8e          	pfpnacc %mm6,%mm7
+  14:	0f 0f 10 8e          	pfpnacc (%eax),%mm2
+  18:	0f 0f d9 0c          	pi2fw  %mm1,%mm3
+  1c:	0f 0f 20 0c          	pi2fw  (%eax),%mm4
+  20:	0f 0f d9 bb          	pswapd %mm1,%mm3
+  24:	0f 0f 20 bb          	pswapd (%eax),%mm4

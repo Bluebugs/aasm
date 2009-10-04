@@ -1,0 +1,30 @@
+
+.section code
+
+	.label begin
+
+	nop
+
+	.label middle loop
+
+	.label middle_ loop
+
+	.label middle__
+
+	nop
+
+	.label end
+
+	.label end_
+
+	jmp middle
+	jmp middle_ + 2
+	jmp middle__
+
+	.label real_end taken
+	.label real_end_ nottaken
+	.label real_end__ loop
+	.label real_end___ data
+
+.ends
+

@@ -1,0 +1,20 @@
+
+.obj_base 0x0
+
+.section code .text
+
+	push dword 5
+	push dword 0xff
+	push dword -1
+	push byte 5
+	push byte 0xff
+	push byte -1
+	push dword 0x100
+
+	.label lbl1
+
+	jz lbl1
+	jnz dword lbl1
+
+.ends
+

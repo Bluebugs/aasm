@@ -1,0 +1,32 @@
+
+tests_opcodes/misc.o:     file format elf32-sparc
+tests_opcodes/misc.o
+architecture: sparc, flags 0x00000010:
+HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000030  00000000  00000000  00000124  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000073  00000000  00000000  0000017e  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	f6 fe 80 00 	swapa  [ %i2 ] (0), %i3
+   4:	c2 7b 40 00 	swap  [ %o5 ], %g1
+   8:	3b 00 00 00 	sethi  %hi(0), %i5
+   c:	01 00 00 00 	nop 
+  10:	8f e7 00 0b 	save  %i4, %o3, %g7
+  14:	93 e6 a0 00 	save  %i2, 0, %o1
+  18:	8f ef 00 0b 	restore  %i4, %o3, %g7
+  1c:	93 ee a0 00 	restore  %i2, 0, %o1
+  20:	81 43 c0 00 	stbar 
+  24:	81 de c0 04 	flush  %i3 + %g4
+  28:	9b b0 82 25 	cpop1  [ %g2 + %g5 ], %o5
+  2c:	9b b8 82 25 	cpop2  [ %g2 + %g5 ], %o5

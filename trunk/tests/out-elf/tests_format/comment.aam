@@ -1,0 +1,10 @@
+
+.obj_desc comment test for aasm_out_elf32
+.obj_copyright AASM dev team
+
+.section code .text
+
+	nop
+
+.ends
+

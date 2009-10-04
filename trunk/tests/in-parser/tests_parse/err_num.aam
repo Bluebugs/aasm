@@ -1,0 +1,18 @@
+
+.section data .data
+
+	.dump oword 'truc\
+	.dump oword 'truc\htroc'	
+	.dump oword 'truc
+	.dump oword 'truc\'
+	.dump oword '0123456789ABCDEF1'
+	.dump word 'truct'
+	.dump byte ''
+	.dump byte '\xaj'
+	.dump byte '\x'
+	.dump word 'a''
+	.dump
+	.dump		; comment
+
+.ends
+

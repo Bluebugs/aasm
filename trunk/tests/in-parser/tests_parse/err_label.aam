@@ -1,0 +1,16 @@
+
+.invalid_directive
+
+.mod_load asm-x86
+.obj_base 0x0
+
+lbl:
+
+.section code .text
+
+	.section_base 0x10
+
+	label&:
+	nop
+.ends
+

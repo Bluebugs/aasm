@@ -1,0 +1,2 @@
+ [ Error ] tests_error/invalid_scale_reloc.aam:19: x86: invalid scale factor in address
+ [ Error ] tests_error/invalid_scale_reloc.aam:19: binary: can't reduce relocation

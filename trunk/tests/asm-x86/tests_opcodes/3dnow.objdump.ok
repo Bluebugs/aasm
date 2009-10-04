@@ -1,0 +1,8 @@
+
+tests_opcodes/3dnow.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	0f 05                	syscall 
+   2:	0f 07                	sysret 

@@ -1,0 +1,2 @@
+ [ Error ] ./tests_parse/inc_a.aam:2: can't open `./tests_parse/inc_b.aam' max include depth reached
+ [ Error ] empty object (no section)

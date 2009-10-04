@@ -1,0 +1,10 @@
+ [ Error ] tests_error/invalid_addr.aam:12: x86: invalid address displacement size
+ [ Error ] tests_error/invalid_addr.aam:13: x86: word register `si' can't be used with `di' in address
+ [ Error ] tests_error/invalid_addr.aam:14: x86: `bx' and `esi' address registers have different size
+ [ Error ] tests_error/invalid_addr.aam:15: x86: `esp' used as index register in address
+ [ Error ] tests_error/invalid_addr.aam:16: x86: `esp' used as index register in address
+ [ Error ] tests_error/invalid_addr.aam:17: x86: word displacement used with dword address register `eax'
+ [ Error ] tests_error/invalid_addr.aam:18: x86: dword displacement used with word address register `bx'
+ [ Error ] tests_error/invalid_addr.aam:19: x86: scale factor used with word address register `bx'
+ [ Error ] tests_error/invalid_addr.aam:20: x86: invalid register in address expression
+ [ Error ] tests_error/invalid_addr.aam:21: x86: invalid address expression

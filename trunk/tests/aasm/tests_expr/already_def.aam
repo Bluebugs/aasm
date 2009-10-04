@@ -1,0 +1,16 @@
+
+.mod_load asm-x86
+
+.obj_base 0x0
+
+.section code .text
+
+	.mod_asm mode 32bits
+
+	.define truc 1
+	.define truc 2
+
+	mov eax, truc
+
+.ends
+

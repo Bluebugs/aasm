@@ -1,0 +1,30 @@
+
+tests_opcodes/synthetic_v9.o:     file format elf64-sparc
+tests_opcodes/synthetic_v9.o
+architecture: sparc:v9, flags 0x00000010:
+HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000028  0000000000000000  0000000000000000  000001c0  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      0000007b  0000000000000000  0000000000000000  00000212  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    d  .text	0000000000000000 
+
+
+Disassembly of section .text:
+
+0000000000000000 <.text>:
+   0:	85 80 00 19 	wr  %g0, %i1, %ccr
+   4:	87 80 00 19 	wr  %g0, %i1, %asi
+   8:	89 80 00 19 	wr  %g0, %i1, %asr4
+   c:	8b 80 00 19 	wr  %g0, %i1, %asr5
+  10:	8d 80 00 19 	wr  %g0, %i1, %fprs
+  14:	b3 40 80 00 	rd  %ccr, %i1
+  18:	b3 40 c0 00 	rd  %asi, %i1
+  1c:	b3 41 00 00 	rd  %tick, %i1
+  20:	b3 41 40 00 	rd  %pc, %i1
+  24:	b3 41 80 00 	rd  %fprs, %i1

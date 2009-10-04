@@ -1,0 +1,135 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	ba 0
+	b 0
+	bn 0
+	bne 0
+	be 0
+	bnz 0
+	bz 0
+	bg 0
+	ble 0
+	bge 0
+	bl 0
+	bgu 0
+	bleu 0
+	bcc 0
+	bgeu 0
+	bcs 0
+	blu 0
+	bpos 0
+	bneg 0
+	bvc 0
+	bvs 0
+
+	ba,a 0
+	b,a 0
+	bn,a 0
+	bne,a 0
+	be,a 0
+	bnz,a 0
+	bz,a 0
+	bg,a 0
+	ble,a 0
+	bge,a 0
+	bl,a 0
+	bgu,a 0
+	bleu,a 0
+	bcc,a 0
+	bgeu,a 0
+	bcs,a 0
+	blu,a 0
+	bpos,a 0
+	bneg,a 0
+	bvc,a 0
+	bvs,a 0
+
+	fba 0
+	fbn 0
+	fbu 0
+	fbg 0
+	fbug 0
+	fbl 0
+	fbul 0
+	fblg 0
+	fbne 0
+	fbe 0
+	fbue 0
+	fbge 0
+	fbuge 0
+	fble 0
+	fbule 0
+	fbo 0
+
+	fba,a 0
+	fbn,a 0
+	fbu,a 0
+	fbg,a 0
+	fbug,a 0
+	fbl,a 0
+	fbul,a 0
+	fblg,a 0
+	fbne,a 0
+	fbe,a 0
+	fbue,a 0
+	fbge,a 0
+	fbuge,a 0
+	fble,a 0
+	fbule,a 0
+	fbo,a 0
+
+	cb 0
+	cba 0
+	cbn 0
+	cb0 0
+	cb1 0
+	cb2 0
+	cb3 0
+	cb01 0
+	cb02 0
+	cb03 0
+	cb12 0
+	cb13 0
+	cb23 0
+	cb012 0
+	cb013 0
+	cb023 0
+	cb123 0
+
+	cb,a 0
+	cba,a 0
+	cbn,a 0
+	cb0,a 0
+	cb1,a 0
+	cb2,a 0
+	cb3,a 0
+	cb01,a 0
+	cb02,a 0
+	cb03,a 0
+	cb12,a 0
+	cb13,a 0
+	cb23,a 0
+	cb012,a 0
+	cb013,a 0
+	cb023,a 0
+	cb123,a 0
+
+	call 0
+	jmpl g2 + i3, i6
+	jmpl g2, i6
+	jmpl 2, i6
+
+	rett i4
+	rett g5 + 4
+
+	ta 12
+	ta g3
+	ta i3 + 50
+	ta g3 + g7
+
+.ends
+

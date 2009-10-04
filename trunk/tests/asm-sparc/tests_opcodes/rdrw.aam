@@ -1,0 +1,37 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	.mod_asm opcodes v8
+
+	rd y, i4
+	rd psr, i4
+	rd wim, i4
+	rd tbr, i4
+	rd asr3, i4
+	rd asr15, i4
+
+	mov y, i4
+	mov psr, i4
+	mov wim, i4
+	mov tbr, i4
+	mov asr3, i4
+	mov asr15, i4
+
+	mov i4, y
+	mov i4, psr
+	mov i4, wim
+	mov i4, tbr
+	mov i4, asr3
+	mov i4, asr15
+
+	wr g3, i1, y
+	wr g3, i1, psr
+	wr g3, i1, wim
+	wr g3, i1, tbr
+	wr g3, i1, asr11
+
+.ends
+

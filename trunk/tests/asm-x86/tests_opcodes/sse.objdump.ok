@@ -1,0 +1,129 @@
+
+tests_opcodes/sse.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	0f 58 df             	addps  %xmm7,%xmm3
+   3:	0f 58 20             	addps  (%eax),%xmm4
+   6:	f3 0f 58 df          	addss  %xmm7,%xmm3
+   a:	f3 0f 58 20          	addss  (%eax),%xmm4
+   e:	0f 55 df             	andnps %xmm7,%xmm3
+  11:	0f 55 20             	andnps (%eax),%xmm4
+  14:	0f 54 df             	andps  %xmm7,%xmm3
+  17:	0f 54 20             	andps  (%eax),%xmm4
+  1a:	0f c2 df 00          	cmpeqps %xmm7,%xmm3
+  1e:	0f c2 20 00          	cmpeqps (%eax),%xmm4
+  22:	f3 0f c2 df 00       	cmpeqss %xmm7,%xmm3
+  27:	f3 0f c2 20 00       	cmpeqss (%eax),%xmm4
+  2c:	0f c2 df 02          	cmpleps %xmm7,%xmm3
+  30:	0f c2 20 02          	cmpleps (%eax),%xmm4
+  34:	f3 0f c2 df 02       	cmpless %xmm7,%xmm3
+  39:	f3 0f c2 20 02       	cmpless (%eax),%xmm4
+  3e:	0f c2 df 01          	cmpltps %xmm7,%xmm3
+  42:	0f c2 20 01          	cmpltps (%eax),%xmm4
+  46:	f3 0f c2 df 01       	cmpltss %xmm7,%xmm3
+  4b:	f3 0f c2 20 01       	cmpltss (%eax),%xmm4
+  50:	0f c2 df 04          	cmpneqps %xmm7,%xmm3
+  54:	0f c2 20 04          	cmpneqps (%eax),%xmm4
+  58:	f3 0f c2 df 04       	cmpneqss %xmm7,%xmm3
+  5d:	f3 0f c2 20 04       	cmpneqss (%eax),%xmm4
+  62:	0f c2 df 06          	cmpnleps %xmm7,%xmm3
+  66:	0f c2 20 06          	cmpnleps (%eax),%xmm4
+  6a:	f3 0f c2 df 06       	cmpnless %xmm7,%xmm3
+  6f:	f3 0f c2 20 06       	cmpnless (%eax),%xmm4
+  74:	0f c2 df 05          	cmpnltps %xmm7,%xmm3
+  78:	0f c2 20 05          	cmpnltps (%eax),%xmm4
+  7c:	f3 0f c2 df 05       	cmpnltss %xmm7,%xmm3
+  81:	f3 0f c2 20 05       	cmpnltss (%eax),%xmm4
+  86:	0f c2 df 07          	cmpordps %xmm7,%xmm3
+  8a:	0f c2 20 07          	cmpordps (%eax),%xmm4
+  8e:	f3 0f c2 df 07       	cmpordss %xmm7,%xmm3
+  93:	f3 0f c2 20 07       	cmpordss (%eax),%xmm4
+  98:	0f c2 df 04          	cmpneqps %xmm7,%xmm3
+  9c:	0f c2 20 05          	cmpnltps (%eax),%xmm4
+  a0:	f3 0f c2 df 04       	cmpneqss %xmm7,%xmm3
+  a5:	f3 0f c2 20 05       	cmpnltss (%eax),%xmm4
+  aa:	0f c2 df 03          	cmpunordps %xmm7,%xmm3
+  ae:	0f c2 20 03          	cmpunordps (%eax),%xmm4
+  b2:	f3 0f c2 df 03       	cmpunordss %xmm7,%xmm3
+  b7:	f3 0f c2 20 03       	cmpunordss (%eax),%xmm4
+  bc:	0f 2f df             	comiss %xmm7,%xmm3
+  bf:	0f 2f 20             	comiss (%eax),%xmm4
+  c2:	0f 2a fb             	cvtpi2ps %mm3,%xmm7
+  c5:	0f 2a 38             	cvtpi2ps (%eax),%xmm7
+  c8:	0f 2d 18             	cvtps2pi (%eax),%mm3
+  cb:	0f 2d dd             	cvtps2pi %xmm5,%mm3
+  ce:	f3 0f 2a 28          	cvtsi2ss (%eax),%xmm5
+  d2:	f3 0f 2a e9          	cvtsi2ss %ecx,%xmm5
+  d6:	f3 0f 2d 30          	cvtss2si (%eax),%esi
+  da:	f3 0f 2d f5          	cvtss2si %xmm5,%esi
+  de:	0f 2c 38             	cvttps2pi (%eax),%mm7
+  e1:	0f 2c fd             	cvttps2pi %xmm5,%mm7
+  e4:	f3 0f 2d 30          	cvtss2si (%eax),%esi
+  e8:	f3 0f 2d f5          	cvtss2si %xmm5,%esi
+  ec:	0f 5e df             	divps  %xmm7,%xmm3
+  ef:	0f 5e 20             	divps  (%eax),%xmm4
+  f2:	f3 0f 5e df          	divss  %xmm7,%xmm3
+  f6:	f3 0f 5e 20          	divss  (%eax),%xmm4
+  fa:	0f ae 10             	ldmxcsr (%eax)
+  fd:	0f 5f ef             	maxps  %xmm7,%xmm5
+ 100:	0f 5f 28             	maxps  (%eax),%xmm5
+ 103:	f3 0f 5f ef          	maxss  %xmm7,%xmm5
+ 107:	f3 0f 5f 28          	maxss  (%eax),%xmm5
+ 10b:	0f 5f ef             	maxps  %xmm7,%xmm5
+ 10e:	0f 5f 28             	maxps  (%eax),%xmm5
+ 111:	0f 5d ef             	minps  %xmm7,%xmm5
+ 114:	0f 5d 28             	minps  (%eax),%xmm5
+ 117:	f3 0f 5d ef          	minss  %xmm7,%xmm5
+ 11b:	f3 0f 5d 28          	minss  (%eax),%xmm5
+ 11f:	0f 28 ef             	movaps %xmm7,%xmm5
+ 122:	0f 28 28             	movaps (%eax),%xmm5
+ 125:	0f 29 28             	movaps %xmm5,(%eax)
+ 128:	0f 12 d1             	movhlps %xmm1,%xmm2
+ 12b:	0f 16 d1             	movlhps %xmm1,%xmm2
+ 12e:	0f 16 20             	movhps (%eax),%xmm4
+ 131:	0f 17 20             	movhps %xmm4,(%eax)
+ 134:	0f 12 20             	movlps (%eax),%xmm4
+ 137:	0f 13 20             	movlps %xmm4,(%eax)
+ 13a:	0f 50 c6             	movmskps %xmm6,%eax
+ 13d:	0f 2b 10             	movntps %xmm2,(%eax)
+ 140:	f3 0f 10 ef          	movss  %xmm7,%xmm5
+ 144:	f3 0f 10 28          	movss  (%eax),%xmm5
+ 148:	f3 0f 11 28          	movss  %xmm5,(%eax)
+ 14c:	0f 10 ef             	movups %xmm7,%xmm5
+ 14f:	0f 10 28             	movups (%eax),%xmm5
+ 152:	0f 11 28             	movups %xmm5,(%eax)
+ 155:	0f 59 df             	mulps  %xmm7,%xmm3
+ 158:	0f 59 20             	mulps  (%eax),%xmm4
+ 15b:	f3 0f 59 df          	mulss  %xmm7,%xmm3
+ 15f:	f3 0f 59 20          	mulss  (%eax),%xmm4
+ 163:	0f 56 df             	orps   %xmm7,%xmm3
+ 166:	0f 56 20             	orps   (%eax),%xmm4
+ 169:	0f 53 df             	rcpps  %xmm7,%xmm3
+ 16c:	0f 53 20             	rcpps  (%eax),%xmm4
+ 16f:	f3 0f 53 df          	rcpss  %xmm7,%xmm3
+ 173:	f3 0f 53 20          	rcpss  (%eax),%xmm4
+ 177:	0f 52 df             	rsqrtps %xmm7,%xmm3
+ 17a:	0f 52 20             	rsqrtps (%eax),%xmm4
+ 17d:	f3 0f 52 df          	rsqrtss %xmm7,%xmm3
+ 181:	f3 0f 52 20          	rsqrtss (%eax),%xmm4
+ 185:	0f c6 df 01          	shufps $0x1,%xmm7,%xmm3
+ 189:	0f c6 20 02          	shufps $0x2,(%eax),%xmm4
+ 18d:	0f 51 df             	sqrtps %xmm7,%xmm3
+ 190:	0f 51 20             	sqrtps (%eax),%xmm4
+ 193:	f3 0f 51 df          	sqrtss %xmm7,%xmm3
+ 197:	f3 0f 51 20          	sqrtss (%eax),%xmm4
+ 19b:	0f ae 18             	stmxcsr (%eax)
+ 19e:	0f 5c df             	subps  %xmm7,%xmm3
+ 1a1:	0f 5c 20             	subps  (%eax),%xmm4
+ 1a4:	f3 0f 5c df          	subss  %xmm7,%xmm3
+ 1a8:	f3 0f 5c 20          	subss  (%eax),%xmm4
+ 1ac:	0f 2e df             	ucomiss %xmm7,%xmm3
+ 1af:	0f 2e 20             	ucomiss (%eax),%xmm4
+ 1b2:	0f 15 df             	unpckhps %xmm7,%xmm3
+ 1b5:	0f 15 20             	unpckhps (%eax),%xmm4
+ 1b8:	0f 14 df             	unpcklps %xmm7,%xmm3
+ 1bb:	0f 14 20             	unpcklps (%eax),%xmm4
+ 1be:	0f 57 df             	xorps  %xmm7,%xmm3
+ 1c1:	0f 57 20             	xorps  (%eax),%xmm4

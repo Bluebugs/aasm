@@ -1,0 +1,15 @@
+
+
+.section code
+
+	mov eax, [eax + 5]
+	mov eax, [eax + 5 + 5]
+	mov eax, [eax + byte 5]
+	mov eax, [eax + dword 5 + byte 5]
+	mov eax, [eax + byte 5 + dword 5]
+	mov eax, [eax + 5 + byte 5]
+	mov eax, [eax + byte 5 + 5]
+	mov eax, [eax + byte (5 + 5)]
+
+.ends
+

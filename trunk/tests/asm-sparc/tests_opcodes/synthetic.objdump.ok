@@ -1,0 +1,55 @@
+
+tests_opcodes/synthetic.o:     file format elf32-sparc
+tests_opcodes/synthetic.o
+architecture: sparc, flags 0x00000010:
+HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000008c  00000000  00000000  00000124  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000078  00000000  00000000  000001da  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	80 a1 00 07 	cmp  %g4, %g7
+   4:	80 a6 e1 23 	cmp  %i3, 0x123
+   8:	81 c0 e0 05 	jmp  %g3 + 5
+   c:	9f c0 e0 05 	call  %g3 + 5
+  10:	81 c7 e0 08 	ret 
+  14:	81 c3 e0 08 	retl 
+  18:	80 90 00 05 	tst  %g5
+  1c:	81 e8 00 00 	restore 
+  20:	81 e0 00 00 	save 
+  24:	86 3f 40 00 	xnor  %i5, %g0, %g3
+  28:	9c 3b 80 00 	xnor  %sp, %g0, %sp
+  2c:	86 20 00 1d 	neg  %i5, %g3
+  30:	9c 20 00 0e 	neg  %sp
+  34:	88 01 20 01 	inc  %g4
+  38:	b4 06 a0 43 	add  %i2, 0x43, %i2
+  3c:	88 81 20 01 	inccc  %g4
+  40:	b4 86 a0 43 	addcc  %i2, 0x43, %i2
+  44:	88 21 20 01 	dec  %g4
+  48:	b4 26 a0 43 	sub  %i2, 0x43, %i2
+  4c:	88 a1 20 01 	deccc  %g4
+  50:	b4 a6 a0 43 	subcc  %i2, 0x43, %i2
+  54:	80 89 00 0d 	btst  %g4, %o5
+  58:	80 8e 60 45 	btst  0x45, %i1
+  5c:	9a 13 40 04 	or  %o5, %g4, %o5
+  60:	b2 16 60 45 	or  %i1, 0x45, %i1
+  64:	9a 2b 40 04 	andn  %o5, %g4, %o5
+  68:	b2 2e 60 45 	andn  %i1, 0x45, %i1
+  6c:	9a 1b 40 04 	xor  %o5, %g4, %o5
+  70:	b2 1e 60 45 	xor  %i1, 0x45, %i1
+  74:	8a 10 00 00 	mov  %g0, %g5
+  78:	c0 21 20 03 	clr  [ %g4 + 3 ]
+  7c:	c0 29 20 03 	clrb  [ %g4 + 3 ]
+  80:	c0 31 20 03 	clrh  [ %g4 + 3 ]
+  84:	9a 10 00 1c 	mov  %i4, %o5
+  88:	9a 10 21 23 	mov  0x123, %o5

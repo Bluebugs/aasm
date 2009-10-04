@@ -1,0 +1,1 @@
+ [ Error ] tests_scope/err_section.aam:5: use of undefined section `.data' (reported only once)

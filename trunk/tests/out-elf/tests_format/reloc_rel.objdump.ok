@@ -1,0 +1,40 @@
+
+tests_format/reloc_rel.o:     file format elf32-i386
+tests_format/reloc_rel.o
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000010  00000000  00000000  0000014c  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .comment      00000077  00000000  00000000  00000190  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+00000000         *UND*	00000000 printf
+00000000 g     F .text	00000010 main
+
+
+Contents of section .text:
+ 0000 e8fcffff ffe80000 0000e8f8 ffffffc3  ................
+Contents of section .comment:
+ 0000 41737365 6d626c65 64207769 74683a20  Assembled with: 
+ 0010 4141534d 20302e39 2e302c20 47504c20  AASM 0.9.0, GPL 
+ 0020 41647661 6e636564 20417373 656d626c  Advanced Assembl
+ 0030 65722e20 4f626a65 63743a20 74657374  er. Object: test
+ 0040 735f666f 726d6174 2f72656c 6f635f72  s_format/reloc_r
+ 0050 656c2e20 436f7079 72696768 743a206e  el. Copyright: n
+ 0060 6f6e652e 20446573 63726970 74696f6e  one. Description
+ 0070 3a206e6f 6e6500                      : none.         
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e8 fc ff ff ff       	call   1 <main+0x1>
+			1: R_386_PC32	printf
+   5:	e8 00 00 00 00       	call   a <main+0xa>
+			6: R_386_PC32	printf
+   a:	e8 f8 ff ff ff       	call   7 <main+0x7>
+			b: R_386_PC32	printf
+   f:	c3                   	ret    

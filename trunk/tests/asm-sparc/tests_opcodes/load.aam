@@ -1,0 +1,21 @@
+
+
+.mod_load asm-sparc
+
+.section code .text
+
+	.mod_asm opcodes v8
+
+	ld [0], g0
+	lda [g0], 0, o5
+	lda [g3], 3, g7
+	ld [g2 + o3], f8
+	ld [i1 + i1], fsr
+	ld [i7 + 0], c31
+	ldd [i7 + 0], c13
+	ld [i1 + i1], csr
+	ldstuba [g3], 0, i3
+	ldstub [g3], i3
+
+.ends
+

@@ -1,0 +1,27 @@
+
+.mod_load asm-x86
+
+.define T	$0 + $1
+.define Mem	[$0 + byte 0x12]
+
+.macro mac a b
+	.define c Mem(T(a, b))
+	mov a, c
+.endm
+
+.section code .text
+
+	.mod_asm mode 32bits
+
+	.define A [$0 + $1 * 2]
+	.define B .text:A(eax, ebx * 2)
+
+	mov eax, B
+
+	.define E eax + $0
+	mov eax, [E(-eax)]
+
+	@mac ecx, edx
+
+.ends
+

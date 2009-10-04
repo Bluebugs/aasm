@@ -1,0 +1,30 @@
+
+tests_addr/instr_boundary.o:     file format elf32-i386
+tests_addr/instr_boundary.o
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000008  00000000  00000000  00000174  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000014  00000000  00000000  0000017c  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+  2 .comment      0000007a  00000000  00000000  000001ca  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 
+00000000 l    d  .data	00000000 
+00000000 l     O .text	00000000 label_start
+00000004 l     O .text	00000000 label_middle
+00000008 l     O .text	00000000 label_end
+
+
+Disassembly of section .text:
+
+00000000 <label_start>:
+   0:	90 00 00 00                                         ....
+
+00000004 <label_middle>:
+   4:	90 00 00 00                                         ....

@@ -1,0 +1,3 @@
+ [ Error ] tests_oper/err_overflow.aam:9: multiplication overflow
+ [ Error ] tests_oper/err_overflow.aam:10: sum overflow
+ [ Error ] tests_oper/err_overflow.aam:11: negation overflow

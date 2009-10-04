@@ -1,0 +1,7 @@
+ [ Error ] tests_parse/err_build_expr.aam:5: unexpected end of expression, missing bracket/parentheses
+ [ Error ] tests_parse/err_build_expr.aam:13: `1234' is not a valid symbol name
+ [ Error ] tests_parse/err_build_expr.aam:15: `bad' is not a valid register name
+ [ Error ] tests_parse/err_build_expr.aam:17: unexpected token `*' in expression, value/unary operator expected
+ [ Error ] tests_parse/err_build_expr.aam:18: unexpected token `not' in expression, binary operator expected
+ [ Error ] tests_parse/err_build_expr.aam:19: unexpected token `@' in expression, binary operator expected
+ [ Error ] tests_parse/err_build_expr.aam:20: unexpected end of expression

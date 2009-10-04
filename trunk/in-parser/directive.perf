@@ -1,0 +1,79 @@
+%{ /* -*- c -*- */
+
+/*
+**    This file is part of AASM.
+**
+**    AASM is free software; you can redistribute it and/or modify
+**    it under the terms of the GNU General Public License as published by
+**    the Free Software Foundation; either version 3 of the License, or
+**    (at your option) any later version.
+**
+**    AASM is distributed in the hope that it will be useful,
+**    but WITHOUT ANY WARRANTY; without even the implied warranty of
+**    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**    GNU General Public License for more details.
+**
+**    You should have received a copy of the GNU General Public License
+**    along with AASM; if not, write to the Free Software
+**    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+**
+**    Copyright Alexandre Becoulet, 2002
+**    contact : alexandre.becoulet@free.fr
+*/
+
+/*
++options+-N in_directive_set -L ANSI-C -k* -c -D -t
+*/
+
+#include <string.h>
+
+#include "directive.h"
+#include "parse.h"
+
+static unsigned int hash (const char	*str,
+			  unsigned int	len);
+
+struct directive_s *in_directive_set (const char		*str,
+				    unsigned int	len);
+
+%}
+struct directive_s
+;
+%%
+obj_name,	&directive_objname,	PARSER_ST_MAIN
+obj_desc,	&directive_objdesc,	PARSER_ST_MAIN
+obj_copyright,	&directive_objcopyright,PARSER_ST_MAIN
+obj_base,	&directive_objbase,	PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+define,		&directive_define,	PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+align,		&directive_align,	PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+label,		&directive_label,	PARSER_ST_MAIN | PARSER_NEED_OUTMOD
+extern,		&directive_extern,	PARSER_ST_MAIN | PARSER_NEED_OUTMOD
+export,		&directive_export,	PARSER_ST_MAIN
+include,	&directive_include,	PARSER_ST_MAIN
+warning,	&directive_warning,	PARSER_ST_MAIN
+error,		&directive_error,	PARSER_ST_MAIN
+section,	&directive_section,	PARSER_ST_MAIN | PARSER_NEED_OUTMOD
+section_base,	&directive_sectionbase,	PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+section_align,	&directive_sectionalign,PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+ends,		&directive_section_end,	PARSER_ST_MAIN
+proc,		&directive_proc,	PARSER_ST_MAIN | PARSER_NEED_OUTMOD
+macro,		&directive_macro,	PARSER_ST_MAIN
+endp,		&directive_proc_end,	PARSER_ST_MAIN
+endm,		&directive_macro_end,	PARSER_ST_MAIN
+ifdef,		&directive_ifdef,	PARSER_ST_MAIN | PARSER_ST_SKIP
+if,		&directive_if,		PARSER_ST_MAIN | PARSER_ST_SKIP | PARSER_NEED_ASMMOD
+ifndef,		&directive_ifndef,	PARSER_ST_MAIN | PARSER_ST_SKIP
+endif,		&directive_endif,	PARSER_ST_MAIN | PARSER_ST_SKIP
+else,		&directive_else,	PARSER_ST_MAIN | PARSER_ST_SKIP
+string,		&directive_string,	PARSER_ST_MAIN | PARSER_NEED_OUTMOD
+db,		&directive_db,		PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+fill,		&directive_fill,	PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+pad,		&directive_pad,		PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+reserve,	&directive_reserve,	PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+dump,		&directive_dump,	PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+mod_out,	&directive_out,		PARSER_ST_MAIN | PARSER_NEED_OUTMOD
+mod_asm,	&directive_asm,		PARSER_ST_MAIN | PARSER_NEED_ASMMOD
+mod_load,	&directive_mod_load,	PARSER_ST_MAIN
+debug,		&directive_debug,	PARSER_ST_MAIN
+%%
+

@@ -1,0 +1,2 @@
+ [ Error ] tests_oper/err_fit.aam:7: signed value do not fit in word destination
+ [ Error ] tests_oper/err_fit.aam:8: unsigned value do not fit in word destination
