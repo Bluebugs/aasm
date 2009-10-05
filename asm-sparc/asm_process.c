@@ -128,6 +128,9 @@ asm_sparc_process	(struct instr_s		*instr,
 	      break;
 
 	    case (INSTR_TYPE_OPCODE):
+	      if (instr->next->info->flags & FLG_DELAY_SLOT)
+		error_submsg(error(ERRTYP_WARN_CTRL, "sparc: use of branch instruction in `%s' instruction delay slot",
+				   instr->location), instr->info->name);
 	      break;
 
 	    default:
