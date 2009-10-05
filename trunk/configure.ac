@@ -42,7 +42,7 @@ AC_CONFIG_FILES([
 ])
 
 CFLAGS+=" -Wall -Wno-unused-parameter "
-LDFLAGS+=" -release 0.9.1"
+#LDFLAGS+=" -release 0.9.1"
 
 libdir="${libdir}/aasm"
 
