@@ -32,7 +32,7 @@ const struct module_info_s		module_info =
   "asm-x86",
   "Alexandre Becoulet 2002",
   "Generic x86 assembler",
-  {0, 9, 0},
+  {0, 9, 1},
   ARCH_ID_X86,
   MODULE_CLASS_ASM,
   1

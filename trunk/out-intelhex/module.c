@@ -32,7 +32,7 @@ const struct module_info_s		module_info =
   "out-intelhex",
   "Alexandre Becoulet 2002",
   "Intel HEX file writer",
-  {0, 9, 0},
+  {0, 9, 1},
   ARCH_ID_NONE,
   MODULE_CLASS_OUT,
   0

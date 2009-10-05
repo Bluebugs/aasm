@@ -32,7 +32,7 @@ const struct module_info_s		module_info =
   "asm-skel",
   "Alexandre Becoulet 2002",
   "Asm module skeleton",
-  {0, 9, 0},
+  {0, 9, 1},
   ARCH_ID_NONE,
   MODULE_CLASS_ASM,
   0

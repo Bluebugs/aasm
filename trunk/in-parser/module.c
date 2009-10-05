@@ -32,7 +32,7 @@ const struct module_info_s		module_info =
   "in-parser",
   "Alexandre Becoulet 2002",
   "Intel source parser",
-  {0, 9, 0},
+  {0, 9, 1},
   ARCH_ID_NONE,
   MODULE_CLASS_IN,
   0

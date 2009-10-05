@@ -32,7 +32,7 @@ const struct module_info_s		module_info =
   "asm-sparc",
   "Alexandre Becoulet 2003",
   "SPARC assembler",
-  {0, 9, 0},
+  {0, 9, 1},
   ARCH_ID_SPARC,
   MODULE_CLASS_ASM,
   0
