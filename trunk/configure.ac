@@ -30,11 +30,6 @@ AC_CONFIG_FILES([
     tests/Makefile
     doc/Makefile
     asm-sparc/Makefile
-	tests/aasm/Makefile
-	tests/asm-sparc/Makefile
-	tests/asm-x86/Makefile
-	tests/out-coff/Makefile
-    tests/out-elf/Makefile
     include/Makefile
     include/aasm/Makefile
     asm-x86/Makefile
@@ -47,7 +42,7 @@ AC_CONFIG_FILES([
 ])
 
 CFLAGS+=" -Wall -Wno-unused-parameter "
-LDFLAGS+=" -version-info 0:9:1"
+LDFLAGS+=" -release 0.9.1"
 
 libdir="${libdir}/aasm"
 
