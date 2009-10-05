@@ -519,9 +519,8 @@ src_write (const struct object_s	*obj,
 
   /* display current action */
   fprintf (file, 
-	   "; Generated at %s"
-	   "; by " AASM_PROJECT_NAME " - " AASM_PROJECT_DESC " " AASM_PROJECT_VER "\n"
-	   ";    " AASM_AUTHOR " " AASM_COPYRIGHT "\n\n",
+	   "; Generated on %s"
+	   "; by " AASM_PROJECT_NAME " - " AASM_PROJECT_DESC " " AASM_PROJECT_VER "\n\n"
 	   ctime (&tmp));
 
   fprintf (file,
