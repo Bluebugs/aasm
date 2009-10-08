@@ -27,7 +27,6 @@ AC_CONFIG_FILES([
     Makefile
     libcore/Makefile
     aasm/Makefile
-    tests/Makefile
     doc/Makefile
     asm-sparc/Makefile
     include/Makefile
