@@ -36,9 +36,7 @@ instr.perf opcodes_id.h: $(srcdir)/gen_opcodes.pl $(OPCOD_LISTS) instr.skel
 	perl $< $(filter %.list,$^)
 
 install-exec-hook:
-	rm -f $(DESTDIR)$(libdir)/aasm_default_asm.so
-	$(LN_S) $(DESTDIR)$(libdir)/aasm_asm-x86.so \
-	           $(DESTDIR)$(libdir)/aasm_default_asm.so
+	cd $(DESTDIR)$(libdir) ; rm -f aasm_default_asm.so ; $(LN_S) aasm_asm-x86.so aasm_default_asm.so
 
 asm_directive.c: asm_directive.wlex $(top_srcdir)/build/word_lex.pl
 	perl $(top_srcdir)/build/word_lex.pl $<

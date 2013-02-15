@@ -2,6 +2,7 @@
 AC_INIT(aasm, 0.9.1)
 
 AC_CONFIG_AUX_DIR([build])
+AC_CONFIG_MACRO_DIR([build])
 
 AM_INIT_AUTOMAKE(aasm, 0.9.1)
 AC_CONFIG_HEADERS(config.h)
@@ -19,6 +20,7 @@ fi
 AC_DISABLE_STATIC
 
 AC_PROG_LN_S
+AM_PATH_LISPDIR
 
 AC_LANG(C)
 AC_PROG_LIBTOOL
@@ -28,6 +30,8 @@ AC_CONFIG_FILES([
     libcore/Makefile
     aasm/Makefile
     doc/Makefile
+    examples/Makefile
+    extra/Makefile
     asm-sparc/Makefile
     include/Makefile
     include/aasm/Makefile

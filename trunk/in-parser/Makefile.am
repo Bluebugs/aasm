@@ -31,6 +31,4 @@ BUILT_SOURCES = directive.c operator.c
 	fi
 
 install-exec-hook:
-	rm -f $(DESTDIR)$(libdir)/aasm_default_in.so
-	$(LN_S) $(DESTDIR)$(libdir)/aasm_in-parser.so \
-	           $(DESTDIR)$(libdir)/aasm_default_in.so
+	cd $(DESTDIR)$(libdir) ; rm -f aasm_default_in.so ; $(LN_S) aasm_in-parser.so aasm_default_in.so
