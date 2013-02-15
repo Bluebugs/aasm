@@ -19,6 +19,8 @@
 **    contact : alexandre.becoulet@free.fr
 */
 
+#include "config.h"
+
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
@@ -104,7 +106,7 @@ include_path_add	(char		**path)
   return (0);
 }
 
-const char		*args_title_g = AASM_PROJECT_NAME " - " AASM_PROJECT_DESC " " AASM_PROJECT_VER;
+const char		*args_title_g = AASM_PROJECT_NAME " - " AASM_PROJECT_DESC " " PACKAGE_VERSION;
 const char		*args_copyright_g =  AASM_COPYRIGHT " " AASM_AUTHOR;
 const char		*args_usage_g = "aasm [options] inputfile1 [inputfile2 ...]";
 

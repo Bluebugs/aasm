@@ -19,6 +19,8 @@
 **    contact : cedric.bail@epita.fr
 */
 
+#include "config.h"
+
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
@@ -520,7 +522,7 @@ src_write (const struct object_s	*obj,
   /* display current action */
   fprintf (file, 
 	   "; Generated on %s"
-	   "; by " AASM_PROJECT_NAME " - " AASM_PROJECT_DESC " " AASM_PROJECT_VER "\n\n",
+	   "; by " AASM_PROJECT_NAME " - " AASM_PROJECT_DESC " " PACKAGE_VERSION "\n\n",
 	   ctime (&tmp));
 
   fprintf (file,
