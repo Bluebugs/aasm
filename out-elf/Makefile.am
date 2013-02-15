@@ -17,7 +17,4 @@ aasm_out_elf64_la_LIBADD   = $(top_builddir)/libcore/libaasm_core.la
 aasm_out_elf64_la_CFLAGS   = -I$(top_srcdir)/include -DELF_64BITS
 
 install-exec-hook:
-	rm -f $(DESTDIR)$(libdir)/aasm_default_out.so
-	$(LN_S) $(DESTDIR)$(libdir)/aasm_out-elf32.so \
-	           $(DESTDIR)$(libdir)/aasm_default_out.so
-
+	cd $(DESTDIR)$(libdir) ; rm -f aasm_default_out.so ; $(LN_S) aasm_out-elf32.so aasm_default_out.so
