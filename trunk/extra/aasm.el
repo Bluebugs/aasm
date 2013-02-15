@@ -74,7 +74,8 @@
 	  (while not-indented
 	    (forward-line -1)
 
-	    (while (and (looking-at "^\\s-*$") (not (bobp)))
+	    ; look for the previous line which is neither a label nor an empty line
+	    (while (and (looking-at "^\\s-*\\($\\|\\w+:\\)") (not (bobp)))
 	      (forward-line -1))
 	      
 	    (if (bobp)
@@ -93,11 +94,14 @@
 		      (setq not-indented nil))
 		  
 		    )))))
-	
+
+      ; reduce indentation by tab-width for labels
+      (if (looking-at "^\\s-*\\w+:") (setq cur-indent (max 0 (- cur-indent tab-width ))))
+
       (if cur-indent (indent-line-to cur-indent) (indent-line-to 0))
       )
     )
-  )
+)
 
 (defvar aasm-mode-syntax-table nil
   "Syntax table for aasm-mode.")
