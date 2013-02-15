@@ -19,6 +19,8 @@
 **    contact : alexandre.becoulet@free.fr
 */
 
+#include "config.h"
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -86,7 +88,7 @@ elf_init_header		(struct out_object_s	*elf_obj,
   {
     char		buf[1024];
 
-    sprintf(buf, "Assembled with: " AASM_PROJECT_NAME " " AASM_PROJECT_VER ", " AASM_PROJECT_DESC ". Object: %s. Copyright: %s. Description: %s",
+    sprintf(buf, "Assembled with: " AASM_PROJECT_NAME " " PACKAGE_VERSION ", " AASM_PROJECT_DESC ". Object: %s. Copyright: %s. Description: %s",
 	    obj->name, obj->copyright, obj->description);
     elf_section_str(comment, buf);
   }
