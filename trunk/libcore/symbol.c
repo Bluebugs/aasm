@@ -282,7 +282,7 @@ struct symbol_s	*symbol_new (const char		*name,
       new->name = xstrdup(name);
     }
   else
-    new->hash = (unsigned int) new; /* random hash for anonymous symbol */
+    new->hash = (unsigned long) new; /* random hash for anonymous symbol */
 
   /* add symbol to scope symbol table */
   new->next = scope->symbols[new->hash % scope->symbol_hash_size];
