@@ -9,7 +9,7 @@ aasm_asm_sparc_la_LIBADD   = $(top_builddir)/libcore/libaasm_core.la
 
 aasm_asm_sparc_la_CFLAGS = -I$(top_srcdir)/include
 
-CLEANFILES = opcodes_id.h asm_directive.c instr.c reg.c
+CLEANFILES = opcodes_id.h asm_directive.c instr.c reg.c instr.perf instr.skel opcodes.h
 BUILT_SOURCES = opcodes_id.h asm_directive.c instr.c reg.c
 
 OPCOD_LISTS=opcodes_v8_arith.list opcodes_v8_branch.list			\
@@ -40,4 +40,7 @@ asm_directive.c: asm_directive.wlex $(top_srcdir)/build/word_lex.pl
 install-data-hook:
 	mkdir -p $(DESTDIR)$(prefix)/include/aasm/sparc
 	cp $(srcdir)/inc/*.def $(DESTDIR)$(prefix)/include/aasm/sparc
+
+uninstall-hook:
+	rm -rf $(DESTDIR)$(prefix)/include/aasm/sparc
 

@@ -9,7 +9,7 @@ aasm_asm_x86_la_LDFLAGS  = -module -avoid-version
 aasm_asm_x86_la_LIBADD   = $(top_builddir)/libcore/libaasm_core.la
 aasm_asm_x86_la_CFLAGS = -I$(top_srcdir)/include
 
-CLEANFILES = opcodes_id.h asm_directive.c instr.c reg.c
+CLEANFILES = opcodes_id.h asm_directive.c instr.c instr.perf instr.skel opcodes.h
 BUILT_SOURCES = opcodes_id.h asm_directive.c instr.c reg.c
 
 OPCOD_LISTS=opcodes_3dnow.list opcodes_3dnow2.list opcodes_fpu.list		\
