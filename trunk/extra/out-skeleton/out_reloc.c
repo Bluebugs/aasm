@@ -16,7 +16,7 @@
 **    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 **
 **    Copyright Alexandre Becoulet, 2002
-**    contact : alexandre.becoulet@epita.fr
+**    contact : alexandre.becoulet@free.fr
 */
 
 #include <stdlib.h>
