@@ -32,6 +32,11 @@ sub parse_lists
 	my $name = "";
 	my $info = "";
 
+	if (! ($file =~ /\.list$/))
+	{
+	    next ;
+	}
+
 	print "reading $file ... ";
 
 	open (LIST, "<$file") || die "unable to open $file\n";
@@ -231,15 +236,28 @@ sub write_instr_perf
 sub main
 {
     my %instrs;
+    my @outputs = ( "opcodes.h", "opcodes_id.h", "instr.perf", "instr.skel" );
 
     die "usage: gen_opcodes.pl [file.list ...]\n"
 	if (! @ARGV);
 
     parse_lists (\%instrs, \@ARGV);
 
-    write_opcodes_h (\%instrs, "opcodes.h");
-    write_opcodes_id_h (\%instrs, "opcodes_id.h");
-    write_instr_perf (\%instrs, "instr.perf", "instr.skel");
+    foreach my $arg (@ARGV)
+    {
+	foreach my $output (@outputs)
+	{
+	    if ($arg =~ /($output)$/)
+	    {
+		$output = $arg;
+		last;
+	    }
+	}
+    }
+
+    write_opcodes_h (\%instrs, @outputs[0]);
+    write_opcodes_id_h (\%instrs, @outputs[1]);
+    write_instr_perf (\%instrs, @outputs[2], @outputs[3]);
 }
 
 main;
