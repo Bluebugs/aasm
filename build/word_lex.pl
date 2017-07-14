@@ -308,6 +308,11 @@ sub main
     my $out_fname = $in_fname;
     $out_fname .= ".c" if (! ($out_fname =~ s/.wlex/.c/));
 
+    if ( @ARGV > 1 )
+    {
+	$out_fname = @ARGV[1];
+    }
+
     local *IN_FILE, *OUT_FILE;
 
     die "can't open `$in_fname' for reading\n"
