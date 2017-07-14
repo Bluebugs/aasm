@@ -22,7 +22,7 @@
 */
 
 /*
-+options+ -N asm_sparc_get_instr_perf -L ANSI-C -k* -c -D -t
++options+ -N asm_sparc_get_instr_perf -L ANSI-C -c -D -t
 */
 
 #include <string.h>
