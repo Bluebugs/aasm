@@ -33,8 +33,8 @@
 #include "fields.h"
 
 static unsigned int
-hash			(const char			*str,
-			 unsigned int			len);
+hash			(register const char			*str,
+			 register size_t			len);
 
 
 /*
@@ -43,8 +43,8 @@ hash			(const char			*str,
 */
 
 struct register_s	*
-asm_sparc_get_reg	(const char			*str,
-			 unsigned int			len);
+asm_sparc_get_reg	(register const char			*str,
+			 register size_t			len);
 
 /*
 ** Registers list with info fields

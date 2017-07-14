@@ -636,12 +636,12 @@ asm_format_A7	(ASM_INSTR_PARAMS)
 #include "opcodes.h"
 
 static unsigned int	
-hash			(const char		*str,
-			 unsigned int		len);
+hash			(register const char		*str,
+			 register size_t		len);
 
 struct instr_perf_s	*
-asm_sparc_get_instr_perf(const char		*str,
-			 unsigned int		len);
+asm_sparc_get_instr_perf(register const char		*str,
+			 register size_t		len);
 
 /*
 ** Instruction list with pointer to info struct
