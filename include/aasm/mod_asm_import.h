@@ -32,11 +32,11 @@ struct				instr_info_s;
 struct				instr_s;
 struct				section_s;
 
-typedef struct instr_perf_s	*asm_get_instr_perf_t	(const char			*str,
-							 unsigned int			len);
+typedef struct instr_perf_s	*asm_get_instr_perf_t	(register const char			*str,
+							 register size_t			len);
 
-typedef struct register_s	*asm_get_reg_t		(const char			*str,
-							 unsigned int			len);
+typedef struct register_s	*asm_get_reg_t		(register const char			*str,
+							 register size_t			len);
 
 typedef void			asm_process_t		(struct instr_s			*instr,
 							 struct section_s		*sec);
